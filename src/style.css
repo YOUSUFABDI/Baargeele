@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --dark-blue: #003559;
+  --light-blue: #006daa;
+  --blue: #0353a4;
+  --light: #b9d6f2;
+  --dark: #061a40;
+  --black: #000;
+  --white: #fff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--dark);
+}
+
+a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.wrapper {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+/* MOBILE NAVBAR */
+.logo {
+  width: fit-content;
+  cursor: pointer;
+}
+
+.logo img {
+  margin-left: 22px;
+}
+
+.nav {
+  margin-top: 20px;
+  border-bottom: 1px solid var(--light);
+}
+
+.links {
+  color: var(--white);
+  font-size: 1.3rem;
+  opacity: 0.5;
+  font-weight: bold;
+  margin-left: 25px;
+  cursor: pointer;
+}
+
+.links:hover {
+  color: var(--light);
+}
+
+.sign-in {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 50px;
+  margin-left: 22px;
+  background-color: var(--light);
+  color: var(--black);
+  border-radius: 11px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.sign-in:hover {
+  color: var(--black);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2858, 78, 213, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-toggler {
+  margin-right: 15px;
+  border: 1px solid var(--white);
+}
+
+/* TABLET NAVBAR */
+@media (min-width: 37.5em) {
+  nav {
+    margin-top: 20px;
+  }
+
+  .navbar-toggler {
+    margin-right: 30px;
+  }
+}
+
+/* DESKTOP NAVBAR */
+@media (min-width: 62.5em) {
+  nav {
+    margin-top: 15px;
+  }
+}
+
+/* MOBILE SIGN IN PAGE */
+.sign__container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  place-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.sign__reg__img {
+  width: 350px;
+}
+
+.sign__reg__img img {
+  width: 100%;
+}
+
+.login__reg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 27px;
+  padding-bottom: 127px;
+  margin-top: 33px;
+  height: 450px;
+  width: 343px;
+  color: var(--light);
+  border-radius: 6px;
+  border: 1px solid var(--light);
+  box-shadow: 0 0 18px rgba(255, 253, 253, 0.2);
+}
+
+.login__reg h2 {
+  text-align: center;
+}
+
+.sign__reverse {
+  display: flex;
+  flex-direction: column;
+}
+
+.sign__reverse span {
+  color: var(--light);
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+.sign__reverse input {
+  background-color: transparent;
+  color: var(--white);
+  font-size: 1rem;
+  width: 295px;
+  height: 56px;
+  outline: none;
+  border: 1px solid var(--light);
+  border-radius: 8px;
+  box-shadow: 2px 2px 2px 1px rgba(255, 253, 253, 0.2);
+}
+
+.sign__forgot__btn {
+  width: 295px;
+  text-align: right;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: var(--light);
+  padding-top: 11px;
+  cursor: pointer;
+}
+
+.sign__lg__btn {
+  width: 138px;
+  height: 56px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.125rem;
+  font-weight: bold;
+  background-color: var(--light);
+  margin-left: 70px;
+  color: var(--black);
+  cursor: pointer;
+}
+
+.sign__make__acc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.sign__make__acc span {
+  color: var(--light);
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.sign__make__acc button {
+  background-color: transparent;
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: bold;
+  border: none;
+}
+
+/* TABLET SIGN IN PAGE */
+@media (min-width: 37.5em) {
+  .sign__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* DESKTOP SIGN IN PAGE */
+@media (min-width: 62.5em) {
+  .sign__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* MOBILE REGISTRATION PAGE */
+.registeration__container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  place-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.registeration__reg__img {
+  width: 350px;
+}
+
+.registeration__reg__img img {
+  width: 100%;
+}
+
+.registeration__reg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 27px;
+  padding-bottom: 127px;
+  margin-top: 33px;
+  height: 500px;
+  width: 343px;
+  color: var(--light);
+  border-radius: 6px;
+  border: 1px solid var(--light);
+  box-shadow: 0 0 18px rgba(255, 253, 253, 0.2);
+}
+
+.registeration__reg h2 {
+  text-align: center;
+}
+
+.registeration__reverse {
+  display: flex;
+  flex-direction: column;
+}
+
+.registeration__reverse span {
+  color: var(--light);
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+.registeration__reverse input {
+  background-color: transparent;
+  color: var(--white);
+  font-size: 1rem;
+  width: 295px;
+  height: 56px;
+  outline: none;
+  border: 1px solid var(--light);
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(255, 253, 253, 0.2);
+}
+
+.registeration__btn {
+  width: 138px;
+  height: 56px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.125rem;
+  font-weight: bold;
+  background-color: var(--light);
+  margin-left: 70px;
+  color: var(--black);
+  cursor: pointer;
+}
+
+/* TABLET REGISTRATION IN PAGE */
+@media (min-width: 37.5em) {
+  .registeration__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* DESKTOP REGISTRATION IN PAGE */
+@media (min-width: 62.5em) {
+  .registeration__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
