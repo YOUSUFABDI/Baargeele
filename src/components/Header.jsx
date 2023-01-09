@@ -1,44 +1,67 @@
-import logImg from "../images/Baargeelle.png";
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
+  const [click, setClick] = useState(false);
+  const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
+
   return (
-    <nav className="navbar navbar-expand-lg nav">
-      <Link to="/" className="logo">
-        <img src={logImg} alt="logo" />
-      </Link>
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul className="navbar-nav ms-auto">
+    <nav className="navbar">
+      <div className="navbar-container container">
+        <Link to="/" className="navbar-logo">
+          Baargeele
+        </Link>
+        <div className="menu-icon" onClick={handleClick}>
+          {click ? <FaTimes /> : <FaBars />}
+        </div>
+        <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item">
-            <Link to="/" className="nav-link links">
-              Homee
-            </Link>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                "nav-links" + (isActive ? " activated" : "")
+              }
+              onClick={closeMobileMenu}
+            >
+              Home
+            </NavLink>
           </li>
           <li className="nav-item">
-            <Link to="/about" className="nav-link links">
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                "nav-links" + (isActive ? " activated" : "")
+              }
+              onClick={closeMobileMenu}
+            >
               About
-            </Link>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <Link to="/contact" className="nav-link links">
+            <NavLink
+              to="/contact"
+              className={({ isActive }) =>
+                "nav-links" + (isActive ? " activated" : "")
+              }
+              onClick={closeMobileMenu}
+            >
               Contact
-            </Link>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <Link to="/sign" className="nav-link sign-in">
+            <NavLink
+              to="/sign"
+              className={({ isActive }) =>
+                "nav-links-btn" + (isActive ? " active-btn" : "")
+              }
+              id="sign__btn"
+              onClick={closeMobileMenu}
+            >
               Sign in
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </div>
