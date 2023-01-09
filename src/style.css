@@ -49,7 +49,6 @@ a {
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
-  position: sticky;
   top: 0;
   z-index: 999;
 }
@@ -133,6 +132,12 @@ a {
 .nav-links-btn {
   background-color: var(--light);
   color: var(--black);
+  transition: all 0.5s ease;
+
+}
+
+.nav-links-btn:hover{
+  transform: scale(1.1);
 }
 
 .active-btn {
@@ -145,14 +150,17 @@ a {
 }
 
 .menu-icon {
-  color: #fff;
+  color: var(--white);
   display: none;
+  transition: all 0.5s ease;
 }
 
+.menu-icon:hover{
+  transform: scale(1.1);
+}
+
+
 @media screen and (max-width: 960px) {
-  .NavbarItems {
-    position: relative;
-  }
 
   .nav-menu {
     display: flex;
@@ -194,19 +202,9 @@ a {
     width: 100%;
   }
 
-  .navbar-logo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(25%, 50%);
-  }
 
   .menu-icon {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 60%);
+    display: flex;
     font-size: 1.8rem;
     cursor: pointer;
   }
@@ -256,12 +254,14 @@ a {
 .sign__reverse {
   display: flex;
   flex-direction: column;
+  padding: 8px 0;
 }
 
 .sign__reverse span {
   color: var(--light);
   font-size: 1.125rem;
   font-weight: bold;
+  padding: 4px 0;
 }
 
 .sign__reverse input {
@@ -273,16 +273,16 @@ a {
   outline: none;
   border: 1px solid var(--light);
   border-radius: 8px;
-  box-shadow: 2px 2px 2px 1px rgba(255, 253, 253, 0.2);
+  box-shadow: -2px 2px 2px 1px rgba(255, 253, 253, 0.2);
 }
 
 .sign__forgot__btn {
-  width: 295px;
   text-align: right;
   font-size: 0.75rem;
   font-weight: bold;
-  color: var(--light);
+  color: var(--white);
   padding-top: 11px;
+  opacity: 0.5;
   cursor: pointer;
 }
 
@@ -295,9 +295,20 @@ a {
   font-size: 1.125rem;
   font-weight: bold;
   background-color: var(--light);
-  margin-left: 70px;
   color: var(--black);
   cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.sign__lg__btn:hover{
+  scale: 1.1;
+}
+
+.btms {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .sign__make__acc {
@@ -309,7 +320,9 @@ a {
 }
 
 .sign__make__acc span {
-  color: var(--light);
+  color: var(--white);
+  opacity: 0.5;
+  margin-bottom: 4px;
   font-size: 0.75rem;
   font-weight: bold;
 }
@@ -320,6 +333,11 @@ a {
   font-size: 0.75rem;
   font-weight: bold;
   border: none;
+  transition: all 0.5s ease;
+}
+
+.sign__make__acc button:hover{
+  scale: 1.1;
 }
 
 /* TABLET SIGN IN PAGE */
