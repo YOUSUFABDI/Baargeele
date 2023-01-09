@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: "marker_felt";
-  src: url("../assets/marker_felt.ttf");
+  src: url("../assets/fonts/marker_felt.ttf");
 }
 @font-face {
   font-family: "trebuc";
-  src: url("../assets/trebuc.ttf");
+  src: url("../assets/fonts/trebuc.ttf");
 }
 
 :root {
@@ -80,6 +80,11 @@ a {
   font-size: 2rem;
   display: flex;
   align-items: center;
+  transition: all 0.5s ease;
+}
+
+.navbar-logo:hover {
+  scale: 1.1;
 }
 
 .nav-menu {
@@ -97,13 +102,20 @@ a {
 }
 
 .nav-links {
-  color: #fff;
+  color: var(--white);
   opacity: 0.5;
   display: flex;
   align-items: center;
   text-decoration: none;
   padding: 0.5rem 1rem;
   height: 100%;
+  transition: all 0.5s ease;
+}
+
+.nav-links:hover {
+  transform: scale(1.1);
+
+  opacity: 1;
 }
 
 #sign__btn {
@@ -114,8 +126,8 @@ a {
   height: 50px;
   border-radius: 6px;
   margin-top: 15px;
-  margin-left:auto;
-  margin-right:auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .nav-links-btn {
@@ -164,14 +176,14 @@ a {
   .nav-links {
     text-align: center;
     padding: 2rem;
-    width: 100%;
+    margin: 0 auto;
     display: table;
   }
 
   .nav-links:hover {
-    color: #09bef0;
+    opacity: 1;
     transform: scale(1.2);
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
   }
 
   .nav-item:hover {
@@ -209,7 +221,7 @@ a {
   padding-bottom: 50px;
 }
 
-.sign_img{
+.sign_img {
   display: none;
   visibility: hidden;
 }
@@ -312,7 +324,7 @@ a {
 
 /* TABLET SIGN IN PAGE */
 @media (min-width: 37.5em) {
-  .sign_img{
+  .sign_img {
     display: inline;
     visibility: visible;
   }
