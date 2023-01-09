@@ -31,7 +31,7 @@ body {
 }
 
 a {
-  /* color: var(--white); */
+  color: var(--white);
   text-decoration: none;
 }
 
@@ -114,7 +114,8 @@ a {
   height: 50px;
   border-radius: 6px;
   margin-top: 15px;
-  margin-left: 40%;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 .nav-links-btn {
@@ -191,7 +192,7 @@ a {
   .menu-icon {
     display: block;
     position: absolute;
-    top: 7px;
+    top: 0;
     right: 0;
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
@@ -206,6 +207,11 @@ a {
   place-items: center;
   padding-top: 50px;
   padding-bottom: 50px;
+}
+
+.sign_img{
+  display: none;
+  visibility: hidden;
 }
 
 .sign__reg__img {
@@ -306,6 +312,11 @@ a {
 
 /* TABLET SIGN IN PAGE */
 @media (min-width: 37.5em) {
+  .sign_img{
+    display: inline;
+    visibility: visible;
+  }
+
   .sign__container {
     grid-template-columns: repeat(2, 1fr);
   }

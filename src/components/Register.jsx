@@ -1,4 +1,4 @@
-import RegImg from "../images/lgImg.png";
+import RegImg from "../../assets/images/lgImg.png";
 
 const Register = () => {
   return (
