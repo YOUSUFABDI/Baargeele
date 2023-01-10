@@ -4,7 +4,7 @@ const Register = () => {
   return (
     <div className="registeration__container">
       <div className="registeration__reg__img">
-        <img src={RegImg} alt="reg-img" />
+        <img className="reg_img" src={RegImg} alt="reg-img" />
       </div>
       <div className="registeration__reg">
         <h2>Register</h2>

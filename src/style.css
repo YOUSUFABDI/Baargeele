@@ -368,6 +368,10 @@ a {
   padding-bottom: 50px;
 }
 
+.reg_img {
+  display: none;
+}
+
 .registeration__reg__img {
   width: 350px;
 }
@@ -381,9 +385,9 @@ a {
   flex-direction: column;
   align-items: center;
   padding-top: 27px;
-  padding-bottom: 127px;
+  padding-bottom: 27px;
   margin-top: 33px;
-  height: 500px;
+  /* height: 500px; */
   width: 343px;
   color: var(--light);
   border-radius: 6px;
@@ -398,12 +402,14 @@ a {
 .registeration__reverse {
   display: flex;
   flex-direction: column;
+  padding: 8px 0;
 }
 
 .registeration__reverse span {
   color: var(--light);
   font-size: 1.125rem;
   font-weight: bold;
+  padding: 4px 0;
 }
 
 .registeration__reverse input {
@@ -437,6 +443,11 @@ a {
   .registeration__container {
     grid-template-columns: repeat(2, 1fr);
   }
+  .reg_img {
+    display: block;
+  }
+  
+
 }
 
 /* DESKTOP REGISTRATION IN PAGE */
@@ -444,4 +455,6 @@ a {
   .registeration__container {
     grid-template-columns: repeat(2, 1fr);
   }
+
+
 }
