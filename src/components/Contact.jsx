@@ -1,5 +1,15 @@
+import Header from "./Header";
+
 const Contact = () => {
-  return <div className="text-light">Contact</div>;
+  return (
+    <>
+      <Header />
+
+      <div>
+        <h1>Contact page</h1>
+      </div>
+    </>
+  );
 };
 
 export default Contact;
