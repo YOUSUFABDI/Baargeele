@@ -1,0 +1,148 @@
+/* MOBILE SIGN IN PAGE */
+.sign__container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  place-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.sign_img {
+  display: none;
+  visibility: hidden;
+}
+
+.sign__reg__img {
+  width: 350px;
+}
+
+.sign__reg__img img {
+  width: 100%;
+}
+
+.login__reg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 27px;
+  padding-bottom: 127px;
+  margin-top: 33px;
+  height: 450px;
+  width: 343px;
+  color: var(--light);
+  border-radius: 6px;
+  border: 1px solid var(--light);
+  box-shadow: 0 0 18px rgba(255, 253, 253, 0.2);
+}
+
+.login__reg h2 {
+  text-align: center;
+}
+
+.sign__reverse {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0;
+}
+
+.sign__reverse span {
+  color: var(--light);
+  font-size: 1.125rem;
+  font-weight: bold;
+  padding: 4px 0;
+}
+
+.sign__reverse input {
+  background-color: transparent;
+  color: var(--white);
+  font-size: 1rem;
+  width: 295px;
+  height: 56px;
+  outline: none;
+  border: 1px solid var(--light);
+  border-radius: 8px;
+  box-shadow: -2px 2px 2px 1px rgba(255, 253, 253, 0.2);
+}
+
+.sign__forgot__btn {
+  text-align: right;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: var(--white);
+  padding-top: 11px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.sign__lg__btn {
+  width: 138px;
+  height: 56px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.125rem;
+  font-weight: bold;
+  background-color: var(--light);
+  color: var(--black);
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.sign__lg__btn:hover {
+  scale: 1.1;
+}
+
+.btms {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign__make__acc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.sign__make__acc span {
+  color: var(--white);
+  opacity: 0.5;
+  margin-bottom: 4px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.sign__make__acc button {
+  background-color: transparent;
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: bold;
+  border: none;
+  transition: all 0.5s ease;
+}
+
+.sign__make__acc button:hover {
+  scale: 1.1;
+}
+
+/* TABLET SIGN IN PAGE */
+@media (min-width: 37.5em) {
+  .sign_img {
+    display: inline;
+    visibility: visible;
+  }
+
+  .sign__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* DESKTOP SIGN IN PAGE */
+@media (min-width: 62.5em) {
+  .sign__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

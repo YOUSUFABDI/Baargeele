@@ -1,11 +1,14 @@
-import RegImg from "../../assets/images/lgImg.png";
+import RegImg from "../../../assets/images/lgImg.png";
 import { Link } from "react-router-dom";
-import Header from "./Header";
+import Header from "../Header/Header";
+import "./register.css";
 
 const Register = () => {
   return (
     <>
-      <Header />
+      <nav className="navbar">
+        <Header />
+      </nav>
 
       <div className="registeration__container">
         <div className="registeration__reg__img">

@@ -1,12 +1,14 @@
-import RegImg from "../../assets/images/lgImg.png";
+import RegImg from "../../../assets/images/lgImg.png";
 import { Link } from "react-router-dom";
-import Header from "./Header";
+import Header from "../Header/Header";
+import "./sign.css";
 
 const SignIn = () => {
   return (
     <>
-      <Header />
-
+      <nav className="navbar">
+        <Header />
+      </nav>
       <div className="sign__container">
         <div className="sign__reg__img">
           <img className="sign_img" src={RegImg} alt="reg-img" />

@@ -1,4 +1,4 @@
-import About from "../components/About";
+import About from "../components/AboutPage/About";
 
 const about = () => {
   return <About />;

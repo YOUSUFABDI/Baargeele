@@ -1,9 +1,10 @@
-import Header from "./Header";
-import headerImg from "../../assets/images/bannerImg.png";
-import evcPlusImg from "../../assets/images/evcplus.png";
-import sahalImg from "../../assets/images/sahal.png";
-import jeebImg from "../../assets/images/jeep.png";
-import zaadImg from "../../assets/images/zaad.png";
+import Header from "../Header/Header";
+import "./home.css";
+import headerImg from "../../../assets/images/bannerImg.png";
+import evcPlusImg from "../../../assets/images/evcplus.png";
+import sahalImg from "../../../assets/images/sahal.png";
+import jeebImg from "../../../assets/images/jeep.png";
+import zaadImg from "../../../assets/images/zaad.png";
 
 const Home = () => {
   return (

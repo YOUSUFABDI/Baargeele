@@ -1,0 +1,162 @@
+/* NAVBAR */
+.navbar {
+  height: 80px;
+  border-bottom: 1px solid var(--light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  padding: var(--paddingX);
+  height: 80px;
+}
+
+.container {
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.navbar-logo {
+  color: var(--light);
+  opacity: 1;
+  font-family: "marker_felt";
+  justify-self: start;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.navbar-logo:hover {
+  scale: 1.1;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  text-align: center;
+  justify-content: flex-end;
+}
+
+.nav-item {
+  height: 80px;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-links {
+  color: var(--white);
+  opacity: 0.5;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  height: 100%;
+  transition: all 0.5s ease;
+}
+
+.nav-links:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+#sign__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 112px;
+  height: 50px;
+  border-radius: 6px;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-links-btn {
+  background-color: var(--light);
+  color: var(--black);
+  transition: all 0.5s ease;
+}
+
+.nav-links-btn:hover {
+  transform: scale(1.1);
+}
+
+.active-btn {
+  background-color: var(--light-blue);
+  color: var(--white);
+}
+
+.activated {
+  opacity: 1;
+}
+
+.menu-icon {
+  color: var(--white);
+  display: none;
+  transition: all 0.5s ease;
+}
+
+.menu-icon:hover {
+  transform: scale(1.1);
+}
+
+/* TABLET NAVBAR */
+@media screen and (max-width: 960px) {
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .nav-menu.active {
+    background: var(--dark);
+    left: 0;
+    opacity: 1;
+    transition: all 0.6s ease;
+    z-index: 1;
+  }
+
+  .nav-links {
+    text-align: center;
+    padding: 2rem;
+    margin: 0 auto;
+    display: table;
+  }
+
+  .nav-links:hover {
+    opacity: 1;
+    transform: scale(1.2);
+    transition: all 0.5s ease;
+  }
+
+  .nav-item:hover {
+    border: none;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .menu-icon {
+    display: flex;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+}
