@@ -25,6 +25,7 @@
   flex-direction: column;
   justify-content: center;
   gap: 14px;
+  margin-block-start: 31px;
 }
 
 .home__title {
@@ -74,7 +75,7 @@
   flex-direction: column;
   gap: 14px;
   width: 100%;
-  margin-block-start: 18px;
+  margin-block-start: 31px;
 }
 
 .payment__title {
@@ -118,6 +119,10 @@
   font-weight: bold;
 }
 
+.product__container {
+  margin-block-start: 31px;
+}
+
 /* TABLET HOME PAGE */
 @media (min-width: 37.5em) {
   .home__title {
@@ -141,6 +146,7 @@
 
   .home__player__id__verfy {
     gap: 34px;
+    margin-block-start: 51px;
   }
 
   .payment__cards {
@@ -160,6 +166,15 @@
 
   .payment__card__name {
     font-size: 1.5rem;
+  }
+
+  .home__payment__container {
+    gap: 37px;
+    margin-block-start: 51px;
+  }
+
+  .product__container {
+    margin-block-start: 51px;
   }
 }
 
