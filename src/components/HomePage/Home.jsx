@@ -5,8 +5,34 @@ import evcPlusImg from "../../../assets/images/evcplus.png";
 import sahalImg from "../../../assets/images/sahal.png";
 import jeebImg from "../../../assets/images/jeep.png";
 import zaadImg from "../../../assets/images/zaad.png";
+import { useEffect, useState } from "react";
 
 const Home = () => {
+  const [isSelectedindex, setisSelectedindex] = useState(0)
+  const onselect = (index) => setisSelectedindex(index)
+
+
+
+  var payment=[
+    {
+      paymentName: "Evc Plus",
+      paymentImage: evcPlusImg
+    },
+    {
+      paymentName: "Sahal Service",
+      paymentImage: sahalImg
+    },
+    {
+      paymentName: "Jeeb",
+      paymentImage: jeebImg
+    },
+    {
+      paymentName: "ZAAD",
+      paymentImage: zaadImg
+    }
+  ]
+
+
   return (
     <>
       <Header />
@@ -29,30 +55,20 @@ const Home = () => {
         <div className="home__payment__container">
           <span className="payment__title">Payment Method</span>
           <div className="payment__cards">
-            <div className="payment__card__info selected">
-              <img
-                className="payment__card__img"
-                src={evcPlusImg}
-                alt="evc-img"
-              />
-              <span className="payment__card__name">Evc Plus</span>
-            </div>
-            <div className="payment__card__info">
-              <img
-                className="payment__card__img"
-                src={sahalImg}
-                alt="evc-img"
-              />
-              <span className="payment__card__name">Sahal Service</span>
-            </div>
-            <div className="payment__card__info">
-              <img className="payment__card__img" src={jeebImg} alt="evc-img" />
-              <span className="payment__card__name">Jeeb</span>
-            </div>
-            <div className="payment__card__info">
-              <img className="payment__card__img" src={zaadImg} alt="evc-img" />
-              <span className="payment__card__name">ZAAD</span>
-            </div>
+            {
+              payment.map((data, index) => 
+                <>
+                <div className={`${isSelectedindex == index ? "payment__card__info selected" : "payment__card__info"}`} onClick={() => {onselect(index)}}>
+                  <img
+                  className="payment__card__img"
+                  src={data.paymentImage}
+                  alt="evc-img"
+                  />
+                  <span className="payment__card__name">{data.paymentName}</span>
+                </div>
+                </>
+              )
+            }
           </div>
         </div>
 
