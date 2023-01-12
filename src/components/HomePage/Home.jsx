@@ -17,7 +17,7 @@ const Home = () => {
 
   var payment = [
     {
-      paymentName: "Evc Plus",
+      paymentName: "Evc",
       paymentImage: evcPlusImg,
     },
     {
