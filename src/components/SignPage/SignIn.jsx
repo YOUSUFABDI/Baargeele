@@ -1,4 +1,4 @@
-import RegImg from "../../../assets/images/lgImg.png";
+import LoginImg from "../../../assets/images/login.png";
 import { Link } from "react-router-dom";
 import Header from "../Header/Header";
 import "./sign.css";
@@ -11,7 +11,7 @@ const SignIn = () => {
       </nav>
       <div className="sign__container">
         <div className="sign__reg__img">
-          <img className="sign_img" src={RegImg} alt="reg-img" />
+          <img className="sign_img" src={LoginImg} alt="reg-img" />
         </div>
         <div className="login__reg">
           <h2>Login</h2>

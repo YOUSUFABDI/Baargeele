@@ -33,10 +33,17 @@ const Register = () => {
               <span>Password</span>
               <input type="text" />
             </div>
-            <button className="registeration__btn">Register Now</button>
-            <button>
-              <Link to="/sign">Login</Link>
-            </button>
+            <div className="registration__footer">
+              <button className="registeration__btn">Register Now</button>
+              <div className="registration__sub__footer">
+                <span className="registration__alredy__acc">
+                  Already Have Account ?
+                </span>
+                <button className="registration__login__btn">
+                  <Link to="/sign">Login</Link>
+                </button>
+              </div>
+            </div>
           </form>
         </div>
       </div>

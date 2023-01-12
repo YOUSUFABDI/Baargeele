@@ -3,17 +3,14 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   place-items: center;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: var(--paddingX);
+  padding-top: 10px;
+  padding-bottom: 30px;
 }
 
 .sign_img {
   display: none;
   visibility: hidden;
-}
-
-.sign__reg__img {
-  width: 350px;
 }
 
 .sign__reg__img img {
@@ -23,16 +20,16 @@
 .login__reg {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: 0 22px;
   padding-top: 27px;
   padding-bottom: 127px;
   margin-top: 33px;
   height: 450px;
-  width: 343px;
+  width: 100%;
   color: var(--light);
   border-radius: 6px;
   border: 1px solid var(--light);
-  box-shadow: 0 0 18px rgba(255, 253, 253, 0.2);
+  box-shadow: -4px 4px 18px rgba(255, 253, 253, 0.2);
 }
 
 .login__reg h2 {
@@ -56,12 +53,11 @@
   background-color: transparent;
   color: var(--white);
   font-size: 1rem;
-  width: 295px;
   height: 56px;
   outline: none;
   border: 1px solid var(--light);
   border-radius: 8px;
-  box-shadow: -2px 2px 2px 1px rgba(255, 253, 253, 0.2);
+  box-shadow: 0 0 10px rgba(255, 253, 253, 0.2);
 }
 
 .sign__forgot__btn {
@@ -131,12 +127,28 @@
 /* TABLET SIGN IN PAGE */
 @media (min-width: 37.5em) {
   .sign_img {
-    display: inline;
+    display: none;
     visibility: visible;
   }
 
   .sign__container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    padding: 200px;
+  }
+
+  .sign__reverse input {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .sign__reverse span {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .sign__forgot__btn {
+    width: 90%;
+    margin: 0 auto;
   }
 }
 
@@ -144,5 +156,13 @@
 @media (min-width: 62.5em) {
   .sign__container {
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: 100px;
+    padding: var(--paddingX);
+    padding: 50px 0;
+  }
+
+  .sign_img {
+    display: block;
+    width: 100%;
   }
 }
