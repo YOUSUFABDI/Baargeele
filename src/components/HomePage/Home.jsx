@@ -101,8 +101,9 @@ const Home = () => {
         <div className="product__container">
           <span className="product__title">Select Product</span>
           <div className="product__cards">
+            <div className="product_card_hight active" >
             <div
-              className="product__card__info active"
+              className="product__card__info"
               style={productActiveBgImg}
             >
               <div className="product__amount__uc">
@@ -116,7 +117,8 @@ const Home = () => {
               />
               <p className="product__price__uc">0.75$</p>
             </div>
-
+            </div>
+            <div className="product_card_hight" >
             <div className="product__card__info" style={productBgImg}>
               <div className="product__amount__uc">
                 <img src={ThinUcImg} alt="thin-uc-img" />
@@ -129,7 +131,8 @@ const Home = () => {
               />
               <p className="product__price__uc">1.3$</p>
             </div>
-
+            </div>
+            <div className="product_card_hight" >
             <div className="product__card__info" style={productBgImg}>
               <div className="product__amount__uc">
                 <img src={ThinUcImg} alt="thin-uc-img" />
@@ -142,7 +145,9 @@ const Home = () => {
               />
               <p className="product__price__uc">1.85$</p>
             </div>
+            </div>
 
+            <div className="product_card_hight" >
             <div className="product__card__info" style={productBgImg}>
               <div className="product__amount__uc">
                 <img src={ThinUcImg} alt="thin-uc-img" />
@@ -155,6 +160,8 @@ const Home = () => {
               />
               <p className="product__price__uc">5.3$</p>
             </div>
+            </div>
+            <div className="product_card_hight" >
 
             <div className="product__card__info" style={productBgImg}>
               <div className="product__amount__uc">
@@ -168,6 +175,8 @@ const Home = () => {
               />
               <p className="product__price__uc">6.75$</p>
             </div>
+            </div>
+            <div className="product_card_hight" >
 
             <div className="product__card__info" style={productBgImg}>
               <div className="product__amount__uc">
@@ -181,6 +190,8 @@ const Home = () => {
               />
               <p className="product__price__uc">12$</p>
             </div>
+            </div>
+            <div className="product_card_hight" >
 
             <div className="product__card__info" style={productBgImg}>
               <div className="product__amount__uc">
@@ -194,6 +205,8 @@ const Home = () => {
               />
               <p className="product__price__uc">19$</p>
             </div>
+            </div>
+            <div className="product_card_hight" >
 
             <div className="product__card__info" style={productBgImg}>
               <div className="product__amount__uc">
@@ -207,6 +220,8 @@ const Home = () => {
               />
               <p className="product__price__uc">29$</p>
             </div>
+            </div>
+            <div className="product_card_hight" >
 
             <div className="product__card__info" style={productBgImg}>
               <div className="product__amount__uc">
@@ -220,6 +235,8 @@ const Home = () => {
               />
               <p className="product__price__uc">57$</p>
             </div>
+            </div>
+            <div className="product_card_hight" >
 
             <div className="product__card__info" style={productBgImg}>
               <div className="product__amount__uc">
@@ -232,6 +249,7 @@ const Home = () => {
                 alt="small-uc-img"
               />
               <p className="product__price__uc">109$</p>
+            </div>
             </div>
           </div>
         </div>
