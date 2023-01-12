@@ -98,6 +98,7 @@
   background-color: transparent;
   border: 1px solid var(--light);
   border-radius: 15px;
+  cursor: pointer;
 }
 
 .payment__card__info.selected {
@@ -119,8 +120,78 @@
   font-weight: bold;
 }
 
+/* MOBILE PRODUCT CONTAINER  */
 .product__container {
+  width: 100%;
   margin-block-start: 31px;
+}
+
+.product__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 18px;
+}
+
+.product__title {
+  color: var(--white);
+  font-size: 1.125;
+  font-weight: bold;
+}
+
+.product__card__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 0 5px rgba(255, 253, 253, 0.2);
+  border-radius: 8px;
+  height: 244px;
+  width: 100%;
+  color: var(--white);
+}
+
+.product__card__info {
+  color: var(--white);
+}
+
+.product__card__info.active {
+  background-color: var(--light);
+  color: var(--black);
+}
+
+.product__card__info.active p {
+  background-color: var(--blue);
+  color: var(--black);
+}
+
+.product__amount__uc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product__amount__uc span {
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+.product__bg__small__img {
+  height: 42px;
+  width: 71.14px;
+}
+
+.product__price__uc {
+  background-color: transparent;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  width: 70%;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 /* TABLET HOME PAGE */
