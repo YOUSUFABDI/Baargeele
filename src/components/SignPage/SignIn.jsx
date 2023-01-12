@@ -28,7 +28,7 @@ const SignIn = () => {
               <spam>Forgot Password!</spam>
             </div>
             <div className="btms">
-              <button className="sign__lg__btn">Login</button>
+              <button className="sign__lg__btn">OK</button>
               <div className="sign__make__acc">
                 <span>Dont't have an account?</span>
                 <button>
