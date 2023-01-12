@@ -10,14 +10,48 @@ import ThinUcImg from "../../../assets/images/thinUcImg.png";
 import SmallUcImg from "../../../assets/images/smallUcImg.png";
 import cardUcBg from "../../../assets/images/card-uc-bg.png";
 import cardActiveUcBg from "../../../assets/images/card-uc-active-bg.png";
+import axios from 'axios';
 
 const Home = () => {
   const [isSelectedindex, setisSelectedindex] = useState(0);
+  const [isSelectedindexP, setisSelectedindexP] = useState(0);
   const onselect = (index) => setisSelectedindex(index);
+  const [products, setproducts] = useState([]);
+  const onselectP = (index) => setisSelectedindexP(index);
+
+  useEffect(() => {
+    getProducts()
+  }, [])
+
+  const getProducts = () => {
+    axios.get('https://baargeelle.com/flutterConn/get_service.php')
+      .then(response => setproducts(response.data));
+  }
+
+
+  function imgClass(img) {
+    var imgcls = "";
+    if (img == "first") {
+      imgcls = "first_img"
+    } else if (img == "second") {
+      imgcls = "second_img"
+    } else if (img == "normal") {
+      imgcls = "normal_img"
+    } else if (img == "big") {
+      imgcls = "big_img"
+    } else if (img == "biggest") {
+      imgcls = "biggest_img"
+    }
+    return imgcls;
+  }
+
+  function img() {
+    
+  }
 
   var payment = [
     {
-      paymentName: "Evc",
+      paymentName: "Evc Plus",
       paymentImage: evcPlusImg,
     },
     {
@@ -75,11 +109,10 @@ const Home = () => {
             {payment.map((data, index) => (
               <>
                 <div
-                  className={`${
-                    isSelectedindex == index
-                      ? "payment__card__info selected"
-                      : "payment__card__info"
-                  }`}
+                  className={`${isSelectedindex == index
+                    ? "payment__card__info selected"
+                    : "payment__card__info"
+                    }`}
                   onClick={() => {
                     onselect(index);
                   }}
@@ -101,156 +134,28 @@ const Home = () => {
         <div className="product__container">
           <span className="product__title">Select Product</span>
           <div className="product__cards">
-            <div className="product_card_hight active" >
-            <div
-              className="product__card__info"
-              style={productActiveBgImg}
-            >
-              <div className="product__amount__uc">
-                <img src={ThinUcImg} alt="thin-uc-img" />
-                <span>32</span>
+            {products.map((product, index) => (
+              <div className={`${isSelectedindexP == index
+                ? "product_card_hight active"
+                : "product_card_hight"
+                }`} onClick={() => {onselectP(index)}} >
+                <div
+                  className="product__card__info"
+                  style={isSelectedindexP == index ? productActiveBgImg : productBgImg}
+                >
+                  <div className="product__amount__uc">
+                    <img src={ThinUcImg} alt="thin-uc-img" />
+                    <span>{product.UC}</span>
+                  </div>
+                  <img
+                    className={imgClass(product.image)}
+                    src={"../../../assets/images/"+product.image+".png"}
+                    alt={product.image}
+                  />
+                  <p className="product__price__uc">{product.Price}$</p>
+                </div>
               </div>
-              <img
-                className="product__bg__small__img"
-                src={SmallUcImg}
-                alt="small-uc-img"
-              />
-              <p className="product__price__uc">0.75$</p>
-            </div>
-            </div>
-            <div className="product_card_hight" >
-            <div className="product__card__info" style={productBgImg}>
-              <div className="product__amount__uc">
-                <img src={ThinUcImg} alt="thin-uc-img" />
-                <span>63</span>
-              </div>
-              <img
-                className="product__bg__small__img"
-                src={SmallUcImg}
-                alt="small-uc-img"
-              />
-              <p className="product__price__uc">1.3$</p>
-            </div>
-            </div>
-            <div className="product_card_hight" >
-            <div className="product__card__info" style={productBgImg}>
-              <div className="product__amount__uc">
-                <img src={ThinUcImg} alt="thin-uc-img" />
-                <span>198</span>
-              </div>
-              <img
-                className="product__bg__small__img"
-                src={SmallUcImg}
-                alt="small-uc-img"
-              />
-              <p className="product__price__uc">1.85$</p>
-            </div>
-            </div>
-
-            <div className="product_card_hight" >
-            <div className="product__card__info" style={productBgImg}>
-              <div className="product__amount__uc">
-                <img src={ThinUcImg} alt="thin-uc-img" />
-                <span>261</span>
-              </div>
-              <img
-                className="product__bg__small__img"
-                src={SmallUcImg}
-                alt="small-uc-img"
-              />
-              <p className="product__price__uc">5.3$</p>
-            </div>
-            </div>
-            <div className="product_card_hight" >
-
-            <div className="product__card__info" style={productBgImg}>
-              <div className="product__amount__uc">
-                <img src={ThinUcImg} alt="thin-uc-img" />
-                <span>324</span>
-              </div>
-              <img
-                className="product__bg__small__img"
-                src={SmallUcImg}
-                alt="small-uc-img"
-              />
-              <p className="product__price__uc">6.75$</p>
-            </div>
-            </div>
-            <div className="product_card_hight" >
-
-            <div className="product__card__info" style={productBgImg}>
-              <div className="product__amount__uc">
-                <img src={ThinUcImg} alt="thin-uc-img" />
-                <span>690</span>
-              </div>
-              <img
-                className="product__bg__small__img"
-                src={SmallUcImg}
-                alt="small-uc-img"
-              />
-              <p className="product__price__uc">12$</p>
-            </div>
-            </div>
-            <div className="product_card_hight" >
-
-            <div className="product__card__info" style={productBgImg}>
-              <div className="product__amount__uc">
-                <img src={ThinUcImg} alt="thin-uc-img" />
-                <span>1080</span>
-              </div>
-              <img
-                className="product__bg__small__img"
-                src={SmallUcImg}
-                alt="small-uc-img"
-              />
-              <p className="product__price__uc">19$</p>
-            </div>
-            </div>
-            <div className="product_card_hight" >
-
-            <div className="product__card__info" style={productBgImg}>
-              <div className="product__amount__uc">
-                <img src={ThinUcImg} alt="thin-uc-img" />
-                <span>1875</span>
-              </div>
-              <img
-                className="product__bg__small__img"
-                src={SmallUcImg}
-                alt="small-uc-img"
-              />
-              <p className="product__price__uc">29$</p>
-            </div>
-            </div>
-            <div className="product_card_hight" >
-
-            <div className="product__card__info" style={productBgImg}>
-              <div className="product__amount__uc">
-                <img src={ThinUcImg} alt="thin-uc-img" />
-                <span>4000</span>
-              </div>
-              <img
-                className="product__bg__small__img"
-                src={SmallUcImg}
-                alt="small-uc-img"
-              />
-              <p className="product__price__uc">57$</p>
-            </div>
-            </div>
-            <div className="product_card_hight" >
-
-            <div className="product__card__info" style={productBgImg}>
-              <div className="product__amount__uc">
-                <img src={ThinUcImg} alt="thin-uc-img" />
-                <span>8400</span>
-              </div>
-              <img
-                className="product__bg__small__img"
-                src={SmallUcImg}
-                alt="small-uc-img"
-              />
-              <p className="product__price__uc">109$</p>
-            </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
