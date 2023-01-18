@@ -45,8 +45,6 @@ const Home = () => {
     return imgcls;
   }
 
-  function img() {}
-
   var payment = [
     {
       paymentName: "Evc Plus",
@@ -66,21 +64,21 @@ const Home = () => {
     },
   ];
 
-  const productActiveBgImg = {
-    backgroundImage: `url(${cardActiveUcBg})`,
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    height: "210px",
-    width: "100%",
-  };
+  // const productActiveBgImg = {
+  //   backgroundImage: `url(${cardActiveUcBg})`,
+  //   backgroundRepeat: "no-repeat",
+  //   backgroundSize: "cover",
+  //   height: "210px",
+  //   width: "100%",
+  // };
 
-  const productBgImg = {
-    backgroundImage: `url(${cardUcBg})`,
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    height: "210px",
-    width: "100%",
-  };
+  // const productBgImg = {
+  //   backgroundImage: `url(${cardUcBg})`,
+  //   backgroundRepeat: "no-repeat",
+  //   backgroundSize: "cover",
+  //   height: "210px",
+  //   width: "100%",
+  // };
 
   return (
     <>
@@ -145,22 +143,28 @@ const Home = () => {
                 }}
               >
                 <div
-                  className="product__card__info"
-                  style={
+                  className={`${
                     isSelectedindexP == index
-                      ? productActiveBgImg
-                      : productBgImg
-                  }
+                      ? "product__card__info active"
+                      : "product__card__info"
+                  }`}
+                  // style={
+                  //   isSelectedindexP == index
+                  //     ? productActiveBgImg
+                  //     : productBgImg
+                  // }
                 >
                   <div className="product__amount__uc">
                     <img src={ThinUcImg} alt="thin-uc-img" />
                     <span>{product.UC}</span>
                   </div>
+                  <div className="card_img">
                   <img
                     className={imgClass(product.image)}
                     src={"../../../assets/images/" + product.image + ".png"}
                     alt={product.image}
                   />
+                  </div>
                   <p className="product__price__uc">{product.Price}$</p>
                 </div>
               </div>
