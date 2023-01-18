@@ -7,9 +7,6 @@ import jeebImg from "../../../assets/images/jeep.png";
 import zaadImg from "../../../assets/images/zaad.png";
 import { useEffect, useState } from "react";
 import ThinUcImg from "../../../assets/images/thinUcImg.png";
-import SmallUcImg from "../../../assets/images/smallUcImg.png";
-import cardUcBg from "../../../assets/images/card-uc-bg.png";
-import cardActiveUcBg from "../../../assets/images/card-uc-active-bg.png";
 import axios from "axios";
 
 const Home = () => {
@@ -63,22 +60,6 @@ const Home = () => {
       paymentImage: zaadImg,
     },
   ];
-
-  // const productActiveBgImg = {
-  //   backgroundImage: `url(${cardActiveUcBg})`,
-  //   backgroundRepeat: "no-repeat",
-  //   backgroundSize: "cover",
-  //   height: "210px",
-  //   width: "100%",
-  // };
-
-  // const productBgImg = {
-  //   backgroundImage: `url(${cardUcBg})`,
-  //   backgroundRepeat: "no-repeat",
-  //   backgroundSize: "cover",
-  //   height: "210px",
-  //   width: "100%",
-  // };
 
   return (
     <>
@@ -148,22 +129,17 @@ const Home = () => {
                       ? "product__card__info active"
                       : "product__card__info"
                   }`}
-                  // style={
-                  //   isSelectedindexP == index
-                  //     ? productActiveBgImg
-                  //     : productBgImg
-                  // }
                 >
                   <div className="product__amount__uc">
                     <img src={ThinUcImg} alt="thin-uc-img" />
                     <span>{product.UC}</span>
                   </div>
                   <div className="card_img">
-                  <img
-                    className={imgClass(product.image)}
-                    src={"../../../assets/images/" + product.image + ".png"}
-                    alt={product.image}
-                  />
+                    <img
+                      className={imgClass(product.image)}
+                      src={"../../../assets/images/" + product.image + ".png"}
+                      alt={product.image}
+                    />
                   </div>
                   <p className="product__price__uc">{product.Price}$</p>
                 </div>
