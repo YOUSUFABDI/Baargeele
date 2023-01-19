@@ -68,7 +68,6 @@
   }
 
   .footer__total__pay-btn {
-    background-color: tomato;
     justify-content: flex-end;
     gap: 30px;
   }
@@ -82,8 +81,13 @@
     padding-right: 2px;
   }
 
+
+}
+
+/* TABLET2 FOOTER PAYMENT */
+@media (min-width: 48.125em) {
   .footer__pay-btn {
-    /* width: 40%; */
+    width: 152px;
   }
 }
 
