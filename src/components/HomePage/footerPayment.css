@@ -55,6 +55,7 @@
 .footer__pay-btn.active {
   background-color: var(--light);
   color: var(--black);
+  opacity: 1;
 }
 
 /* TABLET FOOTER PAYMENT */

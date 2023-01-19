@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./footerPayment.css";
 
 const FooterPayment = () => {
@@ -14,7 +15,7 @@ const FooterPayment = () => {
           <span className="footer__total__title">Total: </span>
           <span className="footer__total__money">0.49 USD</span>
         </div>
-        <button className="footer__pay-btn">Pay now</button>
+        <button className="footer__pay-btn ">Pay now</button>
       </div>
     </div>
   );
