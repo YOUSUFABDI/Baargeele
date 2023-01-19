@@ -1,0 +1,95 @@
+/* MOBILE PAYMENT SECTION */
+.home__payment__container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  margin-block-start: 31px;
+}
+
+.payment__title {
+  color: var(--white);
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+.payment__cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 18px;
+}
+
+.payment__card__info {
+  display: flex;
+  align-items: center;
+  gap: 21px;
+  height: 68px;
+  background-color: transparent;
+  border: 1px solid var(--light);
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.payment__card__info.selected {
+  background-color: var(--light);
+}
+
+.selected .payment__card__name {
+  color: #000;
+}
+
+.payment__card__img {
+  width: 79.94px;
+  height: 57px;
+}
+
+.payment__card__name {
+  color: var(--white);
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+/* TABLET PAYMENT SECTION */
+@media (min-width: 37.5em) {
+  .payment__cards {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 37px;
+  }
+
+  .payment__card__info {
+    gap: 10px;
+    height: 80px;
+  }
+
+  .payment__card__img {
+    width: 100px;
+    height: 68px;
+  }
+
+  .payment__card__name {
+    font-size: 1.5rem;
+  }
+
+  .home__payment__container {
+    gap: 37px;
+    margin-block-start: 51px;
+  }
+}
+
+/* DESKTOP PAYMENT SECTION */
+@media (min-width: 62.5em) {
+  .payment__cards {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 47px;
+  }
+
+  .payment__card__info {
+    height: 80px;
+    gap: 18px;
+  }
+
+  .home__payment__container {
+    gap: 37px;
+    margin-block-start: 71px;
+  }
+}
