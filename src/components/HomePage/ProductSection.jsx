@@ -3,11 +3,9 @@ import axios from "axios";
 import "./productSection.css";
 import ThinUcImg from "../../../assets/images/thinUcImg.png";
 
-const ProductSection = () => {
-  const [products, setproducts] = useState([]);
+const ProductSection = ({ setproducts, products, setProPrice }) => {
   const [isSelectedindexP, setisSelectedindexP] = useState(0);
   const onselectP = (index) => setisSelectedindexP(index);
-
   useEffect(() => {
     getProducts();
   }, []);
@@ -40,6 +38,7 @@ const ProductSection = () => {
       <div className="product__cards">
         {products.map((product, index) => (
           <div
+            key={index}
             className={`${
               isSelectedindexP == index
                 ? "product_card_hight active"
@@ -47,6 +46,7 @@ const ProductSection = () => {
             }`}
             onClick={() => {
               onselectP(index);
+              setProPrice(product.Price);
             }}
           >
             <div
