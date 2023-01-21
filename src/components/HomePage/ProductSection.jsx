@@ -13,7 +13,10 @@ const ProductSection = ({ setproducts, products, setProPrice }) => {
   const getProducts = () => {
     axios
       .get("https://baargeelle.com/flutterConn/get_service.php")
-      .then((response) => setproducts(response.data));
+      .then((response) => {
+        setproducts(response.data)
+        setProPrice(response.data[0].Price);
+      });
   };
 
   function imgClass(img) {
@@ -39,22 +42,20 @@ const ProductSection = ({ setproducts, products, setProPrice }) => {
         {products.map((product, index) => (
           <div
             key={index}
-            className={`${
-              isSelectedindexP == index
-                ? "product_card_hight active"
-                : "product_card_hight"
-            }`}
+            className={`${isSelectedindexP == index
+              ? "product_card_hight active"
+              : "product_card_hight"
+              }`}
             onClick={() => {
               onselectP(index);
               setProPrice(product.Price);
             }}
           >
             <div
-              className={`${
-                isSelectedindexP == index
-                  ? "product__card__info active"
-                  : "product__card__info"
-              }`}
+              className={`${isSelectedindexP == index
+                ? "product__card__info active"
+                : "product__card__info"
+                }`}
             >
               <div className="product__amount__uc">
                 <img src={ThinUcImg} alt="thin-uc-img" />
