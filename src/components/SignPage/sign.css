@@ -24,7 +24,7 @@
   padding-top: 27px;
   padding-bottom: 127px;
   margin-top: 33px;
-  height: 450px;
+  height: 475px;
   width: 100%;
   color: var(--light);
   border-radius: 6px;
@@ -122,6 +122,11 @@
 
 .sign__make__acc button:hover {
   scale: 1.1;
+}
+
+.val-lg {
+  color: red;
+  padding: var(--paddingX);
 }
 
 /* TABLET SIGN IN PAGE */

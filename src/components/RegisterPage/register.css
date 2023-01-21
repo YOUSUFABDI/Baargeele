@@ -4,10 +4,8 @@
   grid-template-columns: repeat(1, 1fr);
   place-items: center;
   padding: var(--paddingX);
-  /* padding: 0 100px; */
   padding-top: 10px;
   padding-bottom: 50px;
-  /* margin: auto 0; */
   width: 100%;
 }
 
@@ -122,6 +120,11 @@
 .registration__sub__footer {
   display: flex;
   flex-direction: column;
+}
+
+.val-reg {
+  color: red;
+  padding: var(--paddingX);
 }
 
 /* TABLET REGISTRATION IN PAGE */
