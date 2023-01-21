@@ -24,6 +24,8 @@
   outline: none;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
   border: 1px solid var(--light);
   font-size: 1.125rem;
   background-color: transparent;
