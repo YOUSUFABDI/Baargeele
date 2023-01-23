@@ -31,13 +31,13 @@ const Header = () => {
         </li>
         <li className="nav-item">
           <NavLink
-            to="/about"
+            to="/download"
             className={({ isActive }) =>
               "nav-links" + (isActive ? " activated" : "")
             }
             onClick={closeMobileMenu}
           >
-            About
+            Download
           </NavLink>
         </li>
         <li className="nav-item">

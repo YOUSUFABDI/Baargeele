@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --light-gray-2: hsl(0, 2%, 82%);
+  --marigold: hsl(209, 69%, 84%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* MOBILE DOWNLOAD SECTION */
+.download__section {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("../../../assets/images/hero-bg.jpg");
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.download__wrapper {
+  padding: var(--paddingX);
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.download__content {
+  /* background-color: rebeccapurple; */
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  /* height: 400px; */
+}
+
+.download__title {
+  color: var(--marigold);
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.download__sub-title {
+  color: var(--white);
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.special {
+  color: var(--marigold);
+}
+
+.downlaod__desc {
+  color: var(--white);
+  line-height: 1.5;
+  opacity: 0.7;
+}
+
+.downlaod__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--marigold);
+  border: none;
+  font-size: 1.125rem;
+  font-weight: 700;
+  height: 56px;
+  border-radius: 6px;
+  width: 200px;
+  /* width: 45%; */
+  cursor: pointer;
+  /* margin: 0 auto; */
+}
+
+.downlaod__btn a {
+  color: var(--black);
+}
+
+.download__banner-img {
+  display: none;
+}
+
+/* TABLET DOWNLOAD SECTION */
+@media (min-width: 37.5em) {
+  .download__content {
+    gap: 10px;
+  }
+
+  .download__title {
+    font-size: 2rem;
+  }
+
+  .download__sub-title {
+    font-size: 4.5rem;
+  }
+
+  .downlaod__desc {
+    /* background-color: tan; */
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+
+  .downlaod__btn {
+    /* width: 30%; */
+  }
+}
+
+/* DESKTOP DOWNLOAD SECTION */
+@media (min-width: 62.5em) {
+  .downlaod__btn {
+    /* width: 25%; */
+  }
+
+  .download__banner-img {
+    display: block;
+  }
+
+  .download__wrapper {
+    display: flex;
+    align-items: center;
+  }
+}
