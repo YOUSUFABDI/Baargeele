@@ -2,6 +2,7 @@
 .product__container {
   width: 100%;
   margin-block-start: 31px;
+  padding-bottom: 120px;
 }
 
 .product__cards {
