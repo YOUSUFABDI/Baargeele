@@ -9,6 +9,8 @@ const Header = () => {
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
+  const islogin = true
+
   return (
     <div className="navbar-container container">
       <Link to="/" className="navbar-logo">
@@ -52,16 +54,30 @@ const Header = () => {
           </NavLink>
         </li>
         <li className="nav-item">
-          <NavLink
-            to="/sign"
-            className={({ isActive }) =>
-              "nav-links-btn" + (isActive ? " active-btn" : "")
-            }
-            id="sign__btn"
-            onClick={closeMobileMenu}
-          >
-            Sign in
-          </NavLink>
+          {
+            islogin ?
+              <NavLink
+                to="/sign"
+                className={({ isActive }) =>
+                  "nav-links-btn" + (isActive ? " active-btn" : "")
+                }
+                id="sign__btn"
+                onClick={closeMobileMenu}
+              >
+                Sign out
+              </NavLink> :
+              <NavLink
+                to="/sign"
+                className={({ isActive }) =>
+                  "nav-links-btn" + (isActive ? " active-btn" : "")
+                }
+                id="sign__btn"
+                onClick={closeMobileMenu}
+              >
+                Sign in
+              </NavLink>
+          }
+
         </li>
       </ul>
     </div>
