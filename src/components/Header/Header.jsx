@@ -8,8 +8,13 @@ const Header = () => {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+  const [islogin, setIslogin] = useState(localStorage.getItem("isLogin"));
 
-  const islogin = true
+  if(localStorage.getItem("isLogin") == null){
+    localStorage.setItem("isLogin","false")
+  }
+  // setIslogin(localStorage.setItem("isLogin","true"))
+
 
   return (
     <div className="navbar-container container">
