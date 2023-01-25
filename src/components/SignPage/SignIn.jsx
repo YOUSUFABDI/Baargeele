@@ -47,7 +47,7 @@ const SignIn = () => {
             </div>
             <div className="btms">
               <button className="sign__lg__btn" onClick={handleSubmit}>
-                <Link to="/">OK</Link>
+                OK
               </button>
               <div className="sign__make__acc">
                 <span>Dont't have an account?</span>

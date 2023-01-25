@@ -63,7 +63,11 @@ const Register = () => {
             </div>
             <div className="registration__footer">
               <button className="registeration__btn" onClick={handleSubmit}>
+              <Link
+              to="/"
+              >
                 Register Now
+              </Link>
               </button>
               <div className="registration__sub__footer">
                 <span className="registration__alredy__acc">

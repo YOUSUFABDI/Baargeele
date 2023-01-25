@@ -10,6 +10,23 @@ const Header = () => {
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
   const { islogin, setIslogin } = useLocalData();
+
+  console.log(islogin)
+
+  setIslogin(localStorage.getItem("isLogin"));
+  if (localStorage.getItem("isLogin") == null) {
+    localStorage.setItem("isLogin", "false");
+  }
+
+  const signOut = () => {
+    setIslogin(localStorage.getItem("isLogin"));
+    if (localStorage.getItem("isLogin") == null) {
+      localStorage.setItem("isLogin", "false");
+    } else {
+      setIslogin(localStorage.setItem("isLogin", "false"));
+    }
+  }
+
   // const { handleSubmit } = useForm();
 
   // setIslogin(localStorage.getItem("isLogin"));
@@ -62,16 +79,19 @@ const Header = () => {
           </NavLink>
         </li>
         <li className="nav-item">
-          {islogin ? (
+          {islogin === "true" ? (
             <NavLink
-              to="/sign"
+              to="/"
               className={({ isActive }) =>
                 "nav-links-btn" + (isActive ? " active-btn" : "")
               }
               id="sign__btn"
-              onClick={closeMobileMenu}
+              onClick={() => {
+                closeMobileMenu;
+                signOut();
+              }}
             >
-              Sign in
+              Sign out
             </NavLink>
           ) : (
             <NavLink
@@ -82,7 +102,7 @@ const Header = () => {
               id="sign__btn"
               onClick={closeMobileMenu}
             >
-              Sign out
+              Sign in
             </NavLink>
           )}
         </li>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useLocalData } from "./DataContext";
 import Home from "./components/HomePage/Home";
+import { useNavigate } from "react-router-dom";
 
 const useForm = (validateForms) => {
   const [values, setValues] = useState({
@@ -15,6 +16,8 @@ const useForm = (validateForms) => {
   const [errors, setErrors] = useState({});
 
   const { islogin, setIslogin } = useLocalData();
+
+  const navigate = useNavigate();
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -34,6 +37,7 @@ const useForm = (validateForms) => {
     } else {
       setIslogin(localStorage.setItem("isLogin", "true"));
     }
+    navigate("/")
   };
 
   return { handleChange, handleSubmit, values, errors };

@@ -1,6 +1,7 @@
 import Header from "../Header/Header";
 import "./download.css";
 import bannerImage from "../../../assets/images/hero-banner.png";
+import { FcPhoneAndroid } from 'react-icons/fc';
 
 const Download = () => {
   return (
@@ -22,7 +23,7 @@ const Download = () => {
             </p>
             <button className="downlaod__btn">
               <a href="https://baargeelle.com/app/Baargeelle.apk">
-                AVAILABLE NOW
+                DOWNLOAD <FcPhoneAndroid />
               </a>
             </button>
           </div>

@@ -38,6 +38,7 @@
   color: var(--marigold);
   font-size: 1.3rem;
   font-weight: 700;
+  font-family: "marker_felt";
   text-transform: uppercase;
   text-align: center;
   transition: all 0.5s ease;
@@ -45,7 +46,7 @@
 
 .download__sub-title {
   color: var(--white);
-  font-size: 2.8125rem;
+  font-size: 2.5rem;
   font-weight: 700;
   text-align: center;
   transition: all 0.5s ease;
@@ -79,6 +80,7 @@
   cursor: pointer;
   /* margin: 0 auto; */
 }
+
 
 .downlaod__btn a {
   color: var(--black);

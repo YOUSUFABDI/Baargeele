@@ -8,7 +8,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { DataProvider } from "./DataContext";
 
 const App = () => {
-  // const [showHome, setShowHome] = useState(false);
+
 
   return (
     <div className="wrapper">
