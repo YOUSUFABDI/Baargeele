@@ -1,0 +1,154 @@
+/* MOBILE USER SECTION */
+.profile__section {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: var(--paddingX);
+  margin-block-start: 40px;
+}
+
+.profile__user {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.profile__name-gmail {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+.profile__name {
+  font-size: 1.625rem;
+  font-weight: bold;
+  color: var(--white);
+}
+
+.profile__gmail {
+  font-size: 1.125rem;
+  color: var(--white);
+  opacity: 0.5;
+}
+
+.profile__arrow-img.active {
+  transform: rotate(89deg);
+}
+
+/* MOBILE PURCHASE HISTORY SECTION */
+.profile__purchase__history {
+  margin-block-start: 24px;
+}
+
+.profile__title {
+  color: var(--white);
+  font-size: 1.375rem;
+  font-weight: bold;
+}
+
+.profile__history__purchases {
+  margin-block-start: 28px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 28px;
+}
+
+.profile__history {
+  position: relative;
+  background-color: var(--dark);
+  border-radius: 15px;
+  box-shadow: 0px 0px 8px #2f2e41;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 96px;
+}
+
+.profile__date__uc {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile__date {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--light);
+  width: 90px;
+  height: 18px;
+  border-radius: 15px 0px;
+}
+
+.profile__date p {
+  font-size: 0.8125rem;
+  color: var(--black);
+  opacity: 0.6;
+}
+
+.profile__uc__img {
+  width: 100%;
+  height: 34px;
+}
+
+.profile__name__id {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+}
+
+.profile__player__name {
+  color: var(--white);
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.profile__player__id {
+  color: var(--white);
+  font-size: 1rem;
+  opacity: 0.5;
+}
+
+.profile__money__uc {
+  display: flex;
+  margin-right: 17px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+}
+
+.profile__money {
+  color: var(--white);
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.profile__uc {
+  color: var(--white);
+  font-size: 1rem;
+  opacity: 0.5;
+}
+
+/* TABLET USER SECTION */
+@media (min-width: 37.5em) {
+  .profile__section {
+    /* background-color: rebeccapurple; */
+    max-width: 561px;
+    margin: 0 auto;
+    margin-block-start: 70px;
+  }
+}
+
+/* DESTOP USER SECTION */
+@media (min-width: 62.5em) {
+  .profile__section {
+    margin-block-start: 60px;
+  }
+}

@@ -4,12 +4,11 @@ import Download from "./pages/download";
 import Contact from "./pages/contact";
 import SignIn from "./pages/signIn";
 import Register from "./pages/register";
+import Profile from "./pages/profile";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { DataProvider } from "./DataContext";
 
 const App = () => {
-
-
   return (
     <div className="wrapper">
       <DataProvider>
@@ -20,6 +19,7 @@ const App = () => {
             <Route path="/contact" element={<Contact />}></Route>
             <Route path="/sign" element={<SignIn />}></Route>
             <Route path="/register" element={<Register />}></Route>
+            <Route path="/profile" element={<Profile />}></Route>
           </Routes>
         </BrowserRouter>
       </DataProvider>

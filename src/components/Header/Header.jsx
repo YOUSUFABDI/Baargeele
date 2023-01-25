@@ -4,6 +4,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import "./header.css";
 import { useLocalData } from "../../DataContext";
+import { FaUserCircle } from "react-icons/fa";
 
 const Header = () => {
   const [click, setClick] = useState(false);
@@ -11,7 +12,7 @@ const Header = () => {
   const closeMobileMenu = () => setClick(false);
   const { islogin, setIslogin } = useLocalData();
 
-  console.log(islogin)
+  // console.log(islogin);
 
   setIslogin(localStorage.getItem("isLogin"));
   if (localStorage.getItem("isLogin") == null) {
@@ -25,7 +26,7 @@ const Header = () => {
     } else {
       setIslogin(localStorage.setItem("isLogin", "false"));
     }
-  }
+  };
 
   // const { handleSubmit } = useForm();
 
@@ -81,17 +82,18 @@ const Header = () => {
         <li className="nav-item">
           {islogin === "true" ? (
             <NavLink
-              to="/"
+              to="/profile"
               className={({ isActive }) =>
-                "nav-links-btn" + (isActive ? " active-btn" : "")
+                "nav-links" + (isActive ? " activated" : "")
               }
               id="sign__btn"
               onClick={() => {
                 closeMobileMenu;
-                signOut();
+                // signOut();
               }}
             >
-              Sign out
+              {/* Profile */}
+              <FaUserCircle size={40} />
             </NavLink>
           ) : (
             <NavLink
