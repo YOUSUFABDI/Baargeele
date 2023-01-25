@@ -3,18 +3,21 @@ import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import "./header.css";
+import { useLocalData } from "../../DataContext";
 
 const Header = () => {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
-  const [islogin, setIslogin] = useState(localStorage.getItem("isLogin"));
+  const { islogin, setIslogin } = useLocalData();
+  // const { handleSubmit } = useForm();
 
-  if(localStorage.getItem("isLogin") == null){
-    localStorage.setItem("isLogin","false")
-  }
-  // setIslogin(localStorage.setItem("isLogin","true"))
-
+  // setIslogin(localStorage.getItem("isLogin"));
+  // if (localStorage.getItem("isLogin") == null) {
+  //   localStorage.setItem("isLogin", "false");
+  // } else {
+  //   setIslogin(localStorage.setItem("isLogin", "true"));
+  // }
 
   return (
     <div className="navbar-container container">
@@ -59,30 +62,29 @@ const Header = () => {
           </NavLink>
         </li>
         <li className="nav-item">
-          {
-            islogin ?
-              <NavLink
-                to="/sign"
-                className={({ isActive }) =>
-                  "nav-links-btn" + (isActive ? " active-btn" : "")
-                }
-                id="sign__btn"
-                onClick={closeMobileMenu}
-              >
-                Sign out
-              </NavLink> :
-              <NavLink
-                to="/sign"
-                className={({ isActive }) =>
-                  "nav-links-btn" + (isActive ? " active-btn" : "")
-                }
-                id="sign__btn"
-                onClick={closeMobileMenu}
-              >
-                Sign in
-              </NavLink>
-          }
-
+          {islogin ? (
+            <NavLink
+              to="/sign"
+              className={({ isActive }) =>
+                "nav-links-btn" + (isActive ? " active-btn" : "")
+              }
+              id="sign__btn"
+              onClick={closeMobileMenu}
+            >
+              Sign in
+            </NavLink>
+          ) : (
+            <NavLink
+              to="/sign"
+              className={({ isActive }) =>
+                "nav-links-btn" + (isActive ? " active-btn" : "")
+              }
+              id="sign__btn"
+              onClick={closeMobileMenu}
+            >
+              Sign out
+            </NavLink>
+          )}
         </li>
       </ul>
     </div>
