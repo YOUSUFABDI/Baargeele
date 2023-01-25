@@ -86,7 +86,6 @@ const Header = () => {
               className={({ isActive }) =>
                 "nav-links" + (isActive ? " activated" : "")
               }
-              id="sign__btn"
               onClick={() => {
                 closeMobileMenu;
                 // signOut();
