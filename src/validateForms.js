@@ -2,29 +2,35 @@ export default function validateForms(values) {
   let errors = {};
 
   //   Reg
-  if (!values.name) {
-    errors.name = "name is required";
+
+  const validName = new RegExp(/^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/);
+  if (!validName.test(values.name)) {
+    errors.name = "inValid Name";
   }
 
-  if (!values.phone) {
-    errors.phone = "phone number is required";
+  const validPhone = new RegExp(/^[6]\d{8}$/);
+  if (!validPhone.test(values.phone)) {
+    errors.phone = "inCorrect PhoneNumber";
   }
 
-  if (!values.gmail) {
-    errors.gmail = "gmail is required";
+  const validGmail = new RegExp(/^[\w.+\-]+@gmail\.com$/);
+  if (!validGmail.test(values.gmail)) {
+    errors.gmail = "inCorrect Gmail";
   }
 
-  if (!values.password) {
-    errors.password = "password is required";
+  const validPassword = new RegExp(/^.{8,30}$/);
+  if (!validPassword.test(values.password)) {
+    errors.password = "Password must be minimum eight characters";
   }
 
   //   Login
-  if (!values.loginGmail) {
-    errors.loginGmail = "gmail is requireed";
+  
+  if (!validGmail.test(values.loginGmail)) {
+    errors.loginGmail = "inCorrect Gmail";
   }
 
-  if (!values.loginPass) {
-    errors.loginPass = "password is requireed";
+  if (!validPassword.test(values.loginPass)) {
+    errors.loginPass = "Password must be minimum eight characters";
   }
 
   return errors;

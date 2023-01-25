@@ -64,7 +64,7 @@ const Register = () => {
             <div className="registration__footer">
               <button className="registeration__btn" onClick={handleSubmit}>
               <Link
-              to="/"
+              // to="/"
               >
                 Register Now
               </Link>
