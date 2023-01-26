@@ -4,10 +4,11 @@ import Header from "../Header/Header";
 import "./sign.css";
 import useForm from "../../useForm";
 import validateForms from "../../validateForms";
-import { useEffect } from "react";
+import toast, { Toaster } from 'react-hot-toast';
 
 const SignIn = () => {
-  const { handleChange, handleSubmit, values, errors } = useForm(validateForms);
+  const { handleChange, handleSubmit, values, errors, isLoading } = useForm(validateForms);
+  const notify = () => toast.success('Successfully toasted!');
 
   return (
     <>
@@ -48,7 +49,9 @@ const SignIn = () => {
             </div>
             <div className="btms">
               <button className="sign__lg__btn" onClick={handleSubmit}>
-                OK
+                {
+                  isLoading ? "Loading" : "OK"
+                }
               </button>
               <div className="sign__make__acc">
                 <span>Dont't have an account?</span>
