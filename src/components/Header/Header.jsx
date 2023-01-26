@@ -24,7 +24,8 @@ const Header = () => {
     if (localStorage.getItem("isLogin") == null) {
       localStorage.setItem("isLogin", "false");
     } else {
-      setIslogin(localStorage.setItem("isLogin", "false"));
+      localStorage.setItem("isLogin", "false")
+      setIslogin(localStorage.getItem("isLogin"));
     }
   };
 

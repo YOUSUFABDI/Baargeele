@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { useLocalData } from "./DataContext";
-import Home from "./components/HomePage/Home";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
 
 const useForm = (validateForms) => {
   const [values, setValues] = useState({
@@ -14,7 +12,7 @@ const useForm = (validateForms) => {
     loginPass: "",
   });
 
-  const [errors, setErrors] = useState({});
+  let [errors, setErrors] = useState({});
 
   const { islogin, setIslogin } = useLocalData();
 
@@ -28,20 +26,25 @@ const useForm = (validateForms) => {
     });
   };
 
-  useEffect(() => {}, [values]);
-  console.log(values.loginGmail);
+  
+
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setErrors(validateForms(values));
-
-    setIslogin(localStorage.getItem("isLogin"));
-    if (localStorage.getItem("isLogin") == null) {
-      localStorage.setItem("isLogin", "false");
+    setErrors(errors = validateForms(values))
+    if (errors.loginGmail || errors.loginPass) {
+      console.log("error")
     } else {
-      setIslogin(localStorage.setItem("isLogin", "true"));
+      console.log("done")
+      setIslogin(localStorage.getItem("isLogin"));
+      if (localStorage.getItem("isLogin") == null) {
+        localStorage.setItem("isLogin", "false");
+      } else {
+        localStorage.setItem("isLogin", "true")
+        setIslogin(localStorage.getItem("isLogin"));
+      }
+      navigate("/");
     }
-    navigate("/");
   };
 
   return { handleChange, handleSubmit, values, errors };
