@@ -1,0 +1,50 @@
+/* MOBILE USER SECTION */
+.profile__user {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.profile__name-gmail {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+.profile__name {
+  font-size: 1.625rem;
+  font-weight: bold;
+  color: var(--white);
+}
+
+.profile__gmail {
+  font-size: 1.125rem;
+  color: var(--white);
+  opacity: 0.5;
+}
+
+.profile__arrow-img.active {
+  transform: rotate(89deg);
+}
+
+/* TABLET USER SECTION */
+@media (min-width: 37.5em) {
+  .profile__section {
+    /* background-color: rebeccapurple; */
+    max-width: 561px;
+    margin: 0 auto;
+    margin-block-start: 70px;
+  }
+}
+
+/* DESTOP USER SECTION */
+@media (min-width: 62.5em) {
+  .profile__section {
+    margin-block-start: 60px;
+  }
+}
