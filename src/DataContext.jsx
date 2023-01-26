@@ -8,10 +8,13 @@ export const useLocalData = () => {
 
 export const DataProvider = ({ children }) => {
   const [islogin, setIslogin] = useState(localStorage.getItem("isLogin"));
+  const [isClicked, setIsClicked] = useState(false);
 
   const localValues = {
     islogin,
     setIslogin,
+    isClicked,
+    setIsClicked,
   };
 
   return (

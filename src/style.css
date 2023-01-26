@@ -69,3 +69,10 @@ a {
   padding: var(--paddingX);
   margin-block-start: 40px;
 }
+
+.edit__profile__section {
+  max-width: 554px;
+  margin: 0 auto;
+  padding: var(--paddingX);
+  margin-block-start: 45px;
+}

@@ -29,7 +29,7 @@
 }
 
 .profile__arrow-img.active {
-  transform: rotate(89deg);
+  transform: rotate(89deg) !important;
 }
 
 /* TABLET USER SECTION */

@@ -5,6 +5,7 @@ import Contact from "./pages/contact";
 import SignIn from "./pages/signIn";
 import Register from "./pages/register";
 import Profile from "./pages/profile";
+import EditProfile from "./pages/editProfilePage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { DataProvider } from "./DataContext";
 
@@ -20,6 +21,7 @@ const App = () => {
             <Route path="/sign" element={<SignIn />}></Route>
             <Route path="/register" element={<Register />}></Route>
             <Route path="/profile" element={<Profile />}></Route>
+            <Route path="/editprofile" element={<EditProfile />}></Route>
           </Routes>
         </BrowserRouter>
       </DataProvider>

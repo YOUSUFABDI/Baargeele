@@ -1,34 +1,30 @@
 import "./user-section.css";
-import profileImg from "../../../assets/images/profile-img.png";
-import arrowImg from "../../../assets/images/arrow.png";
-
-import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { FaUserCircle } from "react-icons/fa";
+import { MdOutlineArrowForwardIos } from "react-icons/md";
+import { useLocalData } from "../../DataContext";
 
 const UserSection = () => {
-  const [isClicked, setIsClicked] = useState(false);
-  const handleClck = () => setIsClicked(true);
+  const { isClicked, setIsClicked } = useLocalData();
+
   return (
-    <div
-      className="profile__user"
-      onClick={() => {
-        handleClck;
-      }}
-    >
-      <div className="profile__user__img">
-        <img className="profile__image" src={profileImg} alt="profile-image" />
+    <NavLink to="/editprofile" onClick={() => setIsClicked(true)}>
+      <div className="profile__user">
+        <div className="profile__user__img">
+          <FaUserCircle size={100} />
+        </div>
+        <div className="profile__name-gmail">
+          <span className="profile__name">YOUSUF ABDI</span>
+          <span className="profile__gmail">yufis0844@gmail.com</span>
+        </div>
+        <div className="profile__arrow">
+          <MdOutlineArrowForwardIos
+            size={24}
+            className={`profile__arrow-img ${isClicked && "active"}`}
+          />
+        </div>
       </div>
-      <div className="profile__name-gmail">
-        <span className="profile__name">YOUSUF ABDI</span>
-        <span className="profile__gmail">yufis0844@gmail.com</span>
-      </div>
-      <div className="profile__arrow">
-        <img
-          className={`profile__arrow-img ${isClicked && "active"}`}
-          src={arrowImg}
-          alt="arrow-image"
-        />
-      </div>
-    </div>
+    </NavLink>
   );
 };
 
