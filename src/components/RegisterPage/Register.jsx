@@ -6,7 +6,7 @@ import useForm from "../../useForm";
 import validateForms from "../../validateForms";
 
 const Register = () => {
-  const { handleChange, handleSubmit, values, errors } = useForm(validateForms);
+  const { handleChange, handleSubmit, values, errors, isLoading } = useForm(validateForms);
 
   return (
     <>
@@ -19,7 +19,7 @@ const Register = () => {
           <img className="reg_img" src={RegImg} alt="reg-img" />
         </div>
         <div className="registeration__reg">
-          <h2>Register</h2>
+          <h2>Create Account</h2>
           <form className="registeration__form__control">
             <div className="registeration__reverse">
               <span>Name</span>
@@ -63,11 +63,9 @@ const Register = () => {
             </div>
             <div className="registration__footer">
               <button className="registeration__btn" onClick={handleSubmit}>
-              <Link
-              // to="/"
-              >
-                Register Now
-              </Link>
+              {
+                  isLoading ? "Loading" : "Create Account"
+                }
               </button>
               <div className="registration__sub__footer">
                 <span className="registration__alredy__acc">

@@ -57,7 +57,6 @@
   outline: none;
   border: 1px solid var(--light);
   padding: 12px 20px;
-  
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(255, 253, 253, 0.2);
 }
@@ -81,6 +80,7 @@
   font-size: 1.125rem;
   font-weight: bold;
   background-color: var(--light);
+  color: var(--black);
   cursor: pointer;
   transition: all 0.5s ease;
 }
