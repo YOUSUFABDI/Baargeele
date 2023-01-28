@@ -7,8 +7,12 @@ import { useLocalData } from "../../DataContext";
 const UserSection = () => {
   const { isClicked, setIsClicked } = useLocalData();
 
+  const handleClick = () => {
+    setIsClicked(true);
+  };
+
   return (
-    <NavLink to="/editprofile" onClick={() => setIsClicked(true)}>
+    <NavLink to="/editprofile" onClick={handleClick}>
       <div className="profile__user">
         <div className="profile__user__img">
           <FaUserCircle size={100} />

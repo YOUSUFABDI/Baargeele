@@ -77,3 +77,18 @@
   border: none;
   cursor: pointer;
 }
+
+/* TABLET EDIT PROFILE SECTION */
+@media (min-width: 37.5em) {
+  .edit__profile {
+    justify-content: flex-start;
+  }
+
+  .edit__profile__title {
+    justify-content: flex-start;
+  }
+}
+
+/* DESKTOP EDIT PROFILE SECTION */
+@media (min-width: 62.5em) {
+}

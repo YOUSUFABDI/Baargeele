@@ -63,11 +63,55 @@ a {
   padding: var(--paddingX);
 }
 
-.profile__section {
-  max-width: 1110px;
-  margin: 0 auto;
-  padding: var(--paddingX);
-  margin-block-start: 40px;
+/* MOBILE PROFILE SECTION */
+.make__change {
+  display: none;
+}
+
+/* TABLET PROFILE SECTION */
+@media (min-width: 37.5em) {
+  .profile__section {
+    max-width: 567px !important;
+    margin: 0 auto;
+    margin-block-start: 70px;
+  }
+
+  .make__change {
+    display: none;
+  }
+}
+
+/* DESKTOP PROFILE SECTION */
+@media (min-width: 62.5em) {
+  .profile__section {
+    display: flex;
+    flex-direction: column;
+    max-width: 1189px !important;
+    margin: 0 auto;
+    padding: var(--paddingX);
+    margin-block-end: 40px;
+  }
+
+  .desktop__profile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 67px;
+    position: relative;
+    margin-block-start: 28px;
+  }
+
+  .line {
+    background-color: var(--white);
+    position: absolute;
+    right: 50%;
+    top: 0;
+    height: 500px;
+    width: 1px;
+  }
+
+  .make__change {
+    display: block;
+  }
 }
 
 .edit__profile__section {

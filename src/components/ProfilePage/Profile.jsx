@@ -1,6 +1,7 @@
 import Header from "../Header/Header";
 import UserSection from "./UserSection";
 import PurchaseSection from "./PurchaseSection";
+import MakeChange from "./MakeChange";
 
 const Profile = () => {
   return (
@@ -10,7 +11,13 @@ const Profile = () => {
       </nav>
       <div className="profile__section">
         <UserSection />
-        <PurchaseSection />
+        <div className="desktop__profile">
+          <PurchaseSection />
+          <div className="line"></div>
+          <div className="make__change">
+            <MakeChange />
+          </div>
+        </div>
       </div>
     </>
   );
