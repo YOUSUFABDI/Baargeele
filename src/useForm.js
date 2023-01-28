@@ -54,6 +54,28 @@ const useForm = (validateForms) => {
 
   }
 
+  function createAcc(name, gmail, phone, password) {
+    setIsloading(isLoading = true)
+    const params = new URLSearchParams();
+    params.append('FullName', name);
+    params.append('Gmail', gmail);
+    params.append('PhoneNumber', phone);
+    params.append('Password', password);
+    axios
+      .post("https://baargeelle.com/flutterConn/register.php", params)
+      .then((response) => {
+        var data = response.data;
+        if (data == "Success") {
+          alert("Success");
+          // loginDone()
+        } else {
+          setErrors(errors = {
+            gmail: "Email that you have entered is already exist!",
+          })
+        }
+      }).then(() => setIsloading(isLoading = false));
+
+  }
 
   function loginDone() {
     setIslogin(localStorage.getItem("isLogin"));
@@ -76,6 +98,12 @@ const useForm = (validateForms) => {
     } else {
       console.log("done")
       gmailLogin(values.loginGmail, values.loginPass)
+    }
+    if (errors.name || errors.gmail || errors.phone || errors.password) {
+      console.log("error")
+    } else {
+      console.log("done")
+      createAcc(values.name, values.gmail, values.phone, values.password) 
     }
   };
 
