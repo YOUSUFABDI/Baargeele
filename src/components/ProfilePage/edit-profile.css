@@ -1,10 +1,10 @@
 /* MOBILE EDIT PROFILE SECTION */
 .edit__profile {
-  /* background-color: rebeccapurple; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-block-start: 24px;
+  margin-block-end: 34px;
 }
 
 .edit__profile__title {

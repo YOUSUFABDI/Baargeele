@@ -21,7 +21,7 @@ const EditProfile = () => {
         <Header />
       </nav>
       <div className="edit__profile__section">
-        <div onClick={handleClick}>
+        <div className="edit__profile__user" onClick={handleClick}>
           <UserSection />
         </div>
         <MakeChange />
