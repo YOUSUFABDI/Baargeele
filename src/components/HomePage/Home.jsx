@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import "./home.css";
 import Header from "../Header/Header";
-import headerImg from "../../../assets/images/bannerImg.png";
 import PlayerIdSection from "./PlayerIdSection";
 import PaymentSection from "./PaymentSection";
 import ProductSection from "./ProductSection";
