@@ -1,0 +1,153 @@
+/* MOBILE OPT PAGE */
+.opt__section {
+  display: flex;
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: var(--paddingX);
+  margin-block-start: 49px;
+  margin-block-end: 49px;
+}
+
+.opt__image {
+  display: none;
+}
+
+.opt__verification {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 35px 30px;
+  background-color: var(--dark);
+  border: 2px solid var(--light);
+  box-shadow: -2px 2px 10px var(--light);
+  border-radius: 15px;
+}
+
+.opt__check {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.opt__title__gmail {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.opt__title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--light);
+}
+
+.opt__sub__title {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: var(--white);
+}
+
+.opt__gmail {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--white);
+}
+
+.opt__inputs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 11px;
+}
+
+.opt__inputs input {
+  background-color: transparent;
+  color: var(--white);
+  padding-left: 11px;
+  border: 0.5px solid var(--light);
+  box-shadow: 0px 0px 4px var(--light);
+  border-radius: 8px;
+  width: 100%;
+  height: 78px;
+}
+
+.opt__create__btn {
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.125rem;
+  font-weight: bold;
+  background-color: var(--light);
+  color: var(--black);
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.opt__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.opt__dont__have__acc {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: var(--white);
+  opacity: 0.5;
+}
+
+.opt__create__new__acc {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: var(--light);
+}
+
+/* TABLET OPT  PAGE */
+@media (min-width: 37.5em) {
+  .opt__section {
+    /* background-color: rebeccapurple; */
+    margin: 0 10%;
+    margin-block-start: 49px;
+    margin-block-end: 49px;
+  }
+}
+
+/* DESKTOP OPT  PAGE */
+@media (min-width: 62.5em) {
+  .opt__section {
+    margin: 0 auto;
+    gap: 155px;
+    margin-block-start: 59px;
+    margin-block-end: 58px;
+  }
+
+  .opt__sub__title {
+    font-size: 1.775rem;
+  }
+
+  .opt__image {
+    /* background-color: rebeccapurple; */
+    width: 584px;
+    height: 411px;
+    display: block;
+    /* margin-block-start: 30px; */
+  }
+
+  .opt__auth__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .opt__verification {
+    /* height: 610px; */
+    width: 472px;
+    padding: 35 44px;
+    gap: 39px;
+  }
+}
