@@ -44,15 +44,16 @@
 }
 
 .opt__sub__title {
-  font-size: 1.125rem;
+  font-size: 1.3rem;
   font-weight: bold;
   color: var(--white);
 }
 
 .opt__gmail {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: bold;
   color: var(--white);
+  opacity: 0.5;
 }
 
 .opt__inputs {
@@ -115,6 +116,19 @@
     margin-block-start: 49px;
     margin-block-end: 49px;
   }
+
+  .opt__gmail {
+    font-size: 1rem;
+  }
+
+  .opt__sub__title {
+    font-size: 1.5rem;
+  }
+
+  .opt__title {
+    font-size: 2.5rem;
+  }
+  
 }
 
 /* DESKTOP OPT  PAGE */
@@ -124,10 +138,6 @@
     gap: 155px;
     margin-block-start: 59px;
     margin-block-end: 58px;
-  }
-
-  .opt__sub__title {
-    font-size: 1.775rem;
   }
 
   .opt__image {
