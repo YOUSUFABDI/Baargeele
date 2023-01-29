@@ -1,5 +1,17 @@
-/* .home__bg__img {
-    -webkit-box-shadow: inset 0 0 10px 10px #000;
+.home__bg__img {
+  /* -webkit-box-shadow: inset 0 0 10px 10px #000;
     -moz-box-shadow: inset 0 0 10px 10px #000;
-    box-shadow: inset 0 0 10px 10px #000;
-} */
+    box-shadow: inset 0 0 10px 10px #000; */
+
+  /* box-shadow: 3px 3px red, -1em 0 -0.4em olive; */
+  /* box-shadow: 10px -5px 5px black; */
+  /* box-shadow: -2px -2px -2px 1px rgba(243, 17, 17, 0.2); */
+  /* background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.09),
+    rgba(52, 224, 17, 0) 20%,
+    rgba(236, 15, 15, 0.815)
+  ); */
+  /* box-shadow: inset 5em 1em gold; */
+  /* object-fit: contain; */
+}

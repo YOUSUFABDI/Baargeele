@@ -15,7 +15,11 @@ const Home = () => {
   return (
     <>
       <Header />
-      <img className="home__bg__img" src={"https://baargeelle.com/images/cover_image_11.jpg"} alt="headerImg" />
+      <img
+        className="home__bg__img"
+        src={"https://baargeelle.com/images/cover_image_4.jpg"}
+        alt="headerImg"
+      />
       <div className="home__container">
         <PlayerIdSection setEnteredId={setEnteredId} entredId={entredId} />
         <PaymentSection />

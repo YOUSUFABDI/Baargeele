@@ -21,10 +21,10 @@ const OtpPage = () => {
             </div>
           </div>
           <div className="opt__inputs">
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
+            <input type="text" maxLength={1} />
+            <input type="text" maxLength={1} />
+            <input type="text" maxLength={1} />
+            <input type="text" maxLength={1} />
           </div>
           <button className="opt__create__btn">Create Account</button>
           <div className="opt__footer">

@@ -64,6 +64,9 @@
 .opt__inputs input {
   background-color: transparent;
   color: var(--white);
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
   padding-left: 11px;
   border: 0.5px solid var(--light);
   box-shadow: 0px 0px 4px var(--light);
