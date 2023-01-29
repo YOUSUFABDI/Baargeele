@@ -32,6 +32,16 @@ const Register = () => {
               {errors.name && <p className="val-reg">{errors.name}</p>}
             </div>
             <div className="registeration__reverse">
+              <span>Gmail</span>
+              <input
+                type="email"
+                name="gmail"
+                value={values.gmail}
+                onChange={handleChange}
+              />
+              {errors.gmail && <p className="val-reg">{errors.gmail}</p>}
+            </div>
+            <div className="registeration__reverse">
               <span>Phone Number</span>
               <input
                 type="text"
@@ -42,19 +52,9 @@ const Register = () => {
               {errors.phone && <p className="val-reg">{errors.phone}</p>}
             </div>
             <div className="registeration__reverse">
-              <span>Gmail</span>
-              <input
-                type="text"
-                name="gmail"
-                value={values.gmail}
-                onChange={handleChange}
-              />
-              {errors.gmail && <p className="val-reg">{errors.gmail}</p>}
-            </div>
-            <div className="registeration__reverse">
               <span>Password</span>
               <input
-                type="text"
+                type="password"
                 name="password"
                 value={values.password}
                 onChange={handleChange}

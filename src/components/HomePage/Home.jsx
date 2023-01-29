@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./home.css";
 import Header from "../Header/Header";
 import headerImg from "../../../assets/images/bannerImg.png";
 import PlayerIdSection from "./PlayerIdSection";
@@ -14,7 +15,7 @@ const Home = () => {
   return (
     <>
       <Header />
-      <img className="home__bg__img" src={headerImg} alt="headerImg" />
+      <img className="home__bg__img" src={"https://baargeelle.com/images/cover_image_11.jpg"} alt="headerImg" />
       <div className="home__container">
         <PlayerIdSection setEnteredId={setEnteredId} entredId={entredId} />
         <PaymentSection />

@@ -5,6 +5,7 @@ import "./sign.css";
 import useForm from "../../useForm";
 import validateForms from "../../validateForms";
 import toast, { Toaster } from 'react-hot-toast';
+import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
 
 const SignIn = () => {
   const { handleChange, handleSubmit, values, errors, isLoading } = useForm(validateForms);
@@ -25,7 +26,7 @@ const SignIn = () => {
             <div className="sign__reverse">
               <span>Gmail</span>
               <input
-                type="text"
+                type="email"
                 name="loginGmail"
                 value={values.loginGmail}
                 onChange={handleChange}
@@ -37,13 +38,13 @@ const SignIn = () => {
             <div className="sign__reverse">
               <span>Password</span>
               <input
-                type="text"
+                type="password"
                 name="loginPass"
                 value={values.loginPass}
                 onChange={handleChange}
               />
-              {errors.loginPass && <p className="val-lg">{errors.loginPass}</p>}
             </div>
+            {errors.loginPass && <p className="val-lg">{errors.loginPass}</p>}
             <div className="sign__forgot__btn">
               <spam>Forgot Password!</spam>
             </div>
