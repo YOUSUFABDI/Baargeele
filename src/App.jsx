@@ -6,6 +6,7 @@ import SignIn from "./pages/signIn";
 import Register from "./pages/register";
 import Profile from "./pages/profile";
 import EditProfile from "./pages/editProfilePage";
+import OtpPage from "./pages/otp";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { DataProvider } from "./DataContext";
 
@@ -22,6 +23,7 @@ const App = () => {
             <Route path="/register" element={<Register />}></Route>
             <Route path="/profile" element={<Profile />}></Route>
             <Route path="/editprofile" element={<EditProfile />}></Route>
+            <Route path="/otp" element={<OtpPage />}></Route>
           </Routes>
         </BrowserRouter>
       </DataProvider>

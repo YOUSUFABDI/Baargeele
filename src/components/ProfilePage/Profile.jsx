@@ -10,7 +10,9 @@ const Profile = () => {
         <Header />
       </nav>
       <div className="profile__section">
-        <UserSection />
+        <div className="user">
+          <UserSection />
+        </div>
         <div className="desktop__profile">
           <PurchaseSection />
           <div className="line"></div>

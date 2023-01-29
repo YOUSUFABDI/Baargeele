@@ -68,6 +68,10 @@ a {
   display: none;
 }
 
+.user {
+  padding: var(--paddingX);
+}
+
 /* TABLET PROFILE SECTION */
 @media (min-width: 37.5em) {
   .profile__section {
@@ -101,16 +105,20 @@ a {
   }
 
   .line {
-    background-color: var(--white);
     position: absolute;
     right: 50%;
-    top: 0;
-    height: 500px;
+    top: 25px;
+    background-color: var(--light);
     width: 1px;
+    height: 500px;
   }
 
   .make__change {
     display: block;
+  }
+
+  .user {
+    pointer-events: none;
   }
 }
 

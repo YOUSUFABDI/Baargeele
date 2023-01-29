@@ -6,7 +6,6 @@
   gap: 20px;
   justify-content: space-between;
   margin-block-start: 55px;
-  padding: var(--paddingX);
   cursor: pointer;
 }
 

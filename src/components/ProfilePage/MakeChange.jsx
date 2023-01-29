@@ -5,7 +5,7 @@ const MakeChange = () => {
 
   const handleLogOut = () => {
     navigate("/");
-    setIsClicked(false);
+    // setIsClicked(false);
   };
 
   return (
