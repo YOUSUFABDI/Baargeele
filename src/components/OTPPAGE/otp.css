@@ -56,7 +56,7 @@
   opacity: 0.5;
 }
 
-.opt__inputs {
+.opt__inputs form {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 11px;
@@ -68,7 +68,6 @@
   font-size: 3rem;
   font-weight: bold;
   text-align: center;
-  padding-left: 11px;
   border: 0.5px solid var(--light);
   box-shadow: 0px 0px 4px var(--light);
   border-radius: 8px;
@@ -131,7 +130,6 @@
   .opt__title {
     font-size: 2.5rem;
   }
-  
 }
 
 /* DESKTOP OPT  PAGE */

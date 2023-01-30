@@ -1,8 +1,30 @@
 import "./otp.css";
 import Header from "../Header/Header";
 import authImg from "../../../assets/images/auth.svg";
+import { useEffect, useState } from "react";
 
 const OtpPage = () => {
+  useEffect(() => {
+    const allInput = Array.from(document.querySelectorAll("input"));
+    allInput.map((input, index) => {
+      input.addEventListener("keydown", (e) => {
+        if (e.keyCode === 8 && e.target.value === "")
+          allInput[Math.max(0, index - 1)].focus();
+      });
+      input.addEventListener("input", (e) => {
+        const [first, ...rest] = e.target.value;
+        e.target.value = first ?? "";
+        const lastInputBox = index === allInput.length - 1;
+        const didInsertContent = first !== undefined;
+        if (didInsertContent && !lastInputBox) {
+          allInput[index + 1].focus();
+          allInput[index + 1].value = rest.join("");
+          allInput[index + 1].dispatchEvent(new Event("input"));
+        }
+      });
+    });
+  }, []);
+
   return (
     <>
       <nav className="navbar">
@@ -21,10 +43,12 @@ const OtpPage = () => {
             </div>
           </div>
           <div className="opt__inputs">
-            <input type="text" maxLength={1} />
-            <input type="text" maxLength={1} />
-            <input type="text" maxLength={1} />
-            <input type="text" maxLength={1} />
+            <form>
+              <input type="text" maxLength={1} />
+              <input type="text" maxLength={1} />
+              <input type="text" maxLength={1} />
+              <input type="text" maxLength={1} />
+            </form>
           </div>
           <button className="opt__create__btn">Create Account</button>
           <div className="opt__footer">
