@@ -3,7 +3,9 @@ export default function validateForms(values) {
 
   //   Reg
 
-  const validName = new RegExp(/^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/);
+  const validName = new RegExp(
+    /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/
+  );
   if (!validName.test(values.name)) {
     errors.name = "inValid Name";
   }
@@ -24,7 +26,7 @@ export default function validateForms(values) {
   }
 
   //   Login
-  
+
   if (!validGmail.test(values.loginGmail)) {
     errors.loginGmail = "inCorrect Gmail";
   }

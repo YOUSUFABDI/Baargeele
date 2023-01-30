@@ -56,7 +56,13 @@
   opacity: 0.5;
 }
 
-.opt__inputs form {
+.otp__form__control {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.opt__inputs__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 11px;
@@ -76,6 +82,7 @@
 }
 
 .opt__create__btn {
+  width: 100%;
   height: 56px;
   display: flex;
   justify-content: center;

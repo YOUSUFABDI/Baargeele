@@ -4,12 +4,13 @@ import Header from "../Header/Header";
 import "./sign.css";
 import useForm from "../../useForm";
 import validateForms from "../../validateForms";
-import toast, { Toaster } from 'react-hot-toast';
+import toast, { Toaster } from "react-hot-toast";
 import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
 
 const SignIn = () => {
-  const { handleChange, handleSubmit, values, errors, isLoading } = useForm(validateForms);
-  const notify = () => toast.success('Successfully toasted!');
+  const { handleChange, handleSubmit, values, errors, isLoading } =
+    useForm(validateForms);
+  const notify = () => toast.success("Successfully toasted!");
 
   return (
     <>
@@ -50,9 +51,7 @@ const SignIn = () => {
             </div>
             <div className="btms">
               <button className="sign__lg__btn" onClick={handleSubmit}>
-                {
-                  isLoading ? "Loading" : "OK"
-                }
+                {isLoading ? "Loading" : "OK"}
               </button>
               <div className="sign__make__acc">
                 <span>Dont't have an account?</span>

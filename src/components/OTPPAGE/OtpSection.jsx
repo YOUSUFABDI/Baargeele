@@ -4,6 +4,12 @@ import authImg from "../../../assets/images/auth.svg";
 import { useEffect, useState } from "react";
 
 const OtpPage = () => {
+  const validateOTP = (event) => {
+    if (!/[0-9]/.test(event.key)) {
+      event.preventDefault();
+    }
+  };
+
   useEffect(() => {
     const allInput = Array.from(document.querySelectorAll("input"));
     allInput.map((input, index) => {
@@ -43,14 +49,16 @@ const OtpPage = () => {
             </div>
           </div>
           <div className="opt__inputs">
-            <form>
-              <input type="text" maxLength={1} />
-              <input type="text" maxLength={1} />
-              <input type="text" maxLength={1} />
-              <input type="text" maxLength={1} />
+            <form className="otp__form__control">
+              <div className="opt__inputs__grid">
+                <input type="text" maxLength={1} onKeyPress={validateOTP} />
+                <input type="text" maxLength={1} onKeyPress={validateOTP} />
+                <input type="text" maxLength={1} onKeyPress={validateOTP} />
+                <input type="text" maxLength={1} onKeyPress={validateOTP} />
+              </div>
+              <button className="opt__create__btn">Create Account</button>
             </form>
           </div>
-          <button className="opt__create__btn">Create Account</button>
           <div className="opt__footer">
             <span className="opt__dont__have__acc">Don't have an account?</span>
             <span className="opt__create__new__acc">Create Account</span>
