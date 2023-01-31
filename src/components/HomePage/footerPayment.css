@@ -63,6 +63,10 @@
   opacity: 1;
 }
 
+.inactive {
+  pointer-events: none;
+}
+
 /* TABLET FOOTER PAYMENT */
 @media (min-width: 37.5em) {
   .footer__player__id__name {
