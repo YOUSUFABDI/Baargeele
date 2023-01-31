@@ -1,7 +1,7 @@
-import TransactionPayment from "../components/TransactionPage/TransactionPayment";
+import TransactionSection from "../components/TransactionPage/TransactionSection";
 
 const transaction = () => {
-  return <TransactionPayment />;
+  return <TransactionSection />;
 };
 
 export default transaction;

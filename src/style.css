@@ -128,3 +128,8 @@ a {
   padding: var(--paddingX);
   margin-block-start: 45px;
 }
+
+.transaction__section {
+  display: flex;
+  flex-direction: column;
+}

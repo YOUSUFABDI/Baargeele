@@ -1,0 +1,101 @@
+/* MOBILE TRANSACTION PAGE */
+.transaction__header {
+  position: relative;
+  padding: var(--paddingX);
+  height: 166px;
+  background-color: var(--light);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border-radius: 0px 0px 15px 15px;
+}
+
+.transaction__banner {
+  margin-block-start: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 17px;
+}
+
+.transaction__border {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  border-bottom: 1px solid var(--dark);
+  filter: drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.1));
+}
+
+.transaction__logo {
+  color: var(--dark);
+  opacity: 1;
+  font-family: "marker_felt";
+  justify-self: start;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.transaction__logo:hover {
+  scale: 1.1;
+}
+
+.transaction__name {
+  font-size: 1.375rem;
+  font-weight: bold;
+  color: var(--black);
+}
+
+.transaction__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.transaction__sub__title {
+  font-size: 1.375rem;
+  font-weight: bold;
+  color: var(--black);
+}
+
+.transaction__payment {
+  position: absolute;
+  bottom: -27px;
+  padding: 13px 65px;
+  background-color: var(--dark);
+  color: var(--white);
+  font-size: 1.375rem;
+  font-weight: bold;
+  box-shadow: 0px 0px 8px rgba(136, 136, 136, 0.25);
+  border-radius: 10px;
+}
+
+/* TABLET TRANSACTION PAGE */
+@media (min-width: 37.5em) {
+  .transaction__header {
+    height: 196px;
+  }
+
+  .transaction__sub__title {
+    margin-block-start: 10px;
+    font-size: 1.625rem;
+  }
+
+  .transaction__border {
+    top: 35%;
+  }
+}
+
+/* DESKTOP TRANSACTION PAGE */
+@media (min-width: 62.5em) {
+  .transaction__header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 196px;
+  }
+}
