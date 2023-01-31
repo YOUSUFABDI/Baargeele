@@ -11,6 +11,10 @@ const useForm = (validateForms) => {
     password: "",
     loginGmail: "",
     loginPass: "",
+    otp1: "",
+    otp2: "",
+    otp3: "",
+    otp4: "",
   });
 
   let [errors, setErrors] = useState({});
@@ -112,7 +116,13 @@ const useForm = (validateForms) => {
     }
   };
 
-  return { handleChange, handleSubmit, values, errors, isLoading };
+  const handleOTP = () => {
+    // event.preventDefault();
+    console.log(values.otp1);
+    console.log(values.otp2);
+  };
+
+  return { handleChange, handleSubmit, handleOTP, values, errors, isLoading };
 };
 
 export default useForm;

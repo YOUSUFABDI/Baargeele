@@ -2,35 +2,38 @@ import "./otp.css";
 import Header from "../Header/Header";
 import authImg from "../../../assets/images/auth.svg";
 import { useEffect, useState } from "react";
+import useForm from "../../useForm";
+import validateForms from "../../validateForms";
 
 const OtpPage = () => {
+  const { values, handleChange, handleOTP } = useForm();
+
   const validateOTP = (event) => {
     if (!/[0-9]/.test(event.key)) {
       event.preventDefault();
     }
   };
 
-
-  useEffect(() => {
-    const allInput = Array.from(document.querySelectorAll("input"));
-    allInput.map((input, index) => {
-      input.addEventListener("keydown", (e) => {
-        if (e.keyCode === 8 && e.target.value === "")
-          allInput[Math.max(0, index - 1)].focus();
-      });
-      input.addEventListener("input", (e) => {
-        const [first, ...rest] = e.target.value;
-        e.target.value = first ?? "";
-        const lastInputBox = index === allInput.length - 1;
-        const didInsertContent = first !== undefined;
-        if (didInsertContent && !lastInputBox) {
-          allInput[index + 1].focus();
-          allInput[index + 1].value = rest.join("");
-          allInput[index + 1].dispatchEvent(new Event("input"));
-        }
-      });
-    });
-  }, []);
+  // useEffect(() => {
+  // const allInput = Array.from(document.querySelectorAll("input"));
+  // allInput.map((input, index) => {
+  //   input.addEventListener("keydown", (e) => {
+  //     if (e.keyCode === 8 && e.target.value === "")
+  //       allInput[Math.max(0, index - 1)].focus();
+  //   });
+  //   input.addEventListener("input", (e) => {
+  //     const [first, ...rest] = e.target.value;
+  //     e.target.value = first ?? "";
+  //     const lastInputBox = index === allInput.length - 1;
+  //     const didInsertContent = first !== undefined;
+  //     if (didInsertContent && !lastInputBox) {
+  //       allInput[index + 1].focus();
+  //       allInput[index + 1].value = rest.join("");
+  //       allInput[index + 1].dispatchEvent(new Event("input"));
+  //     }
+  //   });
+  // });
+  // }, []);
 
   return (
     <>
@@ -50,14 +53,47 @@ const OtpPage = () => {
             </div>
           </div>
           <div className="opt__inputs">
-            <form className="otp__form__control" onSubmit={(e) => e.preventDefault()}>
+            <form
+              className="otp__form__control"
+              onSubmit={(e) => e.preventDefault()}
+            >
               <div className="opt__inputs__grid">
-                <input type="text" maxLength={1} onKeyPress={validateOTP} />
-                <input type="text" maxLength={1} onKeyPress={validateOTP} />
-                <input type="text" maxLength={1} onKeyPress={validateOTP} />
-                <input type="text" maxLength={1} onKeyPress={validateOTP} />
+                <input
+                  type="text"
+                  value={values.otp1}
+                  name="otp1"
+                  onChange={handleChange}
+                  maxLength={1}
+                  onKeyPress={validateOTP}
+                />
+                <input
+                  type="text"
+                  name="otp2"
+                  value={values.otp2}
+                  onChange={handleChange}
+                  maxLength={1}
+                  onKeyPress={validateOTP}
+                />
+                <input
+                  type="text"
+                  name="otp3"
+                  value={values.otp3}
+                  onChange={handleChange}
+                  maxLength={1}
+                  onKeyPress={validateOTP}
+                />
+                <input
+                  type="text"
+                  name="otp4"
+                  value={values.otp4}
+                  onChange={handleChange}
+                  maxLength={1}
+                  onKeyPress={validateOTP}
+                />
               </div>
-              <button className="opt__create__btn">Create Account</button>
+              <button className="opt__create__btn" onClick={handleOTP}>
+                Create Account
+              </button>
             </form>
           </div>
           <div className="opt__footer">
