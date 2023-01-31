@@ -1,9 +1,15 @@
 import { useNavigate } from "react-router-dom";
+import { useLocalData } from "../../DataContext";
+
 
 const MakeChange = () => {
   const navigate = useNavigate();
+  const { islogin, setIslogin } = useLocalData();
+
 
   const handleLogOut = () => {
+    localStorage.setItem("isLogin", "false");
+    setIslogin(localStorage.getItem("isLogin"));
     navigate("/");
     // setIsClicked(false);
   };

@@ -10,6 +10,7 @@ const OtpPage = () => {
     }
   };
 
+
   useEffect(() => {
     const allInput = Array.from(document.querySelectorAll("input"));
     allInput.map((input, index) => {
@@ -49,7 +50,7 @@ const OtpPage = () => {
             </div>
           </div>
           <div className="opt__inputs">
-            <form className="otp__form__control">
+            <form className="otp__form__control" onSubmit={(e) => e.preventDefault()}>
               <div className="opt__inputs__grid">
                 <input type="text" maxLength={1} onKeyPress={validateOTP} />
                 <input type="text" maxLength={1} onKeyPress={validateOTP} />
