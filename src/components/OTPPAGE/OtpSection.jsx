@@ -4,36 +4,16 @@ import authImg from "../../../assets/images/auth.svg";
 import { useEffect, useState } from "react";
 import useForm from "../../useForm";
 import validateForms from "../../validateForms";
+import OTPInput from "react-otp-input";
 
 const OtpPage = () => {
-  const { values, handleChange, handleOTP } = useForm();
+  const { handleChangeOTP, handleOTP, OTP, errors } = useForm(validateForms);
 
-  const validateOTP = (event) => {
-    if (!/[0-9]/.test(event.key)) {
-      event.preventDefault();
-    }
-  };
-
-  // useEffect(() => {
-  // const allInput = Array.from(document.querySelectorAll("input"));
-  // allInput.map((input, index) => {
-  //   input.addEventListener("keydown", (e) => {
-  //     if (e.keyCode === 8 && e.target.value === "")
-  //       allInput[Math.max(0, index - 1)].focus();
-  //   });
-  //   input.addEventListener("input", (e) => {
-  //     const [first, ...rest] = e.target.value;
-  //     e.target.value = first ?? "";
-  //     const lastInputBox = index === allInput.length - 1;
-  //     const didInsertContent = first !== undefined;
-  //     if (didInsertContent && !lastInputBox) {
-  //       allInput[index + 1].focus();
-  //       allInput[index + 1].value = rest.join("");
-  //       allInput[index + 1].dispatchEvent(new Event("input"));
-  //     }
-  //   });
-  // });
-  // }, []);
+  // const validateOTP = (event) => {
+  //   if (!/[0-9]/.test(event.key)) {
+  //     event.preventDefault();
+  //   }
+  // };
 
   return (
     <>
@@ -58,38 +38,15 @@ const OtpPage = () => {
               onSubmit={(e) => e.preventDefault()}
             >
               <div className="opt__inputs__grid">
-                <input
-                  type="text"
-                  value={values.otp1}
-                  name="otp1"
-                  onChange={handleChange}
-                  maxLength={1}
-                  onKeyPress={validateOTP}
+                <OTPInput
+                  onChange={handleChangeOTP}
+                  value={OTP}
+                  type
+                  inputStyle="inputStyle"
+                  numInputs={4}
+                  separator={<span></span>}
                 />
-                <input
-                  type="text"
-                  name="otp2"
-                  value={values.otp2}
-                  onChange={handleChange}
-                  maxLength={1}
-                  onKeyPress={validateOTP}
-                />
-                <input
-                  type="text"
-                  name="otp3"
-                  value={values.otp3}
-                  onChange={handleChange}
-                  maxLength={1}
-                  onKeyPress={validateOTP}
-                />
-                <input
-                  type="text"
-                  name="otp4"
-                  value={values.otp4}
-                  onChange={handleChange}
-                  maxLength={1}
-                  onKeyPress={validateOTP}
-                />
+                {!OTP && <p>err</p>}
               </div>
               <button className="opt__create__btn" onClick={handleOTP}>
                 Create Account

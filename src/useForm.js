@@ -11,10 +11,6 @@ const useForm = (validateForms) => {
     password: "",
     loginGmail: "",
     loginPass: "",
-    otp1: "",
-    otp2: "",
-    otp3: "",
-    otp4: "",
   });
 
   let [errors, setErrors] = useState({});
@@ -22,6 +18,12 @@ const useForm = (validateForms) => {
   const { islogin, setIslogin } = useLocalData();
 
   let [isLoading, setIsloading] = useState(false);
+
+  const [OTP, setOTP] = useState("");
+
+  const handleChangeOTP = (OTP) => {
+    setOTP(OTP);
+  };
 
   const navigate = useNavigate();
 
@@ -116,13 +118,32 @@ const useForm = (validateForms) => {
     }
   };
 
-  const handleOTP = () => {
-    // event.preventDefault();
-    console.log(values.otp1);
-    console.log(values.otp2);
+  const handleOTP = (event) => {
+    event.preventDefault();
+    // setErrors((errors = validateForms(OTP)));
+    // if (!OTP) {
+    //   console.log("fill first");
+    // } else {
+    //   console.log("good");
+    // }
+    // console.log(errors.OTP);
+    // if (errors.OTP === undefined) {
+    //   console.log("fill first");
+    // } else {
+    //   console.log("good");
+    // }
   };
 
-  return { handleChange, handleSubmit, handleOTP, values, errors, isLoading };
+  return {
+    handleChange,
+    handleSubmit,
+    handleOTP,
+    handleChangeOTP,
+    values,
+    errors,
+    isLoading,
+    OTP,
+  };
 };
 
 export default useForm;

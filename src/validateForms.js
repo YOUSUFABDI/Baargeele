@@ -1,4 +1,4 @@
-export default function validateForms(values) {
+export default function validateForms(values, OTP) {
   let errors = {};
 
   //   Reg
@@ -33,6 +33,11 @@ export default function validateForms(values) {
 
   if (!validPassword.test(values.loginPass)) {
     errors.loginPass = "Password must be minimum eight characters";
+  }
+
+  // OTP
+  if (OTP === null) {
+    errors.OTP = "fill first";
   }
 
   return errors;
