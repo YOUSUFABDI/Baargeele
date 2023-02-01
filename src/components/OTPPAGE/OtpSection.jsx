@@ -7,16 +7,10 @@ import OTPInput from "react-otp-input";
 import { useLocation } from "react-router-dom";
 
 const OtpPage = () => {
-  const { handleChangeOTP, handleOTP, setValues, values, errors, isLoading } = useForm(validateForms);
-  const location = useLocation()
-  const gmail = location.state.userGmail
-
-
-  // const validateOTP = (event) => {
-  //   if (!/[0-9]/.test(event.key)) {
-  //     event.preventDefault();
-  //   }
-  // };
+  const { handleChangeOTP, handleOTP, setValues, values, errors, isLoading } =
+    useForm(validateForms);
+  const location = useLocation();
+  const gmail = location.state.userGmail;
 
   return (
     <>
@@ -51,13 +45,21 @@ const OtpPage = () => {
                 />
                 {errors.otp && <p className="val-lg1">{errors.otp}</p>}
               </div>
-              <button className="opt__create__btn" onClick={() => { setValues({ gmail: gmail }); handleOTP(event) }}>
-              {isLoading ? "Loading" : "Verify"}
+              <button
+                className="opt__create__btn"
+                onClick={() => {
+                  setValues({ gmail: gmail });
+                  handleOTP(event);
+                }}
+              >
+                {isLoading ? "Loading" : "Verify"}
               </button>
             </form>
           </div>
           <div className="opt__footer">
-            <span className="opt__dont__have__acc">Already have an account!</span>
+            <span className="opt__dont__have__acc">
+              Already have an account!
+            </span>
             <span className="opt__create__new__acc">Login</span>
           </div>
         </div>

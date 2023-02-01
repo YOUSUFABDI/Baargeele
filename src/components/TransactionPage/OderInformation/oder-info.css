@@ -1,4 +1,194 @@
+/* MOBILE ODER INFO SECTION */
 .oder__info__section {
-  background-color: rebeccapurple;
+  display: flex;
+  flex-direction: column;
   margin-block-start: 42px;
+  padding: var(--paddingX);
+}
+
+.oder__info__title {
+  color: var(--white);
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.oder__information__card {
+  position: relative;
+  background-color: transparent;
+  height: 323px;
+  box-shadow: 0px 0px 8px rgba(136, 136, 136, 0.25);
+  border-radius: 15px;
+  margin-block-start: 13px;
+}
+
+.oder__info__banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block-start: 38px;
+  padding: 0 17px;
+}
+
+.oder__img__oder__name {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.oder__img__bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background-color: transparent;
+  box-shadow: 0px 0px 8px rgba(136, 136, 136, 0.25);
+  border-radius: 8px;
+}
+
+.oder__img {
+  width: 51px;
+  height: 31px;
+  object-fit: cover;
+}
+
+.oder__name {
+  color: var(--white);
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.oder__price {
+  color: var(--white);
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+.oder__banner__line {
+  border: 1px solid var(--light);
+  height: 1px;
+  position: absolute;
+  left: 17px;
+  right: 17px;
+  top: 133px;
+}
+
+.oder__player__info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  margin-block-start: 51px;
+  padding: 0 18px;
+}
+
+.oder__player__name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.oder__player__name span:nth-child(1) {
+  color: var(--white);
+  opacity: 0.5;
+  font-size: 0.875rem;
+}
+
+.oder__player__name span:nth-child(2) {
+  color: var(--white);
+  opacity: 1;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.oder__player__id {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.oder__player__id span:nth-child(1) {
+  color: var(--white);
+  opacity: 0.5;
+  font-size: 0.875rem;
+}
+
+.oder__player__id span:nth-child(2) {
+  color: var(--white);
+  opacity: 1;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.oder__player__line {
+  border: 1px solid var(--light);
+  height: 1px;
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  top: 56px;
+}
+
+/* TABLET ODER INFO SECTION*/
+@media (min-width: 37.5em) {
+  .oder__info__section {
+    margin-block-start: 50px;
+  }
+
+  .oder__information__card {
+    margin-block-start: 20px;
+  }
+
+  .oder__info__banner {
+    margin-block-start: 53px;
+    padding: 0 27px;
+  }
+
+  .oder__img__bg {
+    width: 84px;
+    height: 84px;
+  }
+
+  .oder__img {
+    width: 62px;
+    height: 37px;
+    object-fit: cover;
+  }
+
+  .oder__name {
+    font-size: 1.25rem;
+  }
+
+  .oder__price {
+    font-size: 1.5;
+  }
+
+  .oder__banner__line {
+    left: 27px;
+    right: 27px;
+    top: 157px;
+  }
+
+  .oder__player__info {
+    margin-block-start: 40px;
+    padding: 0 27px;
+    gap: 13px;
+  }
+
+  .oder__player__name span:nth-child(1),
+  .oder__player__name span:nth-child(2),
+  .oder__player__id span:nth-child(1),
+  .oder__player__id span:nth-child(2) {
+    font-size: 1.25rem;
+  }
+
+  .oder__player__line {
+    left: 27px;
+    right: 27px;
+    top: 68px;
+  }
+}
+
+/* DESKTOP ODER INFO SECTION*/
+@media (min-width: 62.5em) {
 }
