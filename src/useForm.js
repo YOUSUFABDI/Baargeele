@@ -11,7 +11,7 @@ const useForm = (validateForms) => {
     password: "",
     loginGmail: "",
     loginPass: "",
-    otp: ""
+    otp: "",
   });
 
   const navigate = useNavigate();
@@ -20,16 +20,13 @@ const useForm = (validateForms) => {
 
   const { islogin, setIslogin } = useLocalData();
 
-
-
   let [isLoading, setIsloading] = useState(false);
 
   // let [otp, setOTP] = useState("");
 
   const handleChangeOTP = (OTP) => {
-    setValues({ otp: OTP, gmail: values.gmail })
+    setValues({ otp: OTP, gmail: values.gmail });
   };
-
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -146,11 +143,11 @@ const useForm = (validateForms) => {
   const handleOTP = (event) => {
     event.preventDefault();
     setErrors((errors = validateForms(values)));
-    console.log(values.gmail)
+    console.log(values.gmail);
     if (errors.otp) {
       console.log(errors.otp);
     } else {
-      authCheck(values.otp, values.gmail)
+      authCheck(values.otp, values.gmail);
       console.log("good");
     }
   };

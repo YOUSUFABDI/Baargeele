@@ -126,7 +126,7 @@
   position: absolute;
   left: 18px;
   right: 18px;
-  top: 56px;
+  top: 69px;
 }
 
 /* TABLET ODER INFO SECTION*/
@@ -160,7 +160,7 @@
   }
 
   .oder__price {
-    font-size: 1.5;
+    font-size: 1.5rem;
   }
 
   .oder__banner__line {
@@ -185,7 +185,7 @@
   .oder__player__line {
     left: 27px;
     right: 27px;
-    top: 68px;
+    top: 76px;
   }
 }
 
