@@ -1,13 +1,16 @@
 import "./otp.css";
 import Header from "../Header/Header";
 import authImg from "../../../assets/images/auth.svg";
-import { useEffect, useState } from "react";
 import useForm from "../../useForm";
 import validateForms from "../../validateForms";
 import OTPInput from "react-otp-input";
+import { useLocation } from "react-router-dom";
 
 const OtpPage = () => {
-  const { handleChangeOTP, handleOTP, OTP, errors } = useForm(validateForms);
+  const { handleChangeOTP, handleOTP, setValues, values, errors, isLoading } = useForm(validateForms);
+  const location = useLocation()
+  const gmail = location.state.userGmail
+
 
   // const validateOTP = (event) => {
   //   if (!/[0-9]/.test(event.key)) {
@@ -29,7 +32,7 @@ const OtpPage = () => {
             <h2 className="opt__title">OTP Verification</h2>
             <div className="opt__title__gmail">
               <h3 className="opt__sub__title">Enter The OTP Sent To</h3>
-              <p className="opt__gmail">yufis0488@gmail.com</p>
+              <p className="opt__gmail">{gmail}</p>
             </div>
           </div>
           <div className="opt__inputs">
@@ -40,22 +43,22 @@ const OtpPage = () => {
               <div className="opt__inputs__grid">
                 <OTPInput
                   onChange={handleChangeOTP}
-                  value={OTP}
+                  value={values.otp}
                   type
                   inputStyle="inputStyle"
                   numInputs={4}
                   separator={<span></span>}
                 />
-                {!OTP && <p>err</p>}
+                {errors.otp && <p className="val-lg1">{errors.otp}</p>}
               </div>
-              <button className="opt__create__btn" onClick={handleOTP}>
-                Create Account
+              <button className="opt__create__btn" onClick={() => { setValues({ gmail: gmail }); handleOTP(event) }}>
+              {isLoading ? "Loading" : "Verify"}
               </button>
             </form>
           </div>
           <div className="opt__footer">
-            <span className="opt__dont__have__acc">Don't have an account?</span>
-            <span className="opt__create__new__acc">Create Account</span>
+            <span className="opt__dont__have__acc">Already have an account!</span>
+            <span className="opt__create__new__acc">Login</span>
           </div>
         </div>
       </div>

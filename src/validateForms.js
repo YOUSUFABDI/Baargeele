@@ -1,4 +1,4 @@
-export default function validateForms(values, OTP) {
+export default function validateForms(values) {
   let errors = {};
 
   //   Reg
@@ -36,8 +36,8 @@ export default function validateForms(values, OTP) {
   }
 
   // OTP
-  if (OTP === null) {
-    errors.OTP = "fill first";
+  if (!values.otp) {
+    errors.otp = "Fill";
   }
 
   return errors;

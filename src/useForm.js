@@ -11,21 +11,25 @@ const useForm = (validateForms) => {
     password: "",
     loginGmail: "",
     loginPass: "",
+    otp: ""
   });
+
+  const navigate = useNavigate();
 
   let [errors, setErrors] = useState({});
 
   const { islogin, setIslogin } = useLocalData();
 
+
+
   let [isLoading, setIsloading] = useState(false);
 
-  const [OTP, setOTP] = useState("");
+  // let [otp, setOTP] = useState("");
 
   const handleChangeOTP = (OTP) => {
-    setOTP(OTP);
+    setValues({ otp: OTP, gmail: values.gmail })
   };
 
-  const navigate = useNavigate();
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -76,13 +80,34 @@ const useForm = (validateForms) => {
       .then((response) => {
         var data = response.data;
         if (data == "Success") {
-          alert("Success");
-          navigate("/otp");
-          // loginDone()
+          navigate("/otp", { state: { userGmail: gmail } });
         } else {
           setErrors(
             (errors = {
               gmail: "Email that you have entered is already exist!",
+            })
+          );
+        }
+      })
+      .then(() => setIsloading((isLoading = false)));
+  }
+
+  function authCheck(otp, gmail) {
+    setIsloading((isLoading = true));
+    const params = new URLSearchParams();
+    params.append("Code", otp);
+    params.append("Gmail", gmail);
+    axios
+      .post("https://baargeelle.com/flutterConn/auth.php", params)
+      .then((response) => {
+        var data = response.data;
+        if (data == "Success") {
+          alert("Success");
+          loginDone();
+        } else {
+          setErrors(
+            (errors = {
+              otp: "You've Entered InCorrect Code!",
             })
           );
         }
@@ -120,18 +145,14 @@ const useForm = (validateForms) => {
 
   const handleOTP = (event) => {
     event.preventDefault();
-    // setErrors((errors = validateForms(OTP)));
-    // if (!OTP) {
-    //   console.log("fill first");
-    // } else {
-    //   console.log("good");
-    // }
-    // console.log(errors.OTP);
-    // if (errors.OTP === undefined) {
-    //   console.log("fill first");
-    // } else {
-    //   console.log("good");
-    // }
+    setErrors((errors = validateForms(values)));
+    console.log(values.gmail)
+    if (errors.otp) {
+      console.log(errors.otp);
+    } else {
+      authCheck(values.otp, values.gmail)
+      console.log("good");
+    }
   };
 
   return {
@@ -139,10 +160,10 @@ const useForm = (validateForms) => {
     handleSubmit,
     handleOTP,
     handleChangeOTP,
+    setValues,
     values,
     errors,
     isLoading,
-    OTP,
   };
 };
 

@@ -67,8 +67,10 @@
 }
 
 .inputStyle {
-  margin-left: 8px;
-  margin-right: 8px;
+  margin-left: 4px;
+  margin-right: 4px;
+  border: 0.5px solid var(--light);
+  box-shadow: 0px 0px 4px var(--light); 
 }
 
 .opt__inputs input {
@@ -77,8 +79,6 @@
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
-  border: 0.5px solid var(--light);
-  box-shadow: 0px 0px 4px var(--light);
   border-radius: 8px;
   width: 100% !important;
   height: 58px;
@@ -119,6 +119,12 @@
   font-size: 1.125rem;
   font-weight: bold;
   color: var(--light);
+}
+
+.val-lg1 {
+  color: red;
+  padding-top: 4px;
+  padding-left: 4px;
 }
 
 /* TABLET OPT  PAGE */
