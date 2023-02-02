@@ -7,7 +7,7 @@ const TransactionHeader = () => {
         <Link to="/" className="transaction__logo">
           Baargeele
         </Link>
-        <span className="transaction__name">YOUSUF</span>
+        <span className="transaction__name">Yuusuf</span>
       </div>
       <div className="transaction__border"></div>
       <div className="transaction__title">

@@ -217,4 +217,9 @@
 
 /* DESKTOP ODER INFO SECTION*/
 @media (min-width: 62.5em) {
+  .oder__info__section {
+    padding: 0;
+    /* background-color: teal; */
+    width: 378px;
+  }
 }

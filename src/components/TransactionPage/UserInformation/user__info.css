@@ -1,0 +1,224 @@
+/* MOBILE USER INFO SECTION */
+.user__info__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 9px;
+  margin-block-start: 46px;
+  padding: var(--paddingX);
+}
+
+.user__info__title {
+  color: var(--white);
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.user__info__card {
+  background-color: transparent;
+  box-shadow: 0px 0px 8px rgba(136, 136, 136, 0.25);
+  border-radius: 15px;
+  height: 277px;
+}
+
+.user__info__name__gmail {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 13px;
+  padding: 0 17px;
+  margin-block-start: 38px;
+}
+
+.user__info__name {
+  display: flex;
+  justify-content: space-between;
+  /* gap: 315px; */
+  align-items: center;
+}
+
+.user__info__name span:nth-child(1) {
+  color: var(--white);
+  opacity: 0.5;
+  font-size: 0.875rem;
+}
+
+.user__info__name span:nth-child(2) {
+  color: var(--white);
+  opacity: 1;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.user__info__gmail {
+  display: flex;
+  justify-content: space-between;
+  /* gap: 223px; */
+  align-items: center;
+}
+
+.user__info__gmail span:nth-child(1) {
+  color: var(--white);
+  opacity: 0.5;
+  font-size: 0.875rem;
+}
+
+.user__info__gmail span:nth-child(2) {
+  color: var(--white);
+  opacity: 1;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.user__info__line {
+  position: absolute;
+  left: 17px;
+  right: 17px;
+  top: 72px;
+  border: 1px solid var(--light);
+}
+
+.user__info__pay__method {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+  margin-block-start: 54px;
+  padding: 0 16px;
+}
+
+.user__info__pay__title {
+  color: var(--white);
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.user__info__pay__input__card {
+  position: relative;
+  background-color: transparent;
+  display: flex;
+  gap: 38px;
+  align-items: center;
+  height: 73px;
+  box-shadow: 0px 0px 8px rgba(136, 136, 136, 0.25);
+  border-radius: 10px;
+}
+
+.user__info__pay__img {
+  width: 79.94px;
+  height: 57px;
+  object-fit: cover;
+}
+
+.user__info__pay__input {
+  background-color: transparent;
+  color: var(--white);
+  font-size: 0.875rem;
+  font-weight: bold;
+  border: none;
+  outline: none;
+}
+
+.user__info__pay__input::placeholder {
+  font-weight: lighter;
+  color: var(--white);
+  opacity: 0.5;
+}
+
+.user__info__pay__line {
+  position: absolute;
+  border: 1px solid var(--light);
+  top: 16px;
+  bottom: 16px;
+  left: 92px;
+}
+
+/* TABLET USER INFO SECTION*/
+@media (min-width: 37.5em) {
+  .user__info__section {
+    margin-block-start: 49px;
+    gap: 20px;
+  }
+
+  .user__info__card {
+    height: 308px;
+  }
+
+  .user__info__name__gmail {
+    gap: 10px;
+    padding: 0 27px;
+    margin-block-start: 53px;
+  }
+
+  .user__info__name span:nth-child(1),
+  .user__info__name span:nth-child(2),
+  .user__info__gmail span:nth-child(1),
+  .user__info__gmail span:nth-child(2) {
+    font-size: 1.25rem;
+  }
+
+  .user__info__line {
+    top: 76px;
+    left: 27px;
+    right: 27px;
+  }
+
+  .user__info__pay__method {
+    margin-block-start: 40px;
+    padding: 0 27px;
+    gap: 14px;
+  }
+
+  .user__info__pay__title {
+    font-size: 1.25rem;
+  }
+
+  .user__info__pay__input__card {
+    gap: 82px;
+  }
+
+  .user__info__pay__input {
+    font-size: 1.5rem;
+  }
+
+  .user__info__pay__line {
+    left: 126px;
+  }
+}
+
+/* DESKTOP USER INFO SECTION*/
+@media (min-width: 62.5em) {
+  .user__info__section {
+    /* background-color: red; */
+    /* margin-block-start: 153px; */
+    /* padding: 0; */
+  }
+  .user__info__card {
+    background-color: tan;
+    /* width: 400px; */
+    position: absolute;
+    right: 0;
+    box-shadow: none;
+  }
+
+  .user__info__title {
+    padding: 0 27px;
+  }
+
+  .user__info__name__gmail {
+    margin-block-start: 20px;
+  }
+
+  .user__info__pay__method {
+    margin-block-start: 80px;
+  }
+
+  .user__info__name {
+    /* gap: 236px; */
+  }
+
+  .user__info__gmail {
+    /* gap: 100px; */
+  }
+}

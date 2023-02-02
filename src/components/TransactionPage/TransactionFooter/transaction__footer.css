@@ -1,0 +1,62 @@
+/* MOBILE TRANSACTION FOOTER */
+.transaction__footer__section {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding: var(--paddingX);
+  margin-block-start: 46px;
+  margin-block-end: 23px;
+}
+
+.transaction__footer__title {
+  color: var(--white);
+  font-size: 0.775rem;
+  opacity: 0.5;
+  margin: 0 auto;
+}
+
+.transaction__pay__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light);
+  color: var(--black);
+  height: 56px;
+  font-size: 1.125rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* TABLET TRANSACTION FOOTER SECTION */
+@media (min-width: 37.5em) {
+  .transaction__footer__section {
+    background-color: transparent;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 8px rgba(136, 136, 136, 0.25);
+    border-radius: 10px;
+    margin: 0 26px;
+    margin-block-start: 50px;
+    margin-block-end: 70px;
+    height: 74px;
+  }
+
+  .transaction__footer__title {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .transaction__pay__btn {
+    font-size: 1rem;
+    width: 153px;
+    height: 46px;
+  }
+}
+
+/* DESKTOP TRANSACTION FOOTER SECTION  */
+@media (min-width: 62.5em) {
+}
