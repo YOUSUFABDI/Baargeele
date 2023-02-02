@@ -129,6 +129,21 @@
   top: 69px;
 }
 
+.oder__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 17px;
+  margin-block-start: 55px;
+}
+
+.oder__total span:nth-child(1),
+.oder__total span:nth-child(2) {
+  color: var(--white);
+  font-size: 1.375rem;
+  font-weight: bold;
+}
+
 /* TABLET ODER INFO SECTION*/
 @media (min-width: 37.5em) {
   .oder__info__section {
@@ -137,6 +152,7 @@
 
   .oder__information__card {
     margin-block-start: 20px;
+    height: 359px;
   }
 
   .oder__info__banner {
@@ -186,6 +202,16 @@
     left: 27px;
     right: 27px;
     top: 76px;
+  }
+
+  .oder__total {
+    padding: 0 27px;
+    margin-block-start: 40px;
+  }
+
+  .oder__total span:nth-child(1),
+  .oder__total span:nth-child(2) {
+    font-size: 1.75rem;
   }
 }
 

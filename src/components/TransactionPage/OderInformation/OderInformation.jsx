@@ -27,10 +27,10 @@ const OderInformation = () => {
           </div>
           <div className="oder__player__line"></div>
         </div>
-        {/* <div className="oder__total">
+        <div className="oder__total">
           <span>Total:</span>
           <span>0.75$</span>
-        </div> */}
+        </div>
       </div>
     </div>
   );
