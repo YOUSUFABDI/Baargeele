@@ -34,7 +34,6 @@
 .user__info__name {
   display: flex;
   justify-content: space-between;
-  /* gap: 315px; */
   align-items: center;
 }
 
@@ -54,7 +53,6 @@
 .user__info__gmail {
   display: flex;
   justify-content: space-between;
-  /* gap: 223px; */
   align-items: center;
 }
 
@@ -188,37 +186,37 @@
 }
 
 /* DESKTOP USER INFO SECTION*/
-@media (min-width: 62.5em) {
+@media (min-width: 80em) {
   .user__info__section {
-    /* background-color: red; */
-    /* margin-block-start: 153px; */
-    /* padding: 0; */
-  }
-  .user__info__card {
-    background-color: tan;
-    /* width: 400px; */
-    position: absolute;
-    right: 0;
-    box-shadow: none;
+    padding: 0;
+    margin-block-start: 33px;
   }
 
-  .user__info__title {
-    padding: 0 27px;
+  .user__info__pay__input__card {
+    width: 365px;
   }
 
   .user__info__name__gmail {
-    margin-block-start: 20px;
+    margin-block-start: 0px;
+  }
+
+  .user__info__line {
+    top: 96px;
   }
 
   .user__info__pay__method {
-    margin-block-start: 80px;
+    margin-block-start: 83px;
   }
 
-  .user__info__name {
-    /* gap: 236px; */
+  .user__info__card {
+    box-shadow: none;
   }
 
-  .user__info__gmail {
-    /* gap: 100px; */
+  .user__info__pay__title {
+    margin-block-end: 20px;
+  }
+
+  .user__info__title {
+    margin-left: 32px;
   }
 }

@@ -19,6 +19,8 @@ const TransactionPayment = () => {
           />
           <div className="transaction__oder__user__info">
             <div className="transaction__oder">
+              <h2>Order Information</h2>
+              <h2 className="user__info_x">User Information</h2>
               <OderInformation />
             </div>
             <UserInfo />

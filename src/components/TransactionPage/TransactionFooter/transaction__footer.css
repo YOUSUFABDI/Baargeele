@@ -58,5 +58,9 @@
 }
 
 /* DESKTOP TRANSACTION FOOTER SECTION  */
-@media (min-width: 62.5em) {
+@media (min-width: 80em) {
+  .transaction__footer__section {
+    margin-left: -0px;
+    width: 757px;
+  }
 }
