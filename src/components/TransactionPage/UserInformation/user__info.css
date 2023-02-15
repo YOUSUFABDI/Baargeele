@@ -186,7 +186,7 @@
 }
 
 /* DESKTOP USER INFO SECTION*/
-@media (min-width: 80em) {
+@media (min-width: 64.0625em) {
   .user__info__section {
     padding: 0;
     margin-block-start: 33px;

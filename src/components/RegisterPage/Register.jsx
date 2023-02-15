@@ -6,10 +6,11 @@ import useForm from "../../useForm";
 import validateForms from "../../validateForms";
 
 const Register = () => {
-  const { handleChange, handleSubmit, values, errors, isLoading } = useForm(validateForms);
+  const { handleChange, handleSubmit, values, errors, isLoading } =
+    useForm(validateForms);
 
   return (
-    <>
+    <div className="wrapper">
       <nav className="navbar">
         <Header />
       </nav>
@@ -63,9 +64,7 @@ const Register = () => {
             </div>
             <div className="registration__footer">
               <button className="registeration__btn" onClick={handleSubmit}>
-              {
-                  isLoading ? "Loading" : "Create Account"
-                }
+                {isLoading ? "Loading" : "Create Account"}
               </button>
               <div className="registration__sub__footer">
                 <span className="registration__alredy__acc">
@@ -79,7 +78,7 @@ const Register = () => {
           </form>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

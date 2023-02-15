@@ -1,11 +1,11 @@
 import Header from "../Header/Header";
 import "./download.css";
 import bannerImage from "../../../assets/images/hero-banner.png";
-import { FcPhoneAndroid } from 'react-icons/fc';
+import { FcPhoneAndroid } from "react-icons/fc";
 
 const Download = () => {
   return (
-    <>
+    <div className="wrapper">
       <nav className="navbar">
         <Header />
       </nav>
@@ -37,7 +37,7 @@ const Download = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -16,7 +16,7 @@ const EditProfile = () => {
   };
 
   return (
-    <>
+    <div className="wrapper">
       <nav className="navbar">
         <Header />
       </nav>
@@ -26,7 +26,7 @@ const EditProfile = () => {
         </div>
         <MakeChange />
       </div>
-    </>
+    </div>
   );
 };
 

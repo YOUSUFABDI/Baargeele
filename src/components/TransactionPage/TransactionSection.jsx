@@ -11,6 +11,10 @@ const TransactionPayment = () => {
     <div className="transaction__section">
       <TransactionHeader />
       <div className="transaction__destop__wrapper">
+        <div className="transaction__titles">
+          <h2>User Information</h2>
+          <h2>Oder Information</h2>
+        </div>
         <div className="transaction__ds__head">
           <img
             className="transaction__e__waller__img"
@@ -19,11 +23,11 @@ const TransactionPayment = () => {
           />
           <div className="transaction__oder__user__info">
             <div className="transaction__oder">
-              <h2>Order Information</h2>
-              <h2 className="user__info_x">User Information</h2>
               <OderInformation />
             </div>
-            <UserInfo />
+            <div className="trans__user">
+              <UserInfo />
+            </div>
           </div>
         </div>
         <TransactionFooter />

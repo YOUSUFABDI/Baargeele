@@ -5,7 +5,7 @@ import MakeChange from "./MakeChange";
 
 const Profile = () => {
   return (
-    <>
+    <div className="wrapper">
       <nav className="navbar">
         <Header />
       </nav>
@@ -21,7 +21,7 @@ const Profile = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -13,7 +13,7 @@ import { DataProvider } from "./DataContext";
 
 const App = () => {
   return (
-    <div className="wrapper">
+    <>
       <DataProvider>
         <BrowserRouter>
           <Routes>
@@ -29,7 +29,7 @@ const App = () => {
           </Routes>
         </BrowserRouter>
       </DataProvider>
-    </div>
+    </>
   );
 };
 

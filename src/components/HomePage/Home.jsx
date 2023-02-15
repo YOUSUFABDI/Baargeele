@@ -12,7 +12,7 @@ const Home = () => {
   const [proPrice, setProPrice] = useState();
 
   return (
-    <>
+    <div className="wrapper">
       <Header />
       <img
         className="home__bg__img"
@@ -35,7 +35,7 @@ const Home = () => {
           proPrice={proPrice}
         />
       </div>
-    </>
+    </div>
   );
 };
 

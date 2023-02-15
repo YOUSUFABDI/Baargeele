@@ -120,14 +120,6 @@ a {
   .user {
     pointer-events: none;
   }
-
-  .transaction__section {
-    position: absolute;
-    left: 0;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-  }
 }
 
 .edit__profile__section {

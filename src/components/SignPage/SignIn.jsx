@@ -13,7 +13,7 @@ const SignIn = () => {
   const notify = () => toast.success("Successfully toasted!");
 
   return (
-    <>
+    <div className="wrapper">
       <nav className="navbar">
         <Header />
       </nav>
@@ -63,7 +63,7 @@ const SignIn = () => {
           </form>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
