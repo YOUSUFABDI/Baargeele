@@ -24,6 +24,10 @@
 }
 
 @media (min-width: 64.0625em) {
+  .transaction__section{
+    margin-block-end: 51px;
+  }
+
   .total_desk_tran {
     display: flex;
     flex-direction: row;
@@ -102,6 +106,7 @@
   .img_user_info {
     display: flex;
     justify-content: center;
+    padding-left: 13px;
     /* background-color: aqua; */
     flex: 1;
   }
