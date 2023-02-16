@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import "./home.css";
 import Header from "../Header/Header";
-import PlayerIdSection from "./PlayerIdSection";
-import PaymentSection from "./PaymentSection";
-import ProductSection from "./ProductSection";
-import FooterPayment from "./FooterPayment";
+import PlayerIdSection from "./PlayerIdSection/PlayerIdSection";
+import PaymentSection from "./PaymentSection/PaymentSection";
+import ProductSection from "./ProductSection/ProductSection";
+import FooterPayment from "./FooterSection/FooterPayment";
+import CheckInfo from "./CheckInfo/CheckInfo";
 
 const Home = () => {
   const [entredId, setEnteredId] = useState(false);
@@ -21,6 +22,7 @@ const Home = () => {
       />
       <div className="home__container">
         <PlayerIdSection setEnteredId={setEnteredId} entredId={entredId} />
+        {entredId ? <CheckInfo setEnteredId={setEnteredId} /> : null}
         <PaymentSection />
         <ProductSection
           setproducts={setproducts}

@@ -1,9 +1,9 @@
 import "./paymentSection.css";
 import { useState } from "react";
-import evcPlusImg from "../../../assets/images/evcplus.png";
-import sahalImg from "../../../assets/images/sahal.png";
-import jeebImg from "../../../assets/images/jeep.png";
-import zaadImg from "../../../assets/images/zaad.png";
+import evcPlusImg from "../../../../assets/images/evcplus.png";
+import sahalImg from "../../../../assets/images/sahal.png";
+import jeebImg from "../../../../assets/images/jeep.png";
+import zaadImg from "../../../../assets/images/zaad.png";
 
 const PaymentSection = () => {
   const [isSelectedindex, setisSelectedindex] = useState(0);
