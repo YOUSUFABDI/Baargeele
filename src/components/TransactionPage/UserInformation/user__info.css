@@ -188,15 +188,30 @@
 /* DESKTOP USER INFO SECTION*/
 @media (min-width: 64.0625em) {
   .user__info__section {
+    /* background-color: slategrey; */
     padding: 0;
-    margin-block-start: 33px;
+    padding-top: 33px;
+    justify-content: space-between;
+    height: 100%;
+    margin-block-start: 0px;
+  }
+
+  .user__info__name span:nth-child(1),
+  .user__info__name span:nth-child(2),
+  .user__info__gmail span:nth-child(1),
+  .user__info__gmail span:nth-child(2) {
+    font-size: 1.25vw;
   }
 
   .user__info__pay__input__card {
-    width: 365px;
+    flex: 1;
+    margin-left: 27px;
+    margin-right: 27px;
+    /* background-color: brown; */
   }
 
   .user__info__name__gmail {
+    /* background-color: slateblue; */
     margin-block-start: 0px;
   }
 
@@ -205,18 +220,37 @@
   }
 
   .user__info__pay__method {
-    margin-block-start: 83px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background-color: darkgreen; */
+    height: 116px;
+    gap: 20px;
+    padding: 0;
+    margin-bottom: 20px;
+    /* margin-block-start: 83px; */
   }
 
   .user__info__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background-color: teal; */
     box-shadow: none;
   }
 
   .user__info__pay__title {
-    margin-block-end: 20px;
+    /* background-color: darkmagenta; */
+    padding-left: 27px;
+    /* margin-block-end: 20px; */
+  }
+
+  .user__info__pay__input {
+    font-size: 1vw;
   }
 
   .user__info__title {
-    margin-left: 32px;
+    /* background-color: chocolate; */
+    margin-left: 27px;
   }
 }

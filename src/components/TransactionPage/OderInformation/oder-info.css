@@ -243,6 +243,17 @@
     padding: 0 14px;
   }
 
+  .oder__player__name span:nth-child(1),
+  .oder__player__name span:nth-child(2),
+  .oder__player__id span:nth-child(1),
+  .oder__player__id span:nth-child(2) {
+    font-size: 1.25vw;
+  }
+
+  .oder__name {
+    font-size: 1.25vw;
+  }
+
   .oder__player__line {
     top: 92px;
     left: 14px;

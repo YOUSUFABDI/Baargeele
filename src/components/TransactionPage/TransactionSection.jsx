@@ -10,27 +10,37 @@ const TransactionPayment = () => {
   return (
     <div className="transaction__section">
       <TransactionHeader />
-      <div className="transaction__destop__wrapper">
-        <div className="transaction__titles">
-          <h2>User Information</h2>
-          <h2>Oder Information</h2>
-        </div>
-        <div className="transaction__ds__head">
-          <img
-            className="transaction__e__waller__img"
-            src={EwalletImg}
-            alt="ewalet-img"
-          />
-          <div className="transaction__oder__user__info">
-            <div className="transaction__oder">
-              <OderInformation />
+      <div className="total_desk_tran">
+        <div className="desk_user_info">
+          <div className="total_user_info">
+            <div className="title_user">
+              <h2>User Information</h2>
             </div>
-            <div className="trans__user">
-              <UserInfo />
+            <div className="box_user">
+              <div className="img_user_info">
+                <img
+                  className="transaction__e__waller__img"
+                  src={EwalletImg}
+                  alt="ewalet-img"
+                />
+              </div>
+              <div className="user_info">
+                <UserInfo />
+              </div>
+            </div>
+          </div>
+          <TransactionFooter />
+        </div>
+        <div className="desk_order_info">
+          <div className="total_order_info">
+            <div className="title_order">
+              <h2>Order Information</h2>
+            </div>
+            <div className="box_order">
+            <OderInformation />
             </div>
           </div>
         </div>
-        <TransactionFooter />
       </div>
     </div>
   );

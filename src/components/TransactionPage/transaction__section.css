@@ -6,7 +6,16 @@
   flex-direction: column;
 }
 
-.transaction__titles h2 {
+.total_desk_tran {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.title_user h2 {
+  display: none;
+}
+
+.title_order h2 {
   display: none;
 }
 
@@ -15,22 +24,52 @@
 }
 
 @media (min-width: 64.0625em) {
-  .transaction__destop__wrapper {
-    /* position: relative; */
+  .total_desk_tran {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 31px;
+    /* background-color: rosybrown; */
+    height: 508px;
     margin: 0 57px;
     margin-block-start: 120px;
   }
 
-  .transaction__titles {
+  .desk_user_info {
+    /* background-color: yellow; */
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    width: 950px;
-    margin-bottom: 20px;
+    border-radius: 15px;
+    /* box-shadow: 0px 0px 8px rgba(136, 136, 136, 0.25); */
+    flex: 2;
   }
 
-  .transaction__titles h2 {
+  .desk_order_info {
+    /* background-color: yellowgreen; */
+    border-radius: 15px;
+    /* box-shadow: 0px 0px 8px rgba(136, 136, 136, 0.25); */
+    flex: 1;
+  }
+
+  .total_user_info {
+    display: flex;
+    flex-direction: column;
+    /* background-color: blue; */
+    justify-content: space-between;
+    height: 403px;
+    width: 100%;
+  }
+
+  .total_order_info {
+    display: flex;
+    flex-direction: column;
+    /* background-color: blue; */
+    justify-content: space-between;
+    height: 403px;
+    width: 100%;
+  }
+
+  .title_user h2 {
     color: var(--white);
     font-size: 1.25rem;
     font-weight: bold;
@@ -38,35 +77,44 @@
     width: fit-content;
   }
 
-  .transaction__ds__head {
-    display: flex;
-    align-items: center;
-    gap: 31px;
-    /* width: 757px; */
-    box-shadow: 0px 0px 8px rgba(136, 136, 136, 0.25);
-    border-radius: 15px;
-    padding: 0 13px;
+  .title_order h2 {
+    color: var(--white);
+    font-size: 1.25rem;
+    font-weight: bold;
+    display: block;
+    width: fit-content;
   }
 
-  .transaction__oder__user__info {
+  .box_user {
     display: flex;
-    flex-direction: row-reverse;
-    gap: 31px;
+    flex-direction: row;
+    box-shadow: 0px 0px 8px rgba(136, 136, 136, 0.25);
+    border-radius: 15px;
+    width: 100%;
     height: 360px;
   }
 
-  .transaction__oder {
-    /* position: absolute;
-    right: 0; */
-    border-radius: 15px;
+  .box_order {
     box-shadow: 0px 0px 8px rgba(136, 136, 136, 0.25);
-    width: 378px;
+    border-radius: 15px;
+  }
+
+  .img_user_info {
+    display: flex;
+    justify-content: center;
+    /* background-color: aqua; */
+    flex: 1;
   }
 
   .transaction__e__waller__img {
     display: block;
-    width: 310px;
-    height: 310px;
-    object-fit: contain;
+    max-width: 100%;
+    height: 100%;
   }
+
+  .user_info {
+    /* background-color: darkgoldenrod; */
+    flex: 1;
+  }
+
 }
