@@ -13,7 +13,7 @@
 }
 
 .home__title {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: bold;
   color: var(--white);
 }
@@ -61,7 +61,7 @@
 /* TABLET PLAYER  ID SECTION*/
 @media (min-width: 37.5em) {
   .home__title {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: bold;
   }
 

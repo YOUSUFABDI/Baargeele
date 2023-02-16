@@ -2,12 +2,13 @@
 .check__info {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 13px;
   width: 100%;
   background-color: transparent;
   border: 1px solid var(--light);
   border-radius: 15px;
-  height: 117px;
+  height: 137px;
   padding: 21px 20px;
   margin-block-start: 14px;
 }
@@ -26,13 +27,13 @@
 
 .check__info__head span:nth-child(1) {
   color: var(--white);
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: bold;
 }
 
 .check__info__head span:nth-child(2) {
   color: var(--white);
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   cursor: pointer;
 }
 
@@ -45,7 +46,7 @@
 .check__info__middle span:nth-child(2) {
   color: var(--white);
   opacity: 0.5;
-  font-size: 0.625rem;
+  font-size: 0.875rem;
 }
 
 .check__info__footer {
@@ -67,13 +68,13 @@
 .check__info__footer span:nth-child(1) {
   color: var(--white);
   opacity: 0.5;
-  font-size: 0.625rem;
+  font-size: 0.875rem;
 }
 
 .check__info__refresh span:nth-child(1) {
   color: var(--light);
   opacity: 1;
-  font-size: 0.625rem;
+  font-size: 0.875rem;
 }
 
 .check__info__refresh span:nth-child(2) {
@@ -82,6 +83,7 @@
   align-self: flex-end;
 }
 
+/* TABLET CHECK INFO SECTION*/
 @media (min-width: 37.5em) {
   .check__info {
     width: 47%;

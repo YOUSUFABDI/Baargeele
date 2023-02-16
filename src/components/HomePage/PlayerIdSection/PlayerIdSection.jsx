@@ -1,9 +1,16 @@
-import { useEffect } from "react";
 import "./playerIdSection.css";
+import { useState } from "react";
+import { useLocalData } from "../../../DataContext";
 
 const PlayerIdSection = ({ entredId, setEnteredId }) => {
-  const handleOkBtn = () => {
+  const { inputValue, setInputValue } = useLocalData();
+
+  const handleOkBtn = (event) => {
     setEnteredId(!entredId);
+  };
+
+  const handleOnchange = (event) => {
+    setInputValue(event.target.value);
   };
 
   return (
@@ -17,7 +24,9 @@ const PlayerIdSection = ({ entredId, setEnteredId }) => {
           <input
             className="home__player__id__input"
             type="text"
+            value={inputValue}
             placeholder="Enter Player ID"
+            onChange={handleOnchange}
           />
           <button className="home__player__submit__btn" onClick={handleOkBtn}>
             {entredId ? "X" : "OK"}
