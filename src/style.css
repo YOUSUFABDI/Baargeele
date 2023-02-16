@@ -18,6 +18,7 @@
   --black: #000;
   --white: #fff;
   --paddingX: 0 22px;
+  --input-padding: 8px;
 }
 
 * {
