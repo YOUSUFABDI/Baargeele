@@ -27,6 +27,10 @@
   display: none;
 }
 
+.footer_hide{
+  display: none;
+}
+
 .footer__total__pay-btn {
   display: flex;
   flex: 1;
@@ -103,6 +107,8 @@
   .footer__player__id__name {
     flex: 1;
   }
+
+
 
   .footer__total__pay-btn {
     flex: 1;

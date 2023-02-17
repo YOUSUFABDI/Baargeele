@@ -28,6 +28,7 @@
   width: 100%;
   cursor: pointer;
 }
+
 .product__card__info {
   display: flex;
   flex-direction: column;
@@ -150,6 +151,42 @@
   .product_card_hight {
     margin-block-start: 31px;
     height: 362px;
+  }
+  .product__amount__uc span {
+    font-size: 1.5rem;
+  }
+  .product__price__uc{
+    font-size: 1.25rem;
+  }
+  .product__amount__uc img {
+    margin-right: 2px;
+    height: 24px;
+    width: 24px;
+  }
+
+  .first_img {
+    height: 65px;
+    width: 140px;
+  }
+
+  .second_img {
+    height: 47px;
+    width: 101px;
+  }
+
+  .normal_img {
+    height: 68px;
+    width: 140px;
+  }
+
+  .big_img {
+    height: 89px;
+    width: 140px;
+  }
+
+  .biggest_img {
+    height: 119px;
+    width: 140px;
   }
 }
 

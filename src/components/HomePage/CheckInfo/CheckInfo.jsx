@@ -4,7 +4,7 @@ import { MdOutlineRefresh } from "react-icons/md";
 import { useLocalData } from "../../../DataContext";
 
 const CheckInfo = ({ setEnteredId }) => {
-  const { inputValue, setInputValue } = useLocalData();
+  const { inputValue, playerName } = useLocalData();
 
   const handleBackBtn = () => {
     setEnteredId(false);
@@ -14,7 +14,7 @@ const CheckInfo = ({ setEnteredId }) => {
     <div className="check__info">
       <div className="check__info__banner">
         <div className="check__info__head">
-          <span>Nh-YOUSUF</span>
+          <span>{playerName}</span>
           <span onClick={handleBackBtn}>
             <RiExchangeFundsFill />
           </span>
