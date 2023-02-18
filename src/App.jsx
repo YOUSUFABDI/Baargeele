@@ -10,12 +10,14 @@ import OtpPage from "./pages/otp";
 import TransactionPage from "./pages/transaction";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { DataProvider } from "./DataContext";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
   return (
     <>
       <DataProvider>
         <BrowserRouter>
+          <Toaster />
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/download" element={<Download />}></Route>

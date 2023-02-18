@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useLocalData } from "./DataContext";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { toast } from "react-hot-toast";
 
 const useForm = (validateForms) => {
   const [values, setValues] = useState({
@@ -46,7 +47,7 @@ const useForm = (validateForms) => {
       .then((response) => {
         var data = response.data;
         if (data == "Success") {
-          alert("Login Success");
+          toast.success("Login Success!");
           loginDone();
         } else if (data == "incorretPass") {
           setErrors(

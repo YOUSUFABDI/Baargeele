@@ -6,11 +6,17 @@ import useForm from "../../useForm";
 import validateForms from "../../validateForms";
 import toast, { Toaster } from "react-hot-toast";
 import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
+import PuffLoader from "react-spinners/PuffLoader";
+
+const override = {
+  display: "block",
+  margin: "0 auto",
+  borderColor: "red",
+};
 
 const SignIn = () => {
   const { handleChange, handleSubmit, values, errors, isLoading } =
     useForm(validateForms);
-  const notify = () => toast.success("Successfully toasted!");
 
   return (
     <div className="wrapper">
@@ -51,7 +57,16 @@ const SignIn = () => {
             </div>
             <div className="btms">
               <button className="sign__lg__btn" onClick={handleSubmit}>
-                {isLoading ? "Loading" : "OK"}
+                {isLoading ? (
+                  <PuffLoader
+                    color="#000"
+                    loading={isLoading}
+                    cssOverride={override}
+                    size={40}
+                  />
+                ) : (
+                  "Login"
+                )}
               </button>
               <div className="sign__make__acc">
                 <span>Dont't have an account?</span>

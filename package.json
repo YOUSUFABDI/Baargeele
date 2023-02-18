@@ -16,7 +16,8 @@
     "react-hot-toast": "^2.4.0",
     "react-icons": "^4.7.1",
     "react-otp-input": "^2.4.0",
-    "react-router-dom": "^6.6.1"
+    "react-router-dom": "^6.6.1",
+    "react-spinners": "^0.13.8"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",
