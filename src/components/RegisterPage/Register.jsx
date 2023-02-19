@@ -4,6 +4,10 @@ import Header from "../Header/Header";
 import "./register.css";
 import useForm from "../../useForm";
 import validateForms from "../../validateForms";
+import { BsFilePerson } from "react-icons/bs";
+import { MdOutlineEmail } from "react-icons/md";
+import { BsTelephone } from "react-icons/bs";
+import { MdLockOutline } from "react-icons/md";
 
 const Register = () => {
   const { handleChange, handleSubmit, values, errors, isLoading } =
@@ -16,66 +20,102 @@ const Register = () => {
       </nav>
 
       <div className="registeration__container">
-        <div className="registeration__reg__img">
-          <img className="reg_img" src={RegImg} alt="reg-img" />
-        </div>
         <div className="registeration__reg">
-          <h2>Create Account</h2>
-          <form className="registeration__form__control">
-            <div className="registeration__reverse">
-              <span>Name</span>
-              <input
-                type="text"
-                name="name"
-                value={values.name}
-                onChange={handleChange}
-              />
-              {errors.name && <p className="val-reg">{errors.name}</p>}
-            </div>
-            <div className="registeration__reverse">
-              <span>Gmail</span>
-              <input
-                type="email"
-                name="gmail"
-                value={values.gmail}
-                onChange={handleChange}
-              />
-              {errors.gmail && <p className="val-reg">{errors.gmail}</p>}
-            </div>
-            <div className="registeration__reverse">
-              <span>Phone Number</span>
-              <input
-                type="text"
-                name="phone"
-                value={values.phone}
-                onChange={handleChange}
-              />
-              {errors.phone && <p className="val-reg">{errors.phone}</p>}
-            </div>
-            <div className="registeration__reverse">
-              <span>Password</span>
-              <input
-                type="password"
-                name="password"
-                value={values.password}
-                onChange={handleChange}
-              />
-              {errors.password && <p className="val-reg">{errors.password}</p>}
-            </div>
-            <div className="registration__footer">
-              <button className="registeration__btn" onClick={handleSubmit}>
-                {isLoading ? "Loading" : "Create Account"}
-              </button>
-              <div className="registration__sub__footer">
-                <span className="registration__alredy__acc">
-                  Already Have Account ?
-                </span>
-                <button className="registration__login__btn">
-                  <Link to="/sign">Login</Link>
-                </button>
+          <div className="registeration__reg__img">
+            <img className="reg_img" src={RegImg} alt="reg-img" />
+          </div>
+          <div className="registration__banner">
+            <h2>Create Account</h2>
+            <form className="registeration__form__control">
+              <div className="registration__header">
+                <div className="regisration__input__container">
+                  <div
+                    className={`${
+                      errors.name ? "input__wrapper__error" : "input__wrapper"
+                    }`}
+                  >
+                    <BsFilePerson className="icon" />
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Enter Your Name"
+                      value={values.name}
+                      onChange={handleChange}
+                    />
+                  </div>
+                  {errors.name && <p className="val-reg">{errors.name}</p>}
+                </div>
+                <div className="regisration__input__container">
+                  <div
+                    className={`${
+                      errors.gmail ? "input__wrapper__error" : "input__wrapper"
+                    }`}
+                  >
+                    <MdOutlineEmail className="icon" />
+                    <input
+                      type="email"
+                      name="gmail"
+                      placeholder="Enter Gmail"
+                      value={values.gmail}
+                      onChange={handleChange}
+                    />
+                  </div>
+                  {errors.gmail && <p className="val-reg">{errors.gmail}</p>}
+                </div>
+                <div className="regisration__input__container">
+                  <div
+                    className={`${
+                      errors.phone ? "input__wrapper__error" : "input__wrapper"
+                    }`}
+                  >
+                    <BsTelephone className="icon" />
+                    <input
+                      type="text"
+                      name="phone"
+                      placeholder="61xxxxxxx"
+                      value={values.phone}
+                      onChange={handleChange}
+                    />
+                  </div>
+                  {errors.phone && <p className="val-reg">{errors.phone}</p>}
+                </div>
+                <div className="regisration__input__container">
+                  <div
+                    className={`${
+                      errors.password
+                        ? "input__wrapper__error"
+                        : "input__wrapper"
+                    }`}
+                  >
+                    <MdLockOutline className="icon" />
+                    <input
+                      type="password"
+                      name="password"
+                      placeholder="Enter Password"
+                      value={values.password}
+                      onChange={handleChange}
+                    />
+                  </div>
+                  {errors.password && (
+                    <p className="val-reg">{errors.password}</p>
+                  )}
+                </div>
               </div>
-            </div>
-          </form>
+              <div className="registration__footer">
+                <button className="registeration__btn" onClick={handleSubmit}>
+                  {isLoading ? "Loading" : "Create Account"}
+                </button>
+                <div className="registration__sub__footer">
+                  <span className="registration__alredy__acc">
+                    Already Have Account ?
+                  </span>
+                  <button className="registration__login__btn">
+                    <Link to="/sign">Login</Link>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>

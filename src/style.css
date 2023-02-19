@@ -19,6 +19,7 @@
   --white: #fff;
   --paddingX: 0 22px;
   --input-padding: 8px;
+  --error-color: #fc4e4e;
 }
 
 * {

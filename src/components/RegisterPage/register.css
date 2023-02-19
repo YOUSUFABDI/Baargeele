@@ -1,95 +1,123 @@
 /* MOBILE REGISTRATION PAGE */
 .registeration__container {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  place-items: center;
   padding: var(--paddingX);
-  padding-top: 10px;
-  padding-bottom: 50px;
-  width: 100%;
+  margin-block-start: 70px;
 }
 
 .reg_img {
   display: none;
 }
 
-.registeration__reg__img img {
-  width: 100%;
-}
-
 .registeration__reg {
   display: flex;
+  background: transparent;
+  border: 2px solid var(--light);
+  box-shadow: -2px 2px 10px var(--light);
+  border-radius: 15px;
+}
+
+.registration__banner {
+  display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 22px;
-  padding-top: 27px;
-  padding-bottom: 41px;
-  margin-top: 33px;
-  color: var(--light);
   width: 100%;
-  border-radius: 6px;
-  border: 1px solid var(--light);
-  box-shadow: -4px 4px 18px rgba(255, 253, 253, 0.2);
 }
 
-.registeration__reverse {
-  display: flex;
-  flex-direction: column;
-  padding: 8px 0;
-}
-
-.registeration__reverse span {
+.registeration__reg h2 {
   color: var(--light);
-  font-size: 1.125rem;
+  font-size: 1.875rem;
   font-weight: bold;
-  padding: 4px 0;
-}
-
-.registeration__reverse input {
-  background-color: transparent;
-  color: var(--white);
-  font-size: 1rem;
-  height: 56px;
-  outline: none;
-  border: 1px solid var(--light);
-  padding: 12px 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(255, 253, 253, 0.2);
-}
-
-.registeration__btn {
-  padding: 0 30px;
-  height: 56px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.125rem;
-  font-weight: bold;
-  background-color: var(--light);
-  color: var(--black);
-  cursor: pointer;
-  transition: all 0.5s ease;
-}
-.registeration__btn:hover {
-  scale: 1.1;
+  margin-block-start: 30px;
 }
 
 .registeration__form__control {
   display: flex;
   flex-direction: column;
+  gap: 30px;
+  margin-block-start: 40px;
+  padding: 0 24px;
   width: 100%;
+}
+
+.registration__header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.regisration__input__container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  height: 56px;
+  background: transparent;
+  border: 1px solid var(--light);
+  box-shadow: 0px 0px 8px var(--light);
+  border-radius: 10px;
+}
+
+.input__wrapper__error {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  height: 56px;
+  background: transparent;
+  box-shadow: 0px 0px 8px var(--error-color);
+  border-radius: 10px;
+  border: 1px solid var(--error-color);
+}
+
+.input__wrapper input,
+.input__wrapper__error input {
+  background-color: transparent;
+  color: var(--white);
+  font-size: 0.875rem;
+  border: none;
+  outline: none;
+}
+
+.icon {
+  color: var(--light);
+  width: 24px;
+  height: 24px;
+  margin-left: 15px;
+}
+
+.regisration__input__container p {
+  color: var(--error-color);
+  font-size: 0.625rem;
+  font-weight: bold;
 }
 
 .registration__footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 41px;
-  width: 100%;
+  gap: 10px;
+}
+
+.registeration__btn {
+  background: var(--light);
+  color: var(--black);
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  width: 196px;
+  height: 45px;
+  cursor: pointer;
+}
+
+.registration__sub__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .registration__alredy__acc {
@@ -97,69 +125,25 @@
   opacity: 0.5;
   font-size: 0.75rem;
   font-weight: bold;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  text-align: center;
 }
 
 .registration__login__btn {
   background-color: transparent;
-  color: var(--white);
-  opacity: 1;
+  border: none;
+  width: fit-content;
+  margin-block-end: 40px;
+}
+
+.registration__login__btn a {
+  color: var(--light);
   font-size: 0.75rem;
   font-weight: bold;
-  border: none;
-  transition: all 0.5s ease;
-  cursor: pointer;
-}
-
-.registration__login__btn:hover {
-  scale: 1.1;
-}
-
-.registration__sub__footer {
-  display: flex;
-  flex-direction: column;
-}
-
-.val-reg {
-  color: red;
-  padding: var(--paddingX);
 }
 
 /* TABLET REGISTRATION IN PAGE */
 @media (min-width: 37.5em) {
-  .registeration__container {
-    grid-template-columns: repeat(1, 1fr);
-    padding: 100px;
-  }
-  .reg_img {
-    display: none;
-    width: 100%;
-  }
-
-  .registeration__reverse input {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  .registeration__reverse span {
-    width: 90%;
-    margin: 0 auto;
-  }
 }
 
 /* DESKTOP REGISTRATION IN PAGE */
 @media (min-width: 62.5em) {
-  .registeration__container {
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 100px;
-    padding: var(--paddingX);
-  }
-
-  .reg_img {
-    display: block;
-    width: 100%;
-  }
 }
