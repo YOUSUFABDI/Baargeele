@@ -5,13 +5,11 @@ import "./sign.css";
 import useForm from "../../useForm";
 import validateForms from "../../validateForms";
 import toast, { Toaster } from "react-hot-toast";
-import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
 import PuffLoader from "react-spinners/PuffLoader";
 
 const override = {
   display: "block",
   margin: "0 auto",
-  borderColor: "red",
 };
 
 const SignIn = () => {
