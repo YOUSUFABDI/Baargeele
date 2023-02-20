@@ -32,7 +32,7 @@ export default function validateForms(values) {
   }
 
   if (!validPassword.test(values.loginPass)) {
-    errors.loginPass = "Password must be minimum eight characters";
+    errors.loginPass = "Valid Password";
   }
 
   // OTP
