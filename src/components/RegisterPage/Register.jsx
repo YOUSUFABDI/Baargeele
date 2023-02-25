@@ -1,4 +1,4 @@
-import RegImg from "../../../assets/images/create_acc.png";
+import RegImg from "../../../assets/images/Security-reg.svg";
 import { Link } from "react-router-dom";
 import Header from "../Header/Header";
 import "./register.css";

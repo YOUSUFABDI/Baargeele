@@ -1,6 +1,4 @@
 /* MOBILE SIGN IN PAGE */
-
-/* TABLET SIGN IN PAGE */
 .sign__container {
   padding: var(--paddingX);
   margin-block-start: 20px;
@@ -115,6 +113,7 @@
 .sign__footer {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 10px;
 }
 
@@ -155,9 +154,85 @@
   font-weight: bold;
 }
 
+/* TABLET SIGN IN PAGE */
 @media (min-width: 37.5em) {
+  .sign__container {
+    margin-block-start: 126px;
+    padding: 0 167px;
+  }
+
+  .sign__form__control {
+    padding: 0;
+  }
+
+  .login__banner {
+    gap: 30px;
+  }
+
+  .sign__lg__btn {
+    width: 296px;
+  }
 }
 
 /* DESKTOP SIGN IN PAGE */
 @media (min-width: 62.5em) {
+  .sign__container {
+    margin-block-start: 30px;
+    margin-block-end: 30px;
+    padding: var(--paddingX);
+    display: flex;
+    justify-content: center;
+  }
+
+  .login__reg {
+    gap: 91px;
+    width: 981px;
+    height: 545px;
+    border: 2px solid var(--light);
+    border-radius: 15px;
+  }
+
+  .sign__reg__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light);
+    height: 545px;
+    width: 400px;
+    border-radius: 15px;
+  }
+
+  .sign_img {
+    display: block;
+    width: 390px;
+    height: 390px;
+  }
+
+  .login__banner {
+    align-items: flex-start;
+    margin-block-start: 116px;
+    padding-right: 90px;
+  }
+
+  .login__banner h2 {
+    font-size: 2.5rem;
+  }
+
+  .sign__footer {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .sign__lg__btn {
+    width: 121px;
+  }
+
+  .sign__make__acc {
+    gap: 2px;
+  }
+
+  .sign__create__btn {
+    align-self: flex-end;
+  }
 }

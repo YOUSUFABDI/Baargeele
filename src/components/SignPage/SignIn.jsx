@@ -1,4 +1,4 @@
-import LoginImg from "../../../assets/images/login.png";
+import LoginImg from "../../../assets/images/Computer-login.svg";
 import { Link } from "react-router-dom";
 import Header from "../Header/Header";
 import "./sign.css";

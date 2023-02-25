@@ -105,7 +105,7 @@
   font-weight: bold;
   border: none;
   border-radius: 10px;
-  width: 196px;
+  width: 100%;
   height: 45px;
   cursor: pointer;
 }
@@ -137,8 +137,88 @@
 
 /* TABLET REGISTRATION IN PAGE */
 @media (min-width: 37.5em) {
+  .registeration__container {
+    margin-block-start: 50px;
+    padding: 0 167px;
+  }
+
+  .registeration__form__control {
+    padding: 0;
+  }
+
+  .registeration__btn {
+    width: 295px;
+  }
 }
 
 /* DESKTOP REGISTRATION IN PAGE */
 @media (min-width: 62.5em) {
+  .registeration__container {
+    padding: var(--paddingX);
+    margin-block-start: 30px;
+    margin-block-end: 30px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .registeration__reg {
+    gap: 91px;
+    border: 2px solid var(--light);
+    border-radius: 15px;
+    width: 981px;
+  }
+
+  .registeration__reg__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light);
+    border-radius: 15px;
+  }
+
+  .reg_img {
+    display: block;
+    width: 400px;
+    height: 400px;
+  }
+
+  .registration__banner {
+    gap: 30px;
+    padding-right: 90px;
+    margin-block-start: 40px;
+    margin-block-end: 40px;
+    align-items: flex-start;
+  }
+
+  .registration__banner h2 {
+    font-size: 2.5rem;
+  }
+
+  .registeration__form__control {
+    gap: 60px;
+  }
+
+  .registration__footer {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .registeration__btn {
+    width: 196px;
+  }
+
+  .registration__sub__footer {
+    gap: 2px;
+    align-items: flex-start;
+  }
+
+  .registration__alredy__acc {
+    justify-self: flex-end;
+  }
+
+  .registration__login__btn {
+    margin: 0;
+    align-self: flex-end;
+  }
 }
