@@ -48,7 +48,7 @@ const useForm = (validateForms) => {
         var data = response.data;
         if (data == "Success") {
           toast.success("Login Success!");
-          loginDone();
+          loginDone(loginGmail);
         } else if (data == "incorretPass") {
           setErrors(
             (errors = {
@@ -101,7 +101,7 @@ const useForm = (validateForms) => {
         var data = response.data;
         if (data == "Success") {
           alert("Success");
-          loginDone();
+          loginDone(gmail);
         } else {
           setErrors(
             (errors = {
@@ -113,7 +113,7 @@ const useForm = (validateForms) => {
       .then(() => setIsloading((isLoading = false)));
   }
 
-  function loginDone() {
+  function loginDone(gmail) {
     setIslogin(localStorage.getItem("isLogin"));
     if (localStorage.getItem("isLogin") == null) {
       localStorage.setItem("isLogin", "false");
@@ -121,6 +121,7 @@ const useForm = (validateForms) => {
       localStorage.setItem("isLogin", "true");
       setIslogin(localStorage.getItem("isLogin"));
     }
+    localStorage.setItem("userGmail", gmail);
     navigate("/");
   }
 

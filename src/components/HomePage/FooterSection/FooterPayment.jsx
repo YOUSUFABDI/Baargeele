@@ -1,14 +1,40 @@
-import { useState } from "react";
 import "./footerPayment.css";
 import { useNavigate } from "react-router-dom";
 import { useLocalData } from "../../../DataContext";
+import { toast } from "react-hot-toast";
 
-const FooterPayment = ({ entredId, proPrice }) => {
+const FooterPayment = ({ entredId, totalproduct, selectedPayment }) => {
   const navigate = useNavigate();
   const { inputValue, playerName } = useLocalData();
 
+  const isLoginCheck = () => {
+    const isLogin = localStorage.getItem("isLogin");
+    if (isLogin === "true") {
+      goToTransaction();
+    } else {
+      toast.error("Login required")
+      navigate("/sign")
+    }
+  }
+
   const goToTransaction = () => {
-    navigate("/transaction");
+    console.log(localStorage.getItem("userGmail"))
+    let playerID = "";
+    let playerNewNAme = "";
+    if (inputValue != "") {
+      playerID = inputValue;
+    }
+    if (playerName != "") {
+      playerNewNAme = playerName
+    }
+    console.log("pass " + playerNewNAme + " and " + playerID)
+    const data = {
+      playerid: playerID,
+      playername: playerNewNAme,
+      totalproduct: totalproduct,
+      selectedPayment: selectedPayment,
+    }
+    navigate("/transaction", { state: data });
   };
 
   return (
@@ -23,11 +49,11 @@ const FooterPayment = ({ entredId, proPrice }) => {
         <div className="footer__total__pay-btn">
           <div className="footer__total">
             <span className="footer__total__title">Total: </span>
-            <span className="footer__total__money">{proPrice}$</span>
+            <span className="footer__total__money">{totalproduct.Price}$</span>
           </div>
           <button
             className={`footer__pay-btn ${entredId ? "active" : "inactive"}`}
-            onClick={goToTransaction}
+            onClick={isLoginCheck}
           >
             Pay now
           </button>

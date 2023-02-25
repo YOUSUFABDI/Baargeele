@@ -3,7 +3,7 @@ import axios from "axios";
 import "./productSection.css";
 import ThinUcImg from "../../../../assets/images/thinUcImg.png";
 
-const ProductSection = ({ setproducts, products, setProPrice }) => {
+const ProductSection = ({ setproducts, products, setTotalproduct }) => {
   const [isSelectedindexP, setisSelectedindexP] = useState(0);
   const onselectP = (index) => setisSelectedindexP(index);
   useEffect(() => {
@@ -15,7 +15,7 @@ const ProductSection = ({ setproducts, products, setProPrice }) => {
       .get("https://baargeelle.com/flutterConn/get_service.php")
       .then((response) => {
         setproducts(response.data);
-        setProPrice(response.data[0].Price);
+        setTotalproduct(response.data[0]);
       });
   };
 
@@ -49,7 +49,7 @@ const ProductSection = ({ setproducts, products, setProPrice }) => {
             }`}
             onClick={() => {
               onselectP(index);
-              setProPrice(product.Price);
+              setTotalproduct(product);
             }}
           >
             <div

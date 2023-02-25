@@ -1,32 +1,41 @@
 import "./paymentSection.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import evcPlusImg from "../../../../assets/images/evcplus.png";
 import sahalImg from "../../../../assets/images/sahal.png";
 import jeebImg from "../../../../assets/images/jeep.png";
 import zaadImg from "../../../../assets/images/zaad.png";
 
-const PaymentSection = () => {
+const PaymentSection = ({setSelectedPayment}) => {
   const [isSelectedindex, setisSelectedindex] = useState(0);
   const onselect = (index) => setisSelectedindex(index);
+  // setSelectedPayment("evcplus")
 
   var payment = [
     {
       paymentName: "Evc Plus",
+      paymentID: "evcplus",
       paymentImage: evcPlusImg,
     },
     {
       paymentName: "Sahal Service",
+      paymentID: "sahal",
       paymentImage: sahalImg,
     },
     {
       paymentName: "Jeeb",
+      paymentID: "jeep",
       paymentImage: jeebImg,
     },
     {
       paymentName: "ZAAD",
+      paymentID: "zaad",
       paymentImage: zaadImg,
     },
   ];
+
+  useEffect(()=>{
+  setSelectedPayment(payment[0].paymentID)
+  },[])
 
   return (
     <div className="home__payment__container">
@@ -42,6 +51,7 @@ const PaymentSection = () => {
               }`}
               onClick={() => {
                 onselect(index);
+                setSelectedPayment(data.paymentID)
               }}
             >
               <img

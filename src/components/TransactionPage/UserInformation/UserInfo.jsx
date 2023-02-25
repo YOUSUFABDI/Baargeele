@@ -1,7 +1,14 @@
+import { useLocation } from "react-router-dom";
 import "./user__info.css";
-import evcPlusImg from "../../../../assets/images/evcplus.png";
 
 const UserInfo = () => {
+  const location = useLocation();
+  const selectedPayment = location.state.selectedPayment;
+  
+  const imgChecker = () => {
+    const imgName = selectedPayment;
+    return "../../../../assets/images/"+imgName+".png"
+  }
   return (
     <div className="user__info__section">
       <h2 className="user__info__title">User Information</h2>
@@ -22,8 +29,8 @@ const UserInfo = () => {
           <div className="user__info__pay__input__card">
             <img
               className="user__info__pay__img"
-              src={evcPlusImg}
-              alt="evc-img"
+              src={imgChecker()}
+              alt="payment-img"
             />
             <div className="user__info__pay__line"></div>
             <input
