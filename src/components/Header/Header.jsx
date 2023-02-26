@@ -12,31 +12,21 @@ const Header = () => {
   const closeMobileMenu = () => setClick(false);
   const { islogin, setIslogin } = useLocalData();
 
-  // console.log(islogin);
 
   setIslogin(localStorage.getItem("isLogin"));
   if (localStorage.getItem("isLogin") == null) {
     localStorage.setItem("isLogin", "false");
   }
 
-  const signOut = () => {
-    setIslogin(localStorage.getItem("isLogin"));
-    if (localStorage.getItem("isLogin") == null) {
-      localStorage.setItem("isLogin", "false");
-    } else {
-      localStorage.setItem("isLogin", "false")
-      setIslogin(localStorage.getItem("isLogin"));
-    }
-  };
-
-  // const { handleSubmit } = useForm();
-
-  // setIslogin(localStorage.getItem("isLogin"));
-  // if (localStorage.getItem("isLogin") == null) {
-  //   localStorage.setItem("isLogin", "false");
-  // } else {
-  //   setIslogin(localStorage.setItem("isLogin", "true"));
-  // }
+  // const signOut = () => {
+  //   setIslogin(localStorage.getItem("isLogin"));
+  //   if (localStorage.getItem("isLogin") == null) {
+  //     localStorage.setItem("isLogin", "false");
+  //   } else {
+  //     localStorage.setItem("isLogin", "false")
+  //     setIslogin(localStorage.getItem("isLogin"));
+  //   }
+  // };
 
   return (
     <div className="navbar-container container">

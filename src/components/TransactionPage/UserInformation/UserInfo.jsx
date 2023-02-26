@@ -4,6 +4,7 @@ import "./user__info.css";
 const UserInfo = () => {
   const location = useLocation();
   const selectedPayment = location.state.selectedPayment;
+  const user = location.state.user;
   
   const imgChecker = () => {
     const imgName = selectedPayment;
@@ -16,11 +17,11 @@ const UserInfo = () => {
         <div className="user__info__name__gmail">
           <div className="user__info__name">
             <span>Name:</span>
-            <span>Yuusuf</span>
+            <span>{user.Name}</span>
           </div>
           <div className="user__info__gmail">
             <span>Gmail:</span>
-            <span>Yufis0488@gmail.com</span>
+            <span>{user.Gmail}</span>
           </div>
           <div className="user__info__line"></div>
         </div>

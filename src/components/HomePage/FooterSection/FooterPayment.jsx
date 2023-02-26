@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useLocalData } from "../../../DataContext";
 import { toast } from "react-hot-toast";
 
-const FooterPayment = ({ entredId, totalproduct, selectedPayment }) => {
+const FooterPayment = ({ entredId, totalproduct, selectedPayment, user }) => {
   const navigate = useNavigate();
   const { inputValue, playerName } = useLocalData();
 
@@ -33,6 +33,7 @@ const FooterPayment = ({ entredId, totalproduct, selectedPayment }) => {
       playername: playerNewNAme,
       totalproduct: totalproduct,
       selectedPayment: selectedPayment,
+      user: user,
     }
     navigate("/transaction", { state: data });
   };

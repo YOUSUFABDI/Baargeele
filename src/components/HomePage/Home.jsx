@@ -13,24 +13,23 @@ const Home = () => {
   const [products, setproducts] = useState([]);
   const [totalproduct, setTotalproduct] = useState([]);
   const [selectedPayment, setSelectedPayment] = useState();
-  // const [user, setUser] = useState([]);
+  let [user, setUser] = useState([]);
+
+  let userGmail = localStorage.getItem("userGmail");
+
+  useEffect(() => {
+    const params = new URLSearchParams();
+    params.append("UserGmail", userGmail);
+    axios
+      .post("https://baargeelle.com/flutterConn/get_users.php",params)
+      .then((response) => {
+        setUser(response.data[0]);
+      });
+  })
 
 
-  // let userGmail = localStorage.getItem("userGmail");
-  // // console.log(userGmail);
 
-  // const getProducts = (gmail) => {
-  //   const params = new URLSearchParams();
-  //   params.append("UserGmail", gmail);
-  //   axios
-  //     .get("https://baargeelle.com/flutterConn/get_service.php")
-  //     .then((response) => {
-  //       setUser(response.data);
-  //       console.log(user);
-  //     });
-  // };
-  // getProducts(userGmail)
-  
+
 
   return (
     <div className="wrapper">
@@ -56,6 +55,7 @@ const Home = () => {
           products={products}
           totalproduct={totalproduct}
           selectedPayment={selectedPayment}
+          user={user}
         />
       </div>
     </div>
