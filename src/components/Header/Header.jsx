@@ -12,21 +12,10 @@ const Header = () => {
   const closeMobileMenu = () => setClick(false);
   const { islogin, setIslogin } = useLocalData();
 
-
   setIslogin(localStorage.getItem("isLogin"));
   if (localStorage.getItem("isLogin") == null) {
     localStorage.setItem("isLogin", "false");
   }
-
-  // const signOut = () => {
-  //   setIslogin(localStorage.getItem("isLogin"));
-  //   if (localStorage.getItem("isLogin") == null) {
-  //     localStorage.setItem("isLogin", "false");
-  //   } else {
-  //     localStorage.setItem("isLogin", "false")
-  //     setIslogin(localStorage.getItem("isLogin"));
-  //   }
-  // };
 
   return (
     <div className="navbar-container container">
@@ -79,10 +68,8 @@ const Header = () => {
               }
               onClick={() => {
                 closeMobileMenu;
-                // signOut();
               }}
             >
-              {/* Profile */}
               <FaUserCircle size={40} />
             </NavLink>
           ) : (
