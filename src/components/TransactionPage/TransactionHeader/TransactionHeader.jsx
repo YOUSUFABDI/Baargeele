@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 
 const TransactionHeader = () => {
-  const loction = useLocation();
+  const location = useLocation();
   const user = location.state.user;
   return (
     <div className="transaction__header">
