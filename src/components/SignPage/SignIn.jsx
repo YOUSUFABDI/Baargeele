@@ -8,6 +8,9 @@ import toast, { Toaster } from "react-hot-toast";
 import PuffLoader from "react-spinners/PuffLoader";
 import { MdOutlineEmail } from "react-icons/md";
 import { MdLockOutline } from "react-icons/md";
+import { AiFillEye } from "react-icons/ai";
+import { AiFillEyeInvisible } from "react-icons/ai";
+import { useState } from "react";
 
 const override = {
   display: "block",
@@ -17,6 +20,19 @@ const override = {
 const SignIn = () => {
   const { handleChange, handleSubmit, values, errors, isLoading } =
     useForm(validateForms);
+
+  const [passwordType, setPasswordType] = useState("password");
+  const [clickedEyeIcon, setClickedEyeIcon] = useState(false);
+
+  const togglePassword = () => {
+    if (passwordType === "password") {
+      setPasswordType("text");
+      setClickedEyeIcon(!false);
+      return;
+    }
+    setPasswordType("password");
+    setClickedEyeIcon(false);
+  };
 
   return (
     <div className="wrapper">
@@ -63,12 +79,23 @@ const SignIn = () => {
                   >
                     <MdLockOutline className="sign__icon" />
                     <input
-                      type="password"
+                      type={passwordType}
                       name="loginPass"
                       placeholder="Enter Password"
                       value={values.loginPass}
                       onChange={handleChange}
                     />
+                    {clickedEyeIcon ? (
+                      <AiFillEyeInvisible
+                        className="sign__icon__eyesplash"
+                        onClick={togglePassword}
+                      />
+                    ) : (
+                      <AiFillEye
+                        className="sign__icon__eyesplash"
+                        onClick={togglePassword}
+                      />
+                    )}
                   </div>
                   {errors.loginPass && (
                     <p className="val-lg">{errors.loginPass}</p>

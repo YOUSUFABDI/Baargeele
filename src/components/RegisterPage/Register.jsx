@@ -8,10 +8,26 @@ import { BsFilePerson } from "react-icons/bs";
 import { MdOutlineEmail } from "react-icons/md";
 import { BsTelephone } from "react-icons/bs";
 import { MdLockOutline } from "react-icons/md";
+import { AiFillEye } from "react-icons/ai";
+import { AiFillEyeInvisible } from "react-icons/ai";
+import { useState } from "react";
 
 const Register = () => {
   const { handleChange, handleSubmit, values, errors, isLoading } =
     useForm(validateForms);
+
+  const [passwordType, setPasswordType] = useState("password");
+  const [clickedEyeIcon, setClickedEyeIcon] = useState(false);
+
+  const togglePassword = () => {
+    if (passwordType === "password") {
+      setPasswordType("text");
+      setClickedEyeIcon(!false);
+      return;
+    }
+    setPasswordType("password");
+    setClickedEyeIcon(false);
+  };
 
   return (
     <div className="wrapper">
@@ -89,12 +105,23 @@ const Register = () => {
                   >
                     <MdLockOutline className="icon" />
                     <input
-                      type="password"
+                      type={passwordType}
                       name="password"
                       placeholder="Enter Password"
                       value={values.password}
                       onChange={handleChange}
                     />
+                    {clickedEyeIcon ? (
+                      <AiFillEyeInvisible
+                        className="icon__eyesplash"
+                        onClick={togglePassword}
+                      />
+                    ) : (
+                      <AiFillEye
+                        className="icon__eyesplash"
+                        onClick={togglePassword}
+                      />
+                    )}
                   </div>
                   {errors.password && (
                     <p className="val-reg">{errors.password}</p>

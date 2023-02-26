@@ -48,6 +48,7 @@
 }
 
 .input__wrapper {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 15px;
@@ -59,6 +60,7 @@
 }
 
 .input__wrapper__error {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 15px;
@@ -72,6 +74,7 @@
 .input__wrapper input,
 .input__wrapper__error input {
   background-color: transparent;
+  width: 70%;
   color: var(--white);
   font-size: 0.875rem;
   border: none;
@@ -83,6 +86,15 @@
   width: 24px;
   height: 24px;
   margin-left: 15px;
+}
+
+.icon__eyesplash {
+  position: absolute;
+  right: 15px;
+  color: var(--light);
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
 }
 
 .regisration__input__container p {
