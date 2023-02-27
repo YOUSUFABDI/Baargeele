@@ -56,7 +56,7 @@ const Header = () => {
             }
             onClick={closeMobileMenu}
           >
-            Contact
+            Contact us
           </NavLink>
         </li>
         <li className="nav-item">
@@ -81,9 +81,21 @@ const Header = () => {
               id="sign__btn"
               onClick={closeMobileMenu}
             >
-              Sign in
+              Login
             </NavLink>
           )}
+        </li>
+        <li className="nav-item">
+          <NavLink
+            to="/register"
+            className={({ isActive }) =>
+              "nav-links" + (isActive ? " activated" : "")
+            }
+            id="create__acc__btn"
+            onClick={closeMobileMenu}
+          >
+            Create account
+          </NavLink>
         </li>
       </ul>
     </div>

@@ -76,11 +76,22 @@
   justify-content: center;
   align-items: center;
   width: 112px;
-  height: 50px;
+  height: 45px;
   border-radius: 6px;
   margin-top: 15px;
   margin-left: auto;
   margin-right: auto;
+}
+
+#create__acc__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  margin-top: 15px;
+  margin-left: 10px;
+  border: 1px solid var(--light);
+  border-radius: 10px;
 }
 
 .nav-links-btn {
@@ -158,5 +169,12 @@
     display: flex;
     font-size: 1.8rem;
     cursor: pointer;
+  }
+
+  #create__acc__btn {
+    margin-top: 0;
+    width: 70%;
+    padding: 0;
+    margin-inline: auto;
   }
 }
