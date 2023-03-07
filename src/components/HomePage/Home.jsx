@@ -36,7 +36,7 @@ const Home = () => {
       <Header />
       <img
         className="home__bg__img"
-        src={"https://baargeelle.com/images/cover_image_4.jpg"}
+        src={"https://baargeelle.com/images/cover_image_1.jpg"}
         alt="headerImg"
       />
       <div className="home__container">

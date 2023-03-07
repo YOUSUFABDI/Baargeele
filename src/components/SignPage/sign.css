@@ -136,7 +136,7 @@
   font-weight: bold;
   border: none;
   border-radius: 10px;
-  width: 100%;
+  width: 221px;
   height: 45px;
   cursor: pointer;
 }
@@ -209,9 +209,9 @@
     justify-content: center;
     align-items: center;
     background-color: var(--light);
-    height: 545px;
+    /* height: 545px; */
     width: 400px;
-    border-radius: 15px;
+    border-radius: 13px;
   }
 
   .sign_img {

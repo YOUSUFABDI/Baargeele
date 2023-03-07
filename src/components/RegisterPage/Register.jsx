@@ -11,6 +11,13 @@ import { MdLockOutline } from "react-icons/md";
 import { AiFillEye } from "react-icons/ai";
 import { AiFillEyeInvisible } from "react-icons/ai";
 import { useState } from "react";
+import PuffLoader from "react-spinners/PuffLoader";
+
+
+const override = {
+  display: "block",
+  margin: "0 auto",
+};
 
 const Register = () => {
   const { handleChange, handleSubmit, values, errors, isLoading } =
@@ -46,9 +53,8 @@ const Register = () => {
               <div className="registration__header">
                 <div className="regisration__input__container">
                   <div
-                    className={`${
-                      errors.name ? "input__wrapper__error" : "input__wrapper"
-                    }`}
+                    className={`${errors.name ? "input__wrapper__error" : "input__wrapper"
+                      }`}
                   >
                     <BsFilePerson className="icon" />
                     <input
@@ -63,9 +69,8 @@ const Register = () => {
                 </div>
                 <div className="regisration__input__container">
                   <div
-                    className={`${
-                      errors.gmail ? "input__wrapper__error" : "input__wrapper"
-                    }`}
+                    className={`${errors.gmail ? "input__wrapper__error" : "input__wrapper"
+                      }`}
                   >
                     <MdOutlineEmail className="icon" />
                     <input
@@ -80,9 +85,8 @@ const Register = () => {
                 </div>
                 <div className="regisration__input__container">
                   <div
-                    className={`${
-                      errors.phone ? "input__wrapper__error" : "input__wrapper"
-                    }`}
+                    className={`${errors.phone ? "input__wrapper__error" : "input__wrapper"
+                      }`}
                   >
                     <BsTelephone className="icon" />
                     <input
@@ -97,11 +101,10 @@ const Register = () => {
                 </div>
                 <div className="regisration__input__container">
                   <div
-                    className={`${
-                      errors.password
+                    className={`${errors.password
                         ? "input__wrapper__error"
                         : "input__wrapper"
-                    }`}
+                      }`}
                   >
                     <MdLockOutline className="icon" />
                     <input
@@ -130,7 +133,14 @@ const Register = () => {
               </div>
               <div className="registration__footer">
                 <button className="registeration__btn" onClick={handleSubmit}>
-                  {isLoading ? "Loading" : "Create Account"}
+                  {isLoading ? (
+                    <PuffLoader
+                      color="#000"
+                      loading={isLoading}
+                      cssOverride={override}
+                      size={40}
+                    />
+                  ) : ("Create Account")}
                 </button>
                 <div className="registration__sub__footer">
                   <span className="registration__alredy__acc">

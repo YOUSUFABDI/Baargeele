@@ -4,7 +4,6 @@ import Header from "../Header/Header";
 import "./sign.css";
 import useForm from "../../useForm";
 import validateForms from "../../validateForms";
-import toast, { Toaster } from "react-hot-toast";
 import PuffLoader from "react-spinners/PuffLoader";
 import { MdOutlineEmail } from "react-icons/md";
 import { MdLockOutline } from "react-icons/md";

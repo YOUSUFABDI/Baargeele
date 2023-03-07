@@ -19,6 +19,8 @@
 .opt__container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 33px;
 }
 
@@ -37,7 +39,7 @@
 }
 
 .opt__title {
-  font-size: 2rem;
+  font-size: 1.875rem;
   font-weight: bold;
   color: var(--light);
 }
@@ -87,12 +89,14 @@
   border-radius: 8px;
   width: 100% !important;
   height: 58px;
+  margin: 0 5px;
 }
 
 .opt__create__btn {
-  width: 100%;
-  height: 56px;
+  width: 224px;
+  height: 45px;
   display: flex;
+  align-self: center;
   justify-content: center;
   align-items: center;
   border: none;
@@ -108,7 +112,7 @@
 .val-lg1 {
   color: red;
   padding-top: 4px;
-  padding-left: 4px;
+  padding-left: 5px;
 }
 
 /* TABLET OPT  PAGE */
@@ -118,22 +122,22 @@
     margin-block-end: 30px;
   }
 
+  .val-lg1 {
+    color: red;
+    padding-top: 4px;
+    padding-left: 10px;
+  }
+
+  .opt__inputs__grid {
+    width: 434px !important;
+    /* padding: 0 50px; */
+  }
+
   .opt__inputs input {
-    width: 80% !important;
+    /* width: 100% !important; */
+    margin: 0 10px;
     font-size: 2.5rem;
     height: 78px;
-  }
-
-  .opt__gmail {
-    font-size: 1rem;
-  }
-
-  .opt__sub__title {
-    font-size: 1.5rem;
-  }
-
-  .opt__title {
-    font-size: 2.5rem;
   }
 }
 
@@ -145,6 +149,8 @@
   }
 
   .opt__verification {
+    flex: 1;
+    /* background-color: aqua; */
     margin: 0;
     align-items: center;
     justify-content: center;
@@ -174,7 +180,7 @@
     align-items: center;
     justify-content: center;
     background-color: var(--light);
-    border-radius: 15px;
+    border-radius: 13px;
     /* width: 474px; */
     padding: 0 20px;
     height: 545px;
@@ -187,14 +193,29 @@
   }
 
   .opt__container {
+    /* background-color: blueviolet; */
+    margin-left: 5px;
     height: fit-content;
     width: fit-content;
+    align-items: start;
+    width: 372px;
     gap: 22px;
   }
 
   .opt__create__btn {
     width: 126px;
     align-self: flex-end;
-    margin-right: 11px;
+    margin-right: 5px;
+  }
+  .opt__inputs__grid {
+    width: 100% !important;
+    /* padding: 0 50px; */
+  }
+
+  .opt__inputs input {
+    margin-left: 0;
+  }
+  .val-lg1 {
+    padding-left: 0;
   }
 }

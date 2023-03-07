@@ -75,7 +75,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 112px;
+  width: 121px;
   height: 45px;
   border-radius: 6px;
   margin-top: 15px;
@@ -87,6 +87,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 196px;
   height: 45px;
   margin-top: 15px;
   margin-left: 10px;
@@ -173,7 +174,6 @@
 
   #create__acc__btn {
     margin-top: 0;
-    width: 70%;
     padding: 0;
     margin-inline: auto;
   }

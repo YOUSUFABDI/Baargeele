@@ -59,8 +59,8 @@ const Header = () => {
             Contact us
           </NavLink>
         </li>
-        <li className="nav-item">
-          {islogin === "true" ? (
+        {islogin === "true" ? (
+          <li className="nav-item">
             <NavLink
               to="/profile"
               className={({ isActive }) =>
@@ -72,33 +72,37 @@ const Header = () => {
             >
               <FaUserCircle size={40} />
             </NavLink>
-          ) : (
-            <NavLink
-              to="/sign"
-              className={({ isActive }) =>
-                "nav-links-btn" + (isActive ? " active-btn" : "")
-              }
-              id="sign__btn"
-              onClick={closeMobileMenu}
-            >
-              Login
-            </NavLink>
-          )}
-        </li>
-        <li className="nav-item">
-          <NavLink
-            to="/register"
-            className={({ isActive }) =>
-              "nav-links" + (isActive ? " activated" : "")
-            }
-            id="create__acc__btn"
-            onClick={closeMobileMenu}
-          >
-            Create account
-          </NavLink>
-        </li>
+          </li>
+        ) : (
+          <>
+            <li className="nav-item">
+              <NavLink
+                to="/sign"
+                className={({ isActive }) =>
+                  "nav-links-btn" + (isActive ? " active-btn" : "")
+                }
+                id="sign__btn"
+                onClick={closeMobileMenu}
+              >
+                Login
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                to="/register"
+                className={({ isActive }) =>
+                  "nav-links" + (isActive ? " activated" : "")
+                }
+                id="create__acc__btn"
+                onClick={closeMobileMenu}
+              >
+                Create account
+              </NavLink>
+            </li>
+          </>
+        )}
       </ul>
-    </div>
+    </div >
   );
 };
 

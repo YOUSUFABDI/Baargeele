@@ -5,6 +5,13 @@ import useForm from "../../useForm";
 import validateForms from "../../validateForms";
 import OTPInput from "react-otp-input";
 import { useLocation } from "react-router-dom";
+import PuffLoader from "react-spinners/PuffLoader";
+
+
+const override = {
+  display: "block",
+  margin: "0 auto",
+};
 
 const OtpPage = () => {
   const { handleChangeOTP, handleOTP, setValues, values, errors, isLoading } =
@@ -41,9 +48,8 @@ const OtpPage = () => {
                       onChange={handleChangeOTP}
                       value={values.otp}
                       type
-                      inputStyle={`${
-                        errors.otp ? "inputStyleError" : "inputStyle"
-                      }`}
+                      inputStyle={`${errors.otp ? "inputStyleError" : "inputStyle"
+                        }`}
                       numInputs={4}
                       separator={<span></span>}
                     />
@@ -52,11 +58,18 @@ const OtpPage = () => {
                   <button
                     className="opt__create__btn"
                     onClick={() => {
-                      setValues({ gmail: gmail });
+                      setValues({ gmail: gmail, otp: values.otp });
                       handleOTP(event);
                     }}
                   >
-                    {isLoading ? "Loading" : "Verify"}
+                    {isLoading ? (
+                      <PuffLoader
+                        color="#000"
+                        loading={isLoading}
+                        cssOverride={override}
+                        size={40}
+                      />
+                    ) : ("Verify")}
                   </button>
                 </form>
               </div>
