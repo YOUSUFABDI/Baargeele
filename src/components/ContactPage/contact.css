@@ -73,21 +73,30 @@
   opacity: 0.5;
 }
 
-.get__in__touch__text__input__wrapper textarea {
-  resize: none;
-  border: none;
-  outline: none;
+.get__in__touch__text__input__wrapper {
   padding-left: 18px;
   padding-right: 18px;
   padding-top: 20px;
-  font-size: 0.875rem;
-  color: var(--white);
-  opacity: 0.5;
+  padding-bottom: 20px;
   background: transparent;
   border: 1px solid var(--light);
+  -webkit-box-shadow: 0px 0px 8px var(--light);
+  -moz-box-shadow: 0px 0px 8px var(--light);
   box-shadow: 0px 0px 8px var(--light);
   border-radius: 10px;
   height: 126px;
+  width: 100%;
+}
+
+.get__in__touch__text__input__wrapper textarea {
+  background: transparent;
+  resize: none;
+  border: none;
+  outline: none;
+  font-size: 0.875rem;
+  color: var(--white);
+  opacity: 0.5;
+  height: 100%;
   width: 100%;
 }
 
@@ -199,7 +208,7 @@
     margin-block-end: 30px;
     border: 2px solid #b9d6f2;
     border-radius: 15px;
-    width: 1026px;
+    width: 981px;
     justify-content: space-between;
   }
 
@@ -215,8 +224,8 @@
 
   .contact__img__info {
     background-color: var(--light);
-    width: 100%;
-    border-radius: 15px;
+    width: 70%;
+    border-radius: 13px;
   }
 
   .image__info {
