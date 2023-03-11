@@ -1,3 +1,249 @@
-.contact {
-  color: green;
+/* MOBILE CONTACT PAGE */
+.contact__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 60px;
+  margin-block-start: 40px;
+  padding: var(--paddingX);
+}
+
+.contact__img {
+  display: none;
+}
+
+.get__in__touch__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.get__in__touch__wrapper h2 {
+  color: var(--light);
+  font-size: 1.875rem;
+  font-weight: bold;
+  align-self: center;
+}
+
+.get__in__touch__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.get__in__touch__inpu__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: transparent;
+  border: 1px solid var(--light);
+  box-shadow: 0px 0px 8px var(--light);
+  border-radius: 10px;
+  height: 56px;
+}
+
+.get__in__touch__inpu__wrapper input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 70%;
+  font-size: 0.875rem;
+  color: var(--white);
+  opacity: 0.5;
+}
+
+.get__in__touch__inpu__wrapper__error {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: transparent;
+  box-shadow: 0px 0px 8px var(--error-color);
+  border-radius: 10px;
+  border: 1px solid var(--error-color);
+  height: 56px;
+}
+
+.get__in__touch__inpu__wrapper__error input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 70%;
+  font-size: 0.875rem;
+  color: var(--white);
+  opacity: 0.5;
+}
+
+.get__in__touch__text__input__wrapper textarea {
+  resize: none;
+  border: none;
+  outline: none;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 20px;
+  font-size: 0.875rem;
+  color: var(--white);
+  opacity: 0.5;
+  background: transparent;
+  border: 1px solid var(--light);
+  box-shadow: 0px 0px 8px var(--light);
+  border-radius: 10px;
+  height: 126px;
+  width: 100%;
+}
+
+.get__in__touch__text__input__wrapper__error textarea {
+  resize: none;
+  border: none;
+  outline: none;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 20px;
+  font-size: 0.875rem;
+  color: var(--white);
+  opacity: 0.5;
+  background: transparent;
+  box-shadow: 0px 0px 8px var(--error-color);
+  border-radius: 10px;
+  border: 1px solid var(--error-color);
+  height: 126px;
+  width: 100%;
+}
+
+.get__in__touch__icon {
+  color: var(--light);
+  width: 24px;
+  height: 24px;
+  margin-left: 15px;
+}
+
+.what__up__icon {
+  position: absolute;
+  top: 403px;
+  left: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  box-shadow: 0px 0px 8px var(--light);
+  border-radius: 10px;
+  height: 45px;
+  width: 45%;
+  padding: 8px 10px;
+}
+
+.info__wrappe__desc {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--white);
+}
+
+.info__wrappe__icon {
+  width: 30px;
+  height: 30px;
+  color: #25d366;
+}
+
+.info__wrapper__btn {
+  position: absolute;
+  top: 403px;
+  right: 24px;
+  background-color: var(--light);
+  color: var(--black);
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  width: 30%;
+  height: 45px;
+  padding: 13px 40px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* TABLET CONTACT PAGE */
+@media (min-width: 37.5em) {
+  .contact__wrapper {
+    padding: 0 166px;
+    margin-block-start: 50px;
+  }
+
+  .get__in__touch__wrapper h2 {
+    align-self: flex-start;
+    font-size: 2.5rem;
+  }
+
+  .info__wrapper {
+    justify-content: space-between;
+  }
+
+  .what__up__icon {
+    top: 414px;
+    left: 166px;
+    width: 147px;
+  }
+
+  .info__wrapper__btn {
+    top: 414px;
+    right: 166px;
+    width: 132px;
+  }
+}
+
+/* DESKTOP CONTACT PAGE */
+@media (min-width: 62.5em) {
+  .contact__wrapper {
+    padding: 0;
+    margin: 0;
+    margin-inline: auto;
+    flex-direction: row;
+    margin-block-start: 80px;
+    border: 2px solid #b9d6f2;
+    border-radius: 15px;
+    width: 1026px;
+    justify-content: space-between;
+  }
+
+  .btn-hide-desktop {
+    display: none;
+  }
+
+  .contact__img {
+    display: block;
+    width: 300px;
+    height: 300px;
+  }
+
+  .contact__img__info {
+    background-color: var(--light);
+    width: 100%;
+    border-radius: 15px;
+  }
+
+  .image__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 72px 0;
+  }
+
+  .get__in__touch__wrapper {
+    width: 100%;
+    padding: 0;
+    padding-right: 59px;
+    margin: 0;
+    align-self: center;
+    gap: 30px;
+  }
+
+  .what__up__icon {
+    position: static;
+    width: 282px;
+    background-color: var(--dark);
+  }
+
+  .info__wrapper__btn {
+    position: static;
+    align-self: flex-end;
+    margin-top: 40px;
+  }
 }
