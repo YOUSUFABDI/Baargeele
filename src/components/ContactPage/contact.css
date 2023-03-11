@@ -47,7 +47,7 @@
   border: none;
   outline: none;
   width: 70%;
-  font-size: 0.875rem;
+  font-size: var(--fs-input);
   color: var(--white);
   opacity: 0.5;
 }
@@ -93,7 +93,7 @@
   resize: none;
   border: none;
   outline: none;
-  font-size: 0.875rem;
+  font-size: var(--fs-input);
   color: var(--white);
   opacity: 0.5;
   height: 100%;

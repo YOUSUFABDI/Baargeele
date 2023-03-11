@@ -112,7 +112,7 @@
 .user__info__pay__input {
   background-color: transparent;
   color: var(--white);
-  font-size: 0.875rem;
+  font-size: var(--fs-input);
   font-weight: bold;
   border: none;
   outline: none;

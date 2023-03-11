@@ -76,7 +76,7 @@
   background-color: transparent;
   width: 70%;
   color: var(--white);
-  font-size: 0.875rem;
+  font-size: var(--fs-input);
   border: none;
   outline: none;
 }
