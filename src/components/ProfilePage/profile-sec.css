@@ -1,0 +1,22 @@
+@media (min-width: 62.5em) {
+  .profile__page {
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    gap: 100px;
+    margin-block-start: 80px;
+    margin-block-end: 40px;
+  }
+
+  .profile__page__head {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-left: 91px;
+  }
+
+  .profile__page__banner {
+    width: 100%;
+    margin-right: 66px;
+  }
+}

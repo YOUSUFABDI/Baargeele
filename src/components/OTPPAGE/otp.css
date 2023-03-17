@@ -130,11 +130,9 @@
 
   .opt__inputs__grid {
     width: 434px !important;
-    /* padding: 0 50px; */
   }
 
   .opt__inputs input {
-    /* width: 100% !important; */
     margin: 0 10px;
     font-size: 2.5rem;
     height: 78px;
@@ -150,7 +148,6 @@
 
   .opt__verification {
     flex: 1;
-    /* background-color: aqua; */
     margin: 0;
     align-items: center;
     justify-content: center;

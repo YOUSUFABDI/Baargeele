@@ -1,0 +1,123 @@
+/* MOBILE USER PROFILE HEAD */
+.user__profile__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90px;
+  background-color: transparent;
+  box-shadow: 0px 0px 8px var(--light);
+  border-radius: 10px;
+  margin: var(--paddingX);
+  margin-block-start: 20px;
+  cursor: pointer;
+}
+
+.user__icon__user__info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user__icon {
+  color: var(--light);
+  width: 60px;
+  height: 60px;
+  transform: rotate(0deg);
+  margin-left: 8px;
+}
+
+.user__profile__name__gmail {
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.user__profile__name__gmail span:nth-child(1) {
+  font-size: 1.25rem;
+  opacity: 1;
+}
+
+.user__profile__name__gmail span:nth-child(2) {
+  font-size: 1rem;
+  opacity: 0.5;
+}
+
+.arrow__down__icon {
+  width: 20px;
+  height: 20px;
+  color: var(--white);
+  margin-right: 8px;
+  transition: transform 300ms ease-in-out;
+}
+
+.active__icon {
+  width: 20px;
+  height: 20px;
+  color: var(--white);
+  margin-right: 8px;
+  transform: rotate(90deg);
+  transition: transform 300ms ease-in-out;
+}
+
+/* TABLET USER PROFILE HEAD */
+@media (min-width: 37.5em) {
+  .user__profile__head {
+    width: 500px;
+    margin-inline: auto;
+    margin-block-start: 50px;
+    height: 110px;
+  }
+
+  .user__icon__user__info {
+    gap: 30px;
+  }
+
+  .user__icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .user__profile__name__gmail span:nth-child(1) {
+    font-size: 1.625rem;
+  }
+
+  .user__profile__name__gmail span:nth-child(2) {
+    font-size: 1.25rem;
+  }
+
+  .arrow__down__icon,
+  .active__icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* DESKTOP USER PROFILE HEAD */
+@media (min-width: 62.5em) {
+  .user__profile__head {
+    margin: 0;
+    padding: 0;
+    height: 90px;
+    width: 351px;
+    pointer-events: none;
+  }
+
+  .user__icon {
+    width: 60px;
+    height: 60px;
+    margin-left: 10px;
+  }
+
+  .user__profile__name__gmail span:nth-child(1) {
+    font-size: 1.25rem;
+  }
+
+  .user__profile__name__gmail span:nth-child(2) {
+    font-size: 1rem;
+  }
+
+  .arrow__down__icon {
+    display: none;
+  }
+}
