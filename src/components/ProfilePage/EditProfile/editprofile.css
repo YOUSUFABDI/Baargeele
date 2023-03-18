@@ -158,6 +158,23 @@
   cursor: pointer;
 }
 
+.edit__p__err {
+  color: var(--error-color);
+  font-size: 0.625rem;
+  font-weight: bold;
+  margin-top: 3px;
+}
+
+.edit__eye__icon {
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
+}
+
+.edit__eye__icon:hover {
+  opacity: 0.75;
+}
+
 /* TABLET EDIT PROFILE */
 @media (min-width: 37.5em) {
   .edit__profile__section {

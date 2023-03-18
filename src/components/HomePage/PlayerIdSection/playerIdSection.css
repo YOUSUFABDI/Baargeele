@@ -39,6 +39,23 @@
   color: var(--white);
 }
 
+.home__player__id__input__error {
+  width: 100%;
+  height: 40px;
+  padding-left: var(--input-padding);
+  text-align: left;
+  outline: none;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  font-size: 1.125rem;
+  background-color: transparent;
+  color: var(--white);
+  box-shadow: 0px 0px 8px var(--error-color);
+  border: 1px solid var(--error-color);
+}
+
 ::placeholder {
   color: var(--white);
   opacity: 0.5;
@@ -59,8 +76,11 @@
 }
 
 .home__player__id__verfy p {
-  color: red;
   padding: 4px 0;
+  color: var(--error-color);
+  font-size: 0.625rem;
+  font-weight: bold;
+  margin-top: 3px;
 }
 
 /* TABLET PLAYER  ID SECTION*/
@@ -70,7 +90,8 @@
     font-weight: bold;
   }
 
-  .home__player__id__input {
+  .home__player__id__input,
+  .home__player__id__input__error {
     width: 50%;
     height: 45px;
     border-top-left-radius: 10px;
@@ -96,7 +117,8 @@
     margin-block-start: 71px;
   }
 
-  .home__player__id__input {
+  .home__player__id__input,
+  .home__player__id__input__error {
     width: 43%;
   }
 }

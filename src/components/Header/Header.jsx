@@ -66,17 +66,19 @@ const Header = () => {
         </li>
         {islogin === "true" ? (
           <li className="nav-item">
-            <NavLink
-            to={"/profile"}
-            className={({ isActive }) =>
-              "nav-links" + (isActive ? " activated" : "")
-            }
+            <a
+              className="user__profile__img"
+              // to={"/profile"}
+              // className={({ isActive }) =>
+              //   "nav-links" + (isActive ? " activated" : "")
+              // }
               onClick={() => {
-                closeMobileMenu()
+                closeMobileMenu();
+                goToProfile();
               }}
             >
               <FaUserCircle size={40} />
-            </NavLink >
+            </a>
           </li>
         ) : (
           <>
@@ -107,7 +109,7 @@ const Header = () => {
           </>
         )}
       </ul>
-    </div >
+    </div>
   );
 };
 

@@ -123,6 +123,30 @@
     margin: 0;
   }
 
+  .purchase__history__card__wrapper {
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 495px;
+  }
+
+  .purchase__history__card__wrapper::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .purchase__history__card__wrapper::-webkit-scrollbar-track {
+    box-shadow: 0px 0px 3px var(--light);
+    border-radius: 8px;
+  }
+
+  .purchase__history__card__wrapper::-webkit-scrollbar-thumb {
+    background: var(--light);
+    border-radius: 10px;
+  }
+
+  .purchase__history__card__wrapper::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+  }
+
   .purchase__history__card {
     width: 100%;
   }

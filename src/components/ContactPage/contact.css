@@ -168,6 +168,13 @@
   cursor: pointer;
 }
 
+.get__in__touch__p__err {
+  color: var(--error-color);
+  font-size: 0.625rem;
+  font-weight: bold;
+  margin-top: 3px;
+}
+
 /* TABLET CONTACT PAGE */
 @media (min-width: 37.5em) {
   .contact__wrapper {

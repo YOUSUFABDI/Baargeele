@@ -13,10 +13,13 @@ const useForm = (validateForms) => {
     loginGmail: "",
     loginPass: "",
     otp: "",
-    editName: "Yuusuf Abdi",
+    editName: "",
     editGmail: "",
     editPhone: "",
-    editPass: ""
+    editPass: "",
+    contactName: "",
+    contactGmail: "",
+    contactMessage: "",
   });
 
   const navigate = useNavigate();
@@ -158,12 +161,25 @@ const useForm = (validateForms) => {
     }
   };
 
+  const handleSave = (event) => {
+    event.preventDefault();
+    setErrors((errors = validateForms(values)));
+    console.log(errors.editPhone);
+  };
+
+  const handleGetInTouch = (event) => {
+    event.preventDefault();
+    setErrors((errors = validateForms(values)));
+  };
+
   return {
     handleChange,
     handleSubmit,
     handleOTP,
     handleChangeOTP,
     setValues,
+    handleSave,
+    handleGetInTouch,
     values,
     errors,
     isLoading,

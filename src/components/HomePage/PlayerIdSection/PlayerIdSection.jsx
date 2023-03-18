@@ -65,7 +65,11 @@ const PlayerIdSection = ({ entredId, setEnteredId }) => {
       <div className={`${entredId ? "hide__verify" : "home__player__id"}`}>
         <form className="home__form__control" onSubmit={handleSubmit}>
           <input
-            className="home__player__id__input"
+            className={`${
+              isInvalId
+                ? "home__player__id__input__error"
+                : "home__player__id__input"
+            }`}
             type="text"
             value={inputValue}
             placeholder="Enter Player ID"
