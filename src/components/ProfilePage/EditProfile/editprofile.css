@@ -24,19 +24,19 @@
 .edit__profile__form {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 50px;
 }
 
 .edit__profile__input__wrapper {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
 }
 
 .edit__profile__input {
   display: flex;
   align-items: center;
-  height: 56px;
+  height: 54px;
   background: transparent;
   color: var(--light);
   gap: 15px;
@@ -175,6 +175,7 @@
   .edit__profile__section {
     display: flex;
     flex-direction: column;
+    width: 100%;
     margin: 0;
     padding: 0;
     gap: 20px;
@@ -182,7 +183,7 @@
 
   .edit__profile__section h2,
   .hide__edit__profile h2 {
-    font-size: 1.875rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: var(--white);
   }

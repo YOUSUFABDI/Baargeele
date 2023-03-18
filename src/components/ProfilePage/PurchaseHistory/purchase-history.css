@@ -127,8 +127,15 @@
     width: 100%;
   }
 
+  .hide {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: a 300ms ease-in-out;
+  }
+
   .purchase__history__title {
-    font-size: 1.875rem;
+    font-size: 1.5rem;
     margin-top: 0;
   }
 }

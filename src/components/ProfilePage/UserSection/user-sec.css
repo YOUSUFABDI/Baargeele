@@ -98,7 +98,7 @@
   .user__profile__head {
     margin: 0;
     padding: 0;
-    height: 90px;
+    height: 80px;
     width: 351px;
     pointer-events: none;
   }
@@ -117,7 +117,9 @@
     font-size: 1rem;
   }
 
-  .arrow__down__icon {
+  .arrow__down__icon,
+  .active__icon {
     display: none;
   }
+
 }

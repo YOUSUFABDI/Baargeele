@@ -13,6 +13,10 @@ const useForm = (validateForms) => {
     loginGmail: "",
     loginPass: "",
     otp: "",
+    editName: "Yuusuf Abdi",
+    editGmail: "",
+    editPhone: "",
+    editPass: ""
   });
 
   const navigate = useNavigate();
@@ -100,7 +104,7 @@ const useForm = (validateForms) => {
       .then((response) => {
         var data = response.data;
         if (data == "Success") {
-          alert("Success");
+          toast.success("Success!");
           loginDone(gmail);
         } else {
           setErrors(

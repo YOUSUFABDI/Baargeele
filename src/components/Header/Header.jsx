@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import "./header.css";
@@ -11,10 +11,15 @@ const Header = () => {
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
   const { islogin, setIslogin } = useLocalData();
+  const navigate = useNavigate();
 
   setIslogin(localStorage.getItem("isLogin"));
   if (localStorage.getItem("isLogin") == null) {
     localStorage.setItem("isLogin", "false");
+  }
+
+  function goToProfile() {
+    navigate("/profile");
   }
 
   return (
@@ -62,16 +67,16 @@ const Header = () => {
         {islogin === "true" ? (
           <li className="nav-item">
             <NavLink
-              to="/profile"
-              className={({ isActive }) =>
-                "nav-links" + (isActive ? " activated" : "")
-              }
+            to={"/profile"}
+            className={({ isActive }) =>
+              "nav-links" + (isActive ? " activated" : "")
+            }
               onClick={() => {
-                closeMobileMenu;
+                closeMobileMenu()
               }}
             >
               <FaUserCircle size={40} />
-            </NavLink>
+            </NavLink >
           </li>
         ) : (
           <>

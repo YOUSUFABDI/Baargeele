@@ -4,11 +4,11 @@
     /* background-color: red; */
     display: flex;
     gap: 100px;
-    margin-block-start: 80px;
-    margin-block-end: 40px;
+    margin-block-start: 40px;
   }
 
   .profile__page__head {
+    /* background-color: aqua; */
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -16,6 +16,7 @@
   }
 
   .profile__page__banner {
+    /* background-color: blueviolet; */
     width: 100%;
     margin-right: 66px;
   }
