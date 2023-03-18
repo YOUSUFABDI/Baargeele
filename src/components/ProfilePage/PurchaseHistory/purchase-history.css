@@ -126,7 +126,7 @@
   .purchase__history__card__wrapper {
     overflow: hidden;
     overflow-y: scroll;
-    height: 495px;
+    height: 480px;
   }
 
   .purchase__history__card__wrapper::-webkit-scrollbar {
