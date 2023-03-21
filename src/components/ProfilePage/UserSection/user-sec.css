@@ -39,7 +39,7 @@
 }
 
 .user__profile__name__gmail span:nth-child(2) {
-  font-size: 1rem;
+  font-size: 3.5vw;
   opacity: 0.5;
 }
 
@@ -58,6 +58,13 @@
   margin-right: 8px;
   transform: rotate(90deg);
   transition: transform 300ms ease-in-out;
+}
+
+.Loading{
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
 }
 
 /* TABLET USER PROFILE HEAD */
@@ -94,7 +101,7 @@
 }
 
 /* DESKTOP USER PROFILE HEAD */
-@media (min-width: 62.5em) {
+@media (min-width: 64.0625em) {
   .user__profile__head {
     margin: 0;
     padding: 0;
@@ -114,7 +121,7 @@
   }
 
   .user__profile__name__gmail span:nth-child(2) {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   .arrow__down__icon,

@@ -5,6 +5,10 @@ const UserInfo = () => {
   const location = useLocation();
   const selectedPayment = location.state.selectedPayment;
   const user = location.state.user;
+
+  function capitalize(s) {
+    return s[0].toUpperCase() + s.slice(1);
+  }
   
   const imgChecker = () => {
     const imgName = selectedPayment;
@@ -17,7 +21,7 @@ const UserInfo = () => {
         <div className="user__info__name__gmail">
           <div className="user__info__name">
             <span>Name:</span>
-            <span>{user.Name}</span>
+            <span>{capitalize(user.Name)}</span>
           </div>
           <div className="user__info__gmail">
             <span>Gmail:</span>

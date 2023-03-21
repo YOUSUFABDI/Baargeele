@@ -140,7 +140,7 @@
 }
 
 /* DESKTOP OPT  PAGE */
-@media (min-width: 62.5em) {
+@media (min-width: 64.0625em) {
   .opt__section {
     display: flex;
     justify-content: center;

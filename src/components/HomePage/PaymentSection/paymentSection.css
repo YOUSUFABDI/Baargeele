@@ -77,7 +77,7 @@
 }
 
 /* DESKTOP PAYMENT SECTION */
-@media (min-width: 62.5em) {
+@media (min-width: 64.0625em) {
   .payment__cards {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 47px;

@@ -112,7 +112,7 @@
 }
 
 /* DESKTOP PLAYER  ID SECTION*/
-@media (min-width: 62.5em) {
+@media (min-width: 64.0625em) {
   .home__player__id__verfy {
     margin-block-start: 71px;
   }

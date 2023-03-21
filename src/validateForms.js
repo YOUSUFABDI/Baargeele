@@ -32,7 +32,7 @@ export default function validateForms(values) {
   }
 
   if (!validPassword.test(values.loginPass)) {
-    errors.loginPass = "Valid Password";
+    errors.loginPass = "inValid Password";
   }
 
   // OTP
@@ -42,11 +42,11 @@ export default function validateForms(values) {
 
   //Edit profile
   if (!validName.test(values.editName)) {
-    errors.editName = "enter name first";
+    errors.editName = "inValid Name";
   }
 
   if (!validPassword.test(values.editPass)) {
-    errors.editPass = "Valid Password";
+    errors.editPass = "Password must be minimum eight characters";
   }
 
   if (!validGmail.test(values.editGmail)) {
@@ -59,7 +59,7 @@ export default function validateForms(values) {
 
   //Get in touch
   if (!validName.test(values.contactName)) {
-    errors.contactName = "enter name first";
+    errors.contactName = "inValid Name";
   }
 
   if (!validGmail.test(values.contactGmail)) {
@@ -67,7 +67,7 @@ export default function validateForms(values) {
   }
 
   if (!values.contactMessage) {
-    errors.contactMessage = "first enter message";
+    errors.contactMessage = "Enter Any Message";
   }
 
   return errors;

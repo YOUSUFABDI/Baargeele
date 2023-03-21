@@ -103,7 +103,7 @@
 }
 
 /* DESKTOP FOOTER PAYMENT */
-@media (min-width: 62.5em) {
+@media (min-width: 64.0625em) {
   .footer__player__id__name {
     flex: 1;
   }

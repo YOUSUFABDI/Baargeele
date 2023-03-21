@@ -191,7 +191,7 @@
 }
 
 /* DESKTOP PRODUCT SECTION */
-@media (min-width: 62.5em) {
+@media (min-width: 64.0625em) {
   .product__cards {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 18px;

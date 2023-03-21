@@ -18,10 +18,6 @@ const Header = () => {
     localStorage.setItem("isLogin", "false");
   }
 
-  function goToProfile() {
-    navigate("/profile");
-  }
-
   return (
     <div className="navbar-container container">
       <Link to="/" className="navbar-logo">
@@ -66,19 +62,17 @@ const Header = () => {
         </li>
         {islogin === "true" ? (
           <li className="nav-item">
-            <a
-              className="user__profile__img"
-              // to={"/profile"}
-              // className={({ isActive }) =>
-              //   "nav-links" + (isActive ? " activated" : "")
-              // }
+            <NavLink
+              to={"/profile"}
+              className={({ isActive }) =>
+                "nav-links" + (isActive ? " activated" : "")
+              }
               onClick={() => {
                 closeMobileMenu();
-                goToProfile();
               }}
             >
               <FaUserCircle size={40} />
-            </a>
+            </NavLink>
           </li>
         ) : (
           <>

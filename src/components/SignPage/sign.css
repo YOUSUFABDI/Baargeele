@@ -187,7 +187,7 @@
 }
 
 /* DESKTOP SIGN IN PAGE */
-@media (min-width: 62.5em) {
+@media (min-width: 64.0625em) {
   .sign__container {
     margin-block-start: 30px;
     margin-block-end: 30px;

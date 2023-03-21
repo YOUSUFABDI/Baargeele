@@ -93,6 +93,12 @@
   border-radius: 10px;
 }
 
+.seprater{
+  display: flex;
+  align-items: center;  
+  gap: 15px;
+}
+
 .edit__profile__input__pass input {
   background-color: transparent;
   justify-self: flex-start;
@@ -187,7 +193,7 @@
 }
 
 /* TABLET EDIT PROFILE */
-@media (min-width: 62.5em) {
+@media (min-width: 64.0625em) {
   .hide__edit__profile,
   .edit__profile__section {
     display: flex;

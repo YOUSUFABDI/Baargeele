@@ -1,0 +1,131 @@
+/* MOBILE */
+.model_background {
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark);
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.model_container{
+    width: 300px;
+    height: fit-content;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px var(--light);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.items_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.titel span{
+    color: var(--white);
+    font-size: 1.25rem;
+}
+
+.payment_imgs{
+    margin-top: 40px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.img_container span{
+    display: none;
+}
+
+.img_container{
+    border-radius: 10px;
+    border: 1px solid var(--light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+}
+
+.btn_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 260px;
+    padding: 13px 0px;
+    background-color: var(--light);
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.cancel_btn{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 260px;
+    padding: 13px 0px;
+    border: 1px solid var(--error-color);
+    color: var(--white);
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+@media (min-width: 37.5em) {
+    .model_container{
+        width: 500px;
+    }
+
+    .img_container span{
+        display: block;
+        color: var(--white);
+        font-weight: bold;
+        font-size: 0.875rem;
+        padding-left: 10px;
+    }
+
+    .payment_imgs{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img_container{
+        width: 351px;
+        flex-direction: row;
+        justify-content: start;
+    }
+
+    .btn_container{
+        width: 351px;
+        flex-direction: row-reverse;
+        align-items: start;
+        justify-content: start;
+        gap: 86px;
+    }
+
+    .btn{
+        width: 175px;
+    }
+
+    .cancel_btn{
+        width: 90px;
+        margin-top: 0;
+    }
+}

@@ -10,10 +10,16 @@ import validateForms from "../../../validateForms";
 import { useLocalData } from "../../../DataContext";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-hot-toast";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import PuffLoader from "react-spinners/PuffLoader";
+
+const override = {
+  display: "block",
+  margin: "0 auto",
+};
 
 const EditProfile = ({ clickUserHead }) => {
-  const { handleChange, handleSave, values, errors, isLoading } =
+  const { handleChange, handleSave, values, errors, isLoading, getUser } =
     useForm(validateForms);
 
   const [passwordType, setPasswordType] = useState("password");
@@ -21,6 +27,10 @@ const EditProfile = ({ clickUserHead }) => {
 
   const { islogin, setIslogin } = useLocalData();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    getUser()
+  }, [])
 
   function logout() {
     setIslogin(localStorage.getItem("isLogin"));
@@ -47,20 +57,18 @@ const EditProfile = ({ clickUserHead }) => {
 
   return (
     <div
-      className={`${
-        clickUserHead ? "edit__profile__section" : "hide__edit__profile"
-      }`}
+      className={`${clickUserHead ? "edit__profile__section" : "hide__edit__profile"
+        }`}
     >
       <h2 className="edit__profile__title">Edit Profile</h2>
       <form className="edit__profile__form">
         <div className="edit__profile__input__wrapper">
           <div className="edit__input__container">
             <div
-              className={`${
-                errors.editName
-                  ? "edit__profile__input__error"
-                  : "edit__profile__input"
-              }`}
+              className={`${errors.editName
+                ? "edit__profile__input__error"
+                : "edit__profile__input"
+                }`}
             >
               <span>
                 <BsFilePerson size={24} />
@@ -80,11 +88,10 @@ const EditProfile = ({ clickUserHead }) => {
 
           <div className="edit__input__container">
             <div
-              className={`${
-                errors.editGmail
-                  ? "edit__profile__input__error"
-                  : "edit__profile__input"
-              }`}
+              className={`${errors.editGmail
+                ? "edit__profile__input__error"
+                : "edit__profile__input"
+                }`}
             >
               <span>
                 <MdOutlineEmail size={24} />
@@ -92,7 +99,6 @@ const EditProfile = ({ clickUserHead }) => {
               <input
                 type="text"
                 placeholder="Enter Your Email"
-                name="editGmail"
                 value={values.editGmail}
                 onChange={handleChange}
               />
@@ -104,11 +110,10 @@ const EditProfile = ({ clickUserHead }) => {
 
           <div className="edit__input__container">
             <div
-              className={`${
-                errors.editPhone
-                  ? "edit__profile__input__error"
-                  : "edit__profile__input"
-              }`}
+              className={`${errors.editPhone
+                ? "edit__profile__input__error"
+                : "edit__profile__input"
+                }`}
             >
               <span>
                 <BsTelephone size={24} />
@@ -116,7 +121,6 @@ const EditProfile = ({ clickUserHead }) => {
               <input
                 type="text"
                 placeholder="Enter Your Number"
-                name="editPhone"
                 value={values.editPhone}
                 onChange={handleChange}
               />
@@ -128,22 +132,23 @@ const EditProfile = ({ clickUserHead }) => {
 
           <div className="edit__input__container">
             <div
-              className={`${
-                errors.editPass
-                  ? "edit__profile__input__error"
-                  : "edit__profile__input__pass"
-              }`}
+              className={`${errors.editPass
+                ? "edit__profile__input__error"
+                : "edit__profile__input__pass"
+                }`}
             >
-              <span>
-                <MdLockOutline size={24} />
-              </span>
-              <input
-                type={passwordType}
-                name="editPass"
-                placeholder="Enter Password"
-                value={values.editPass}
-                onChange={handleChange}
-              />
+              <div className="seprater">
+                <span>
+                  <MdLockOutline size={24} />
+                </span>
+                <input
+                  type={passwordType}
+                  name="editPass"
+                  placeholder="Enter Password"
+                  value={values.editPass}
+                  onChange={handleChange}
+                />
+              </div>
               <span className="edit__eye__icon">
                 {clickedEyeIcon ? (
                   <AiFillEyeInvisible size={24} onClick={togglePassword} />
@@ -163,7 +168,12 @@ const EditProfile = ({ clickUserHead }) => {
             Log Out
           </button>
           <button className="edit__btn" onClick={handleSave}>
-            Save
+            {isLoading ? <PuffLoader
+              color="#000"
+              loading={isLoading}
+              cssOverride={override}
+              size={24}
+            /> : "Save"}
           </button>
         </div>
       </form>

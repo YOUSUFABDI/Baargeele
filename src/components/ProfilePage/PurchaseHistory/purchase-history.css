@@ -106,6 +106,31 @@
   opacity: 0.5;
 }
 
+.profile__uc span {
+  color: var(--white);
+  font-size: 1rem;
+  opacity: 1;
+}
+
+.no_history{
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  padding-top: 100px;
+  color: var(--white);
+  font-size: 1.25rem;
+  opacity: 0.5;
+}
+
+.loading_purchase{
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+}
+
 /* TABLET PURCHASE HISTORY */
 @media (min-width: 37.5em) {
   .purchase__history__sec {
@@ -117,7 +142,7 @@
 }
 
 /* DESKTOP PURCHASE HISTORY */
-@media (min-width: 62.5em) {
+@media (min-width: 64.0625em) {
   .purchase__history__sec {
     width: 100%;
     margin: 0;
@@ -161,5 +186,23 @@
   .purchase__history__title {
     font-size: 1.5rem;
     margin-top: 0;
+  }
+  .loading_purchase{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0;
+  }
+
+  .no_history{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.25rem;
+    opacity: 0.5;
+    padding-top: 0;
   }
 }

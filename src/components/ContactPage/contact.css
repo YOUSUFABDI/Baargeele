@@ -49,7 +49,7 @@
   width: 70%;
   font-size: var(--fs-input);
   color: var(--white);
-  opacity: 0.5;
+  opacity: 1;
 }
 
 .get__in__touch__inpu__wrapper__error {
@@ -70,7 +70,7 @@
   width: 70%;
   font-size: 0.875rem;
   color: var(--white);
-  opacity: 0.5;
+  opacity: 1;
 }
 
 .get__in__touch__text__input__wrapper {
@@ -88,6 +88,21 @@
   width: 100%;
 }
 
+.get__in__touch__text__input__wrapper__error {
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: transparent;
+  border: 1px solid var(--error-color);
+  -webkit-box-shadow: 0px 0px 8px var(--error-color);
+  -moz-box-shadow: 0px 0px 8px var(--error-color);
+  box-shadow: 0px 0px 8px var(--error-color);
+  border-radius: 10px;
+  height: 126px;
+  width: 100%;
+}
+
 .get__in__touch__text__input__wrapper textarea {
   background: transparent;
   resize: none;
@@ -95,26 +110,20 @@
   outline: none;
   font-size: var(--fs-input);
   color: var(--white);
-  opacity: 0.5;
+  opacity: 1;
   height: 100%;
   width: 100%;
 }
 
 .get__in__touch__text__input__wrapper__error textarea {
+  background: transparent;
   resize: none;
   border: none;
   outline: none;
-  padding-left: 18px;
-  padding-right: 18px;
-  padding-top: 20px;
-  font-size: 0.875rem;
+  font-size: var(--fs-input);
   color: var(--white);
-  opacity: 0.5;
-  background: transparent;
-  box-shadow: 0px 0px 8px var(--error-color);
-  border-radius: 10px;
-  border: 1px solid var(--error-color);
-  height: 126px;
+  opacity: 1;
+  height: 100%;
   width: 100%;
 }
 
@@ -138,6 +147,7 @@
   height: 45px;
   width: 45%;
   padding: 8px 10px;
+  cursor: pointer;
 }
 
 .info__wrappe__desc {
@@ -156,6 +166,9 @@
   position: absolute;
   top: 403px;
   right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--light);
   color: var(--black);
   font-size: 1rem;
@@ -205,7 +218,7 @@
 }
 
 /* DESKTOP CONTACT PAGE */
-@media (min-width: 62.5em) {
+@media (min-width: 64.0625em) {
   .contact__wrapper {
     padding: 0;
     margin: 0;

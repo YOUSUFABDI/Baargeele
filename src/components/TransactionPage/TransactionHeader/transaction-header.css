@@ -91,7 +91,7 @@
 }
 
 /* DESKTOP TRANSACTION PAGE */
-@media (min-width: 62.5em) {
+@media (min-width: 64.0625em) {
   .transaction__header {
     height: 196px;
   }

@@ -164,7 +164,7 @@
 }
 
 /* DESKTOP REGISTRATION IN PAGE */
-@media (min-width: 62.5em) {
+@media (min-width: 64.0625em) {
   .registeration__container {
     padding: var(--paddingX);
     margin-block-start: 30px;

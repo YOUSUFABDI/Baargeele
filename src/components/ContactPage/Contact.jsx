@@ -6,10 +6,19 @@ import { BsFilePerson } from "react-icons/bs";
 import { MdOutlineEmail } from "react-icons/md";
 import useForm from "../../useForm";
 import validateForms from "../../validateForms";
+import PuffLoader from "react-spinners/PuffLoader";
+import { useNavigate } from "react-router-dom";
+
+const override = {
+  display: "block",
+  margin: "0 auto",
+};
 
 const Contact = () => {
   const { handleChange, handleGetInTouch, values, errors, isLoading } =
     useForm(validateForms);
+
+  const navigate = useNavigate();
 
   return (
     <div className="wrapper">
@@ -26,10 +35,12 @@ const Contact = () => {
               alt="get-in-touch-img"
             />
             <div className="info__wrapper">
-              <div className="what__up__icon">
-                <p className="info__wrappe__desc">Let's Talk</p>
-                <BsWhatsapp className="info__wrappe__icon" />
-              </div>
+              <a href="https://wa.me/252612126698">
+                <div className="what__up__icon">
+                  <p className="info__wrappe__desc">Let's Talk</p>
+                  <BsWhatsapp className="info__wrappe__icon" />
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -39,11 +50,10 @@ const Contact = () => {
           <form className="get__in__touch__form">
             <div className="get__in__touch__container">
               <div
-                className={`${
-                  errors.contactName
-                    ? "get__in__touch__inpu__wrapper__error"
-                    : "get__in__touch__inpu__wrapper"
-                }`}
+                className={`${errors.contactName
+                  ? "get__in__touch__inpu__wrapper__error"
+                  : "get__in__touch__inpu__wrapper"
+                  }`}
               >
                 <BsFilePerson className="get__in__touch__icon" size={20} />
                 <input
@@ -61,15 +71,14 @@ const Contact = () => {
 
             <div className="get__in__touch__container">
               <div
-                className={`${
-                  errors.contactGmail
-                    ? "get__in__touch__inpu__wrapper__error"
-                    : "get__in__touch__inpu__wrapper"
-                }`}
+                className={`${errors.contactGmail
+                  ? "get__in__touch__inpu__wrapper__error"
+                  : "get__in__touch__inpu__wrapper"
+                  }`}
               >
                 <MdOutlineEmail className="get__in__touch__icon" size={20} />
                 <input
-                  type="text"
+                  type="email"
                   placeholder="Enter Gmail"
                   name="contactGmail"
                   value={values.contactGmail}
@@ -83,11 +92,10 @@ const Contact = () => {
 
             <div className="get__in__touch__container">
               <div
-                className={`${
-                  errors.contactMessage
-                    ? "get__in__touch__text__input__wrapper__error"
-                    : "get__in__touch__text__input__wrapper"
-                }`}
+                className={`${errors.contactMessage
+                  ? "get__in__touch__text__input__wrapper__error"
+                  : "get__in__touch__text__input__wrapper"
+                  }`}
               >
                 <textarea
                   name="contactMessage"
@@ -106,7 +114,14 @@ const Contact = () => {
               )}
             </div>
             <button className="info__wrapper__btn" onClick={handleGetInTouch}>
-              Submit
+              {isLoading ? (
+                <PuffLoader
+                  color="#000"
+                  loading={isLoading}
+                  cssOverride={override}
+                  size={24}
+                />
+              ) : ("Submit")}
             </button>
           </form>
         </div>

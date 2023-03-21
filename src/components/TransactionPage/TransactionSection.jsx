@@ -5,11 +5,16 @@ import OderInformation from "./OderInformation/OderInformation";
 import UserInfo from "./UserInformation/UserInfo";
 import TransactionFooter from "./TransactionFooter/TransactionFooter";
 import EwalletImg from "../../../assets/images/E-Wallet.svg";
+import Model from "./model/model";
+import { useState } from "react";
 
 const TransactionPayment = () => {
+  const[openModel, setOpenModel] = useState(false);
+  
   return (
     <div className="transaction__section">
       <TransactionHeader />
+      {openModel && <Model setCloseModel = {setOpenModel} />}
       <div className="total_desk_tran">
         <div className="desk_user_info">
           <div className="total_user_info">
@@ -29,7 +34,7 @@ const TransactionPayment = () => {
               </div>
             </div>
           </div>
-          <TransactionFooter />
+          <TransactionFooter setOpenModel = {setOpenModel}/>
         </div>
         <div className="desk_order_info">
           <div className="total_order_info">

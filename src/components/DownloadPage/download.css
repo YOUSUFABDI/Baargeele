@@ -112,7 +112,7 @@
 }
 
 /* DESKTOP DOWNLOAD SECTION */
-@media (min-width: 62.5em) {
+@media (min-width: 64.0625em){
   .download__banner-img {
     display: block;
     height: 500px;

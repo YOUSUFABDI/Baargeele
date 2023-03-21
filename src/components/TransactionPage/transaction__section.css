@@ -1,6 +1,6 @@
 /* MOBILE TRANSACTION SECTION*/
 .transaction__section {
-  max-width: 1380px;
+  /* max-width: 1380px; */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
