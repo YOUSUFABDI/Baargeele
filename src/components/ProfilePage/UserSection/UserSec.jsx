@@ -4,6 +4,7 @@ import { MdArrowForwardIos } from "react-icons/md";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import PuffLoader from "react-spinners/PuffLoader";
+import { useLocalData } from "../../../DataContext";
 
 const override = {
   display: "block",
@@ -15,7 +16,9 @@ const UserSec = ({ setClickUserHead, clickUserHead }) => {
     setClickUserHead(!clickUserHead);
   };
 
-  const [user, setUser] = useState([]);
+  const {user, setUser} = useLocalData()
+
+  // const [user, setUser] = useState([]);
   const userGmail = localStorage.getItem("userGmail");
   let [isLoading, setIsloading] = useState(true);
 

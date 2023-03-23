@@ -21,7 +21,7 @@ const Header = () => {
   return (
     <div className="navbar-container container">
       <Link to="/" className="navbar-logo">
-        Baargeele
+        Baargeelle
       </Link>
       <div className="menu-icon" onClick={handleClick}>
         {click ? <FaTimes /> : <FaBars />}

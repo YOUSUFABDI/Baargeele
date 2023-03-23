@@ -26,11 +26,11 @@ const useForm = (validateForms) => {
 
   let [errors, setErrors] = useState({});
 
-  const { islogin, setIslogin } = useLocalData();
+  const { islogin, setIslogin, user, setUser } = useLocalData();
 
   let [isLoading, setIsloading] = useState(false);
 
-  const [user, setUser] = useState([]);
+  // const [user, setUser] = useState([]);
   const userGmail = localStorage.getItem("userGmail");
 
   // let [otp, setOTP] = useState("");
@@ -222,6 +222,7 @@ const useForm = (validateForms) => {
   const handleSave = (event) => {
     event.preventDefault();
     setErrors((errors = validateForms(values)));
+    getUser()
     if (errors.editName || errors.editGmail || errors.editPhone || errors.editPass) {
       console.log("error")
     } else {

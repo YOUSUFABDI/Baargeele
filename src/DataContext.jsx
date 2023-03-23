@@ -11,6 +11,7 @@ export const DataProvider = ({ children }) => {
   const [isClicked, setIsClicked] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const [playerName, setPlayerName] = useState("");
+  const [user, setUser] = useState([]);
 
   const localValues = {
     islogin,
@@ -21,6 +22,8 @@ export const DataProvider = ({ children }) => {
     setInputValue,
     playerName,
     setPlayerName,
+    user,
+    setUser,
   };
 
   return (
