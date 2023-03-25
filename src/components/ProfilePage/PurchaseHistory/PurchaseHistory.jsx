@@ -3,6 +3,8 @@ import "./purchase-history.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import PuffLoader from "react-spinners/PuffLoader";
+import moment from 'moment';
+
 
 const override = {
   display: "block",
@@ -21,7 +23,21 @@ const PurchaseHistory = ({ clickUserHead }) => {
 
   useEffect(() => {
     getUserHistory()
+    const intervalId = setInterval(() => {
+      const params = new URLSearchParams();
+      params.append("UserGmail", userGmail);
+      axios
+        .post("https://baargeelle.com/flutterConn/get_history.php", params)
+        .then((response) => {
+          setUserHistory(response.data);
+        })
+        .catch(error => console.error(error));
+    }, 1000);
+    return () => clearInterval(intervalId);
   }, [])
+
+
+
 
   function getUserHistory() {
     setIsloading(true)
@@ -61,7 +77,7 @@ const PurchaseHistory = ({ clickUserHead }) => {
                     <div className="purchase__history__card">
                       <div className="profile__date__uc">
                         <span className="profile__date">
-                          <p>2h ago</p>
+                          <p>{moment(history.DT).fromNow()}</p>
                         </span>
                         <img className="profile__uc__img" src={"https://baargeelle.com/images/first.png"} alt="uc-image" />
                       </div>

@@ -22,8 +22,8 @@
 }
 
 .purchase__history__card__wrapper {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  display: flex;
+  flex-direction: column;
   grid-gap: 20px;
 }
 
@@ -51,7 +51,7 @@
   align-items: center;
   justify-content: center;
   background-color: var(--light);
-  width: 90px;
+  width: 130px;
   height: 18px;
   border-radius: 15px 0px;
 }
