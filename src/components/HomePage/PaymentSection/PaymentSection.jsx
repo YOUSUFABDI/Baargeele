@@ -1,9 +1,9 @@
 import "./paymentSection.css";
 import { useEffect, useState } from "react";
-import evcPlusImg from "../../../../assets/images/evcplus.png";
-import sahalImg from "../../../../assets/images/sahal.png";
-import jeebImg from "../../../../assets/images/jeep.png";
-import zaadImg from "../../../../assets/images/zaad.png";
+// import evcPlusImg from "baargeelle.com/images/evcplus.png";
+// import sahalImg from "baargeelle.com/images/sahal.png";
+// import jeebImg from "baargeelle.com/images/jeep.png";
+// import zaadImg from "baargeelle.com/images/zaad.png";
 
 const PaymentSection = ({ setSelectedPayment }) => {
   const [isSelectedindex, setisSelectedindex] = useState(0);
@@ -14,22 +14,22 @@ const PaymentSection = ({ setSelectedPayment }) => {
     {
       paymentName: "Evc Plus",
       paymentID: "evcplus",
-      paymentImage: evcPlusImg,
+      paymentImage: "https://baargeelle.com/images/evcplus.png",
     },
     {
       paymentName: "Sahal Service",
       paymentID: "sahal",
-      paymentImage: sahalImg,
+      paymentImage: "https://baargeelle.com/images/sahal.png",
     },
     {
       paymentName: "Jeeb",
       paymentID: "jeep",
-      paymentImage: jeebImg,
+      paymentImage: "https://baargeelle.com/images/jeep.png",
     },
     {
       paymentName: "ZAAD",
       paymentID: "zaad",
-      paymentImage: zaadImg,
+      paymentImage: "https://baargeelle.com/images/zaad.png",
     },
   ];
 

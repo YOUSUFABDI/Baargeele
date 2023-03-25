@@ -1,4 +1,4 @@
-import RegImg from "../../../assets/images/Security-reg.svg";
+// import RegImg from "baargeelle.com/images/Security-reg.svg";
 import { Link } from "react-router-dom";
 import Header from "../Header/Header";
 import "./register.css";
@@ -45,7 +45,7 @@ const Register = () => {
       <div className="registeration__container">
         <div className="registeration__reg">
           <div className="registeration__reg__img">
-            <img className="reg_img" src={RegImg} alt="reg-img" />
+            <img className="reg_img" src={"https://baargeelle.com/images/Security-reg.svg"} alt="reg-img" />
           </div>
           <div className="registration__banner">
             <h2>Create Account</h2>

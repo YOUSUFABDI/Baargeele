@@ -1,5 +1,5 @@
 import "./purchase-history.css";
-import ucImg from "../../../../assets/images/first.png";
+// import ucImg from "baargeelle.com/images/first.png";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import PuffLoader from "react-spinners/PuffLoader";
@@ -63,7 +63,7 @@ const PurchaseHistory = ({ clickUserHead }) => {
                         <span className="profile__date">
                           <p>2h ago</p>
                         </span>
-                        <img className="profile__uc__img" src={ucImg} alt="uc-image" />
+                        <img className="profile__uc__img" src={"https://baargeelle.com/images/first.png"} alt="uc-image" />
                       </div>
                       <div className="profile__name__id">
                         <span className="profile__player__name">{history.PlayerName}</span>

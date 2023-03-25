@@ -1,5 +1,5 @@
 import "./oder-info.css";
-import ucImg from "../../../../assets/images/first.png";
+// import ucImg from "baargeelle.com/images/first.png";
 import { useLocation } from "react-router-dom";
 
 const OderInformation = () => {
@@ -14,7 +14,7 @@ const OderInformation = () => {
         <div className="oder__info__banner">
           <div className="oder__img__oder__name">
             <div className="oder__img__bg">
-              <img className="oder__img" src={ucImg} alt="us-img" />
+              <img className="oder__img" src={"https://baargeelle.com/images/first.png"} alt="us-img" />
             </div>
             <span className="oder__name">{totalproduct.UC} Unknown Cash</span>
           </div>

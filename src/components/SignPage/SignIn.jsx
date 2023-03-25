@@ -1,4 +1,4 @@
-import LoginImg from "../../../assets/images/Computer-login.svg";
+// import LoginImg from "baargeelle.com/images/Computer-login.svg";
 import { Link } from "react-router-dom";
 import Header from "../Header/Header";
 import "./sign.css";
@@ -41,7 +41,7 @@ const SignIn = () => {
       <div className="sign__container">
         <div className="login__reg">
           <div className="sign__reg__img">
-            <img className="sign_img" src={LoginImg} alt="reg-img" />
+            <img className="sign_img" src={"https://baargeelle.com/images/Computer-login.svg"} alt="reg-img" />
           </div>
           <div className="login__banner">
             <h2>Login</h2>

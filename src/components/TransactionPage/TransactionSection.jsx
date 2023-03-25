@@ -4,7 +4,7 @@ import TransactionHeader from "./TransactionHeader/TransactionHeader";
 import OderInformation from "./OderInformation/OderInformation";
 import UserInfo from "./UserInformation/UserInfo";
 import TransactionFooter from "./TransactionFooter/TransactionFooter";
-import EwalletImg from "../../../assets/images/E-Wallet.svg";
+// import EwalletImg from "baargeelle.com/images/E-Wallet.svg";
 import Model from "./model/model";
 import { useState } from "react";
 
@@ -25,7 +25,7 @@ const TransactionPayment = () => {
               <div className="img_user_info">
                 <img
                   className="transaction__e__waller__img"
-                  src={EwalletImg}
+                  src={"https://baargeelle.com/images/E-Wallet.svg"}
                   alt="ewalet-img"
                 />
               </div>

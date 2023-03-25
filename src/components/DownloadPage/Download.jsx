@@ -1,6 +1,6 @@
 import Header from "../Header/Header";
 import "./download.css";
-import bannerImage from "../../../assets/images/hero-banner.png";
+// import bannerImage from "baargeelle.com/images/hero-banner.png";
 import { FcPhoneAndroid } from "react-icons/fc";
 
 const Download = () => {
@@ -22,7 +22,7 @@ const Download = () => {
               Isticmalaya EVC-plus, ZAAD, Jeeb Iyo Sahal.
             </p>
             <button className="downlaod__btn">
-              <a href="https://baargeelle.com/app/Baargeelle.apk">
+              <a href="https://https://baargeelle.com/app/Baargeelle.apk">
                 DOWNLOAD <FcPhoneAndroid />
               </a>
             </button>
@@ -31,7 +31,7 @@ const Download = () => {
           <div className="download__image">
             <img
               className="download__banner-img"
-              src={bannerImage}
+              src={"https://baargeelle.com/images/hero-banner.png"}
               alt="baner-img"
             />
           </div>

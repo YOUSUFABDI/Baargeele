@@ -1,6 +1,6 @@
 import "./otp.css";
 import Header from "../Header/Header";
-import authImg from "../../../assets/images/auth.svg";
+// import authImg from "baargeelle.com/images/auth.svg";
 import useForm from "../../useForm";
 import validateForms from "../../validateForms";
 import OTPInput from "react-otp-input";
@@ -27,7 +27,7 @@ const OtpPage = () => {
       <div className="opt__section">
         <div className="otp__wrapper">
           <div className="opt__image">
-            <img className="opt__auth__img" src={authImg} alt="auth-img" />
+            <img className="opt__auth__img" src={"https://baargeelle.com/images/auth.svg"} alt="auth-img" />
           </div>
           <div className="opt__verification">
             <div className="opt__container">

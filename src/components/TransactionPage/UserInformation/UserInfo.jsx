@@ -12,7 +12,7 @@ const UserInfo = () => {
   
   const imgChecker = () => {
     const imgName = selectedPayment;
-    return "../../../../assets/images/"+imgName+".png"
+    return "https://baargeelle.com/images/"+imgName+".png"
   }
   return (
     <div className="user__info__section">

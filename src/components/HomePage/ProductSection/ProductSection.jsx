@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./productSection.css";
-import ThinUcImg from "../../../../assets/images/thinUcImg.png";
+// import ThinUcImg from "baargeelle.com/images/thinUcImg.png";
 
 const ProductSection = ({ setproducts, products, setTotalproduct }) => {
   const [isSelectedindexP, setisSelectedindexP] = useState(0);
@@ -60,13 +60,13 @@ const ProductSection = ({ setproducts, products, setTotalproduct }) => {
               }`}
             >
               <div className="product__amount__uc">
-                <img src={ThinUcImg} alt="thin-uc-img" />
+                <img src={"https://baargeelle.com/images/thinUcImg.png"} alt="thin-uc-img" />
                 <span>{product.UC}</span>
               </div>
               <div className="card_img">
                 <img
                   className={imgClass(product.image)}
-                  src={"../../../assets/images/" + product.image + ".png"}
+                  src={"https://baargeelle.com/images/" + product.image + ".png"}
                   alt={product.image}
                 />
               </div>

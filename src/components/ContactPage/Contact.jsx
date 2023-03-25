@@ -1,6 +1,6 @@
 import Header from "../Header/Header";
 import "./contact.css";
-import getInTouchImg from "../../../assets/images/Get-in-touch.svg";
+// import getInTouchImg from "baargeelle.com/images/Get-in-touch.svg";
 import { BsWhatsapp } from "react-icons/bs";
 import { BsFilePerson } from "react-icons/bs";
 import { MdOutlineEmail } from "react-icons/md";
@@ -31,7 +31,7 @@ const Contact = () => {
           <div className="image__info">
             <img
               className="contact__img"
-              src={getInTouchImg}
+              src={"https://baargeelle.com/images/Get-in-touch.svg"}
               alt="get-in-touch-img"
             />
             <div className="info__wrapper">

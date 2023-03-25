@@ -1,9 +1,9 @@
 import React from 'react'
 import "./model.css";
-import evcPlusImg from "../../../../assets/images/evcplus.png";
-import sahalImg from "../../../../assets/images/sahal.png";
-import jeebImg from "../../../../assets/images/jeep.png";
-import zaadImg from "../../../../assets/images/zaad.png";
+// import evcPlusImg from "baargeelle.com/images/evcplus.png";
+// import sahalImg from "baargeelle.com/images/sahal.png";
+// import jeebImg from "baargeelle.com/images/jeep.png";
+// import zaadImg from "baargeelle.com/images/zaad.png";
 
 
 function Model({ setCloseModel }) {
@@ -18,32 +18,32 @@ function Model({ setCloseModel }) {
                         <div className='img_container'>
                             <img
                                 className='img_card'
-                                src={evcPlusImg}
-                                alt={evcPlusImg}
+                                src={"https://baargeelle.com/images/evcplus.png"}
+                                alt={"baargeelle.com/images/evcplus.png"}
                             />
                             <span>EVC Plus</span>
                         </div>
                         <div className='img_container'>
                             <img
                                 className='img_card'
-                                src={jeebImg}
-                                alt={jeebImg}
+                                src={"https://baargeelle.com/images/jeep.png"}
+                                alt={"baargeelle.com/images/jeep.png"}
                             />
                             <span>Jeeb</span>
                         </div>
                         <div className='img_container'>
                             <img
                                 className='img_card'
-                                src={sahalImg}
-                                alt={sahalImg}
+                                src={"https://baargeelle.com/images/sahal.png"}
+                                alt={"baargeelle.com/images/sahal.png"}
                             />
                             <span>Sahal Service</span>
                         </div>
                         <div className='img_container'>
                             <img
                                 className='img_card'
-                                src={zaadImg}
-                                alt={zaadImg}
+                                src={"https://baargeelle.com/images/zaad.png"}
+                                alt={"baargeelle.com/images/zaad.png"}
                             />
                             <span>ZAAD</span>
                         </div>
